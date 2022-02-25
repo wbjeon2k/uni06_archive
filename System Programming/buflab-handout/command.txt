@@ -1,0 +1,3 @@
+cat exploit.txt | ./hex2raw | ./bufbomb -u 20161248
+cat exploit.txt | ./hex2raw | ./bufbomb -u 20161248 -s
+./hex2raw < exploit.txt > exploit-raw.txt

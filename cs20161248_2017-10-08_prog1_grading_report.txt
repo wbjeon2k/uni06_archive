@@ -1,0 +1,1309 @@
+Grading Report for cs20161248 for programs submitted on 2017-10-08
+This file is generated at 23:55:19 on 2017-10-08.
+
+==================================================
+=== PRELIMINARY TESTS ============================
+==================================================
+The file named README.TXT exists.
+Score earned for the existence of the README.TXT file = 10pt
+
+==================================================
+=== PHASE 1: Tests for CircularList.h ============
+==================================================
+The file named CircularList.h exists.
+Score earned for the existence of the CircularList.h file = 10pt
+
+--------------------------------------------------
+Compiling phase1-testcase01.cpp ...
+Compilation succeeded.
+Running phase1-testcase01 ...
+
+/home/cse221/chiu-2017/assign1/grading/scripts/timeout.sh: line 63: 32368 Segmentation fault      "$@"
+AB+1pt)
+Check clist.size() == 0.
+  Passed (+1pt)
+Check whether clist.empty().
+  Passed (+1pt)
+Check whether clist.front() throws an exception.
+  Exception: CircularList is empty
+  Passed (+1pt)
+Check whether clist.back() throws an exception.
+  Exception: CircularList is empty
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Exception: CircularList is empty
+  Failed (+0pt)
+Check whether clist.advance() does not throw an exception.
+
+Error: Segmentation fault. Zero point for the rest of this test case.
+
+Score earned in phase1-testcase01 = 4pt
+
+--------------------------------------------------
+Compiling phase1-testcase02.cpp ...
+Compilation succeeded.
+Running phase1-testcase02 ...
+
+/home/cse221/chiu-2017/assign1/grading/scripts/timeout.sh: line 63: 32404 Segmentation fault      "$@"
+ (+1pt)
+Add 'a' to clist.
+  Passed (+1pt)
+Check clist.size() == 1.
+  Passed (+1pt)
+Check whether clist.empty() is false.
+  Passed (+1pt)
+Check whether clist.front() == 'a'.
+  Passed (+1pt)
+Check whether clist.back() == 'a'.
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist is still <'a'> after reversal.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+1pt)
+Check whether clist is still <'a'> after advancing.
+  Passed (+1pt)
+Check whether we can remove 'a' from clist.
+  Passed (+1pt)
+Check clist.size() == 0.
+  Passed (+1pt)
+Check whether clist.empty().
+  Passed (+1pt)
+Check whether clist.front() throws an exception.
+  Exception: CircularList is empty
+  Passed (+1pt)
+Check whether clist.back() throws an exception.
+  Exception: CircularList is empty
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Exception: CircularList is empty
+  Failed (+0pt)
+Check whether clist.advance() does not throw an exception.
+
+Error: Segmentation fault. Zero point for the rest of this test case.
+
+Score earned in phase1-testcase02 = 15pt
+
+--------------------------------------------------
+Compiling phase1-testcase03.cpp ...
+Compilation succeeded.
+Running phase1-testcase03 ...
+
+/home/cse221/chiu-2017/assign1/grading/scripts/timeout.sh: line 63: 32475 Segmentation fault      "$@"
+ (+1pt)
+Add 'a' to clist.
+  Passed (+1pt)
+Change 'a' to 'b' via front().
+  Passed (+1pt)
+Check clist.size() == 1.
+  Passed (+1pt)
+Check whether clist.empty() is false.
+  Passed (+1pt)
+Check whether clist.front() == 'b'.
+  Passed (+1pt)
+Check whether clist.back() == 'b'.
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist is still <'b'> after reversal.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+1pt)
+Check whether clist is still <'b'> after advancing.
+  Passed (+1pt)
+Change 'b' to 'c' via back().
+  Passed (+1pt)
+Check clist.size() == 1.
+  Passed (+1pt)
+Check whether clist.empty() is false.
+  Passed (+1pt)
+Check whether clist.front() == 'c'.
+  Passed (+1pt)
+Check whether clist.back() == 'c'.
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist is still <'c'> after reversal.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+1pt)
+Check whether clist is still <'a'> after advancing.
+  Passed (+1pt)
+Check whether we can remove 'a' from clist.
+  Passed (+1pt)
+Check clist.size() == 0.
+  Passed (+1pt)
+Check whether clist.empty().
+  Passed (+1pt)
+Check whether clist.front() throws an exception.
+  Exception: CircularList is empty
+  Passed (+1pt)
+Check whether clist.back() throws an exception.
+  Exception: CircularList is empty
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Exception: CircularList is empty
+  Failed (+0pt)
+Check whether clist.advance() does not throw an exception.
+
+Error: Segmentation fault. Zero point for the rest of this test case.
+
+Score earned in phase1-testcase03 = 25pt
+
+--------------------------------------------------
+Compiling phase1-testcase04.cpp ...
+Compilation succeeded.
+Running phase1-testcase04 ...
+
+/home/cse221/chiu-2017/assign1/grading/scripts/timeout.sh: line 63: 32551 Segmentation fault      "$@"
+sed (+1pt)
+Add "a" to clist.
+  Passed (+1pt)
+Add "b" to clist.
+  Passed (+1pt)
+Check clist.size() == 2.
+  Passed (+1pt)
+Check whether clist.empty() is false.
+  Passed (+1pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.back() == "b".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.back() == "b".
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check whether we can remove an element from clist.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check clist.size() == 1.
+  Passed (+1pt)
+Check whether clist is not empty.
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Add "b" to clist.
+  Passed (+1pt)
+Check clist.size() == 2.
+  Passed (+1pt)
+Check whether clist.empty() is false.
+  Passed (+1pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.back() == "b".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.back() == "b".
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check whether we can remove an element from clist.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check clist.size() == 1.
+  Passed (+1pt)
+Check whether clist is not empty.
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.back() == "a".
+  Passed (+1pt)
+Check whether we can remove an element from clist.
+  Passed (+1pt)
+Check clist.size() == 0.
+  Passed (+1pt)
+Check whether clist.empty().
+  Passed (+1pt)
+Check whether clist.front() throws an exception.
+  Exception: CircularList is empty
+  Passed (+1pt)
+Check whether clist.back() throws an exception.
+  Exception: CircularList is empty
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Exception: CircularList is empty
+  Failed (+0pt)
+Check whether clist.advance() does not throw an exception.
+
+Error: Segmentation fault. Zero point for the rest of this test case.
+
+Score earned in phase1-testcase04 = 63pt
+
+--------------------------------------------------
+Compiling phase1-testcase05.cpp ...
+Compilation succeeded.
+Running phase1-testcase05 ...
+
+TESTCASE: Create a circular list with three elements:
+Create a string circular list called "clist".
+  Passed (+1pt)
+Add "a" to clist.
+  Passed (+1pt)
+Add "b" to clist.
+  Passed (+1pt)
+Add "c" to clist.
+  Passed (+1pt)
+Check clist.size() == 3.
+  Passed (+1pt)
+Check whether clist.empty() is false.
+  Passed (+1pt)
+Check whether clist.front() == "c".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "c".
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "c".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether we can remove an element from clist.
+  Passed (+1pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "c".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether we can remove an element from clist.
+  Passed (+1pt)
+Check whether clist.front() == "c".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "c".
+  Passed (+1pt)
+Add "b" to clist.
+  Passed (+1pt)
+Add "a" to clist.
+  Passed (+1pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "c".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "a".
+  Passed (+1pt)
+Check clist.size() == 3.
+  Passed (+1pt)
+Check whether clist is not empty.
+  Passed (+1pt)
+Check whether we can remove an element from clist.
+  Passed (+1pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "c".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "b".
+  Passed (+1pt)
+Check whether we can remove an element from clist.
+  Passed (+1pt)
+Check whether clist.front() == "c".
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == "c".
+  Passed (+1pt)
+Add "b" to clist.
+  Passed (+1pt)
+Add "a" to clist.
+  Passed (+1pt)
+Score of this test case: (=39pt)
+
+Score earned in phase1-testcase05 = 39pt
+
+--------------------------------------------------
+Compiling phase1-testcase06.cpp ...
+Compilation succeeded.
+Running phase1-testcase06 ...
+
+TESTCASE: Create a circular list with four elements:
+Create an integer circular list called "clist".
+  Passed (+1pt)
+Add 1 to clist.
+  Passed (+1pt)
+Add 2 to clist.
+  Passed (+1pt)
+Add 3 to clist.
+  Passed (+1pt)
+Add 4 to clist.
+  Passed (+1pt)
+Check clist.size() == 4.
+  Passed (+1pt)
+Check whether clist.empty() is false.
+  Passed (+1pt)
+Check whether clist.front() == 4.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 3.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 2.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 1.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 4.
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == 1.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 2.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 3.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 4.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 1.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether we can remove an element from clist.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether we can remove an element from clist.
+  Passed (+1pt)
+Check whether clist.front() == 1.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 3.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 1.
+  Passed (+1pt)
+Add 4 to clist.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Add 2 to clist.
+  Passed (+1pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.reverse() does not throw an exception.
+  Passed (+1pt)
+Check whether clist.front() == 1.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 2.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 3.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 4.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 1.
+  Passed (+1pt)
+Set clist.front() = 5.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Set clist.front() = 6.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Set clist.front() = 7.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Set clist.front() = 8.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 5.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 6.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 7.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 8.
+  Passed (+1pt)
+Check whether clist.advance() does not throw an exception.
+  Passed (+0pt)
+Check whether clist.front() == 5.
+  Passed (+1pt)
+Score of this test case: (=41pt)
+
+Score earned in phase1-testcase06 = 41pt
+
+--------------------------------------------------
+Compiling phase1-testcase07.cpp ...
+Compilation succeeded.
+Running phase1-testcase07 ...
+
+TESTCASE: check memory leak due to remove():
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 1MB
+  At 50000 step, memory usage = 1MB
+  At 60000 step, memory usage = 1MB
+  At 70000 step, memory usage = 2MB
+  At 80000 step, memory usage = 2MB
+  At 90000 step, memory usage = 2MB
+  At 100000 step, memory usage = 3MB
+  At 110000 step, memory usage = 3MB
+  At 120000 step, memory usage = 3MB
+  At 130000 step, memory usage = 3MB
+  At 140000 step, memory usage = 4MB
+  At 150000 step, memory usage = 4MB
+  At 160000 step, memory usage = 4MB
+  At 170000 step, memory usage = 5MB
+  At 180000 step, memory usage = 5MB
+  At 190000 step, memory usage = 5MB
+  At 200000 step, memory usage = 6MB
+  At 210000 step, memory usage = 6MB
+  At 220000 step, memory usage = 6MB
+  At 230000 step, memory usage = 7MB
+  At 240000 step, memory usage = 7MB
+  At 250000 step, memory usage = 7MB
+  At 260000 step, memory usage = 7MB
+  At 270000 step, memory usage = 8MB
+  At 280000 step, memory usage = 8MB
+  At 290000 step, memory usage = 8MB
+  At 300000 step, memory usage = 9MB
+  At 310000 step, memory usage = 9MB
+  At 320000 step, memory usage = 9MB
+  At 330000 step, memory usage = 10MB
+  At 340000 step, memory usage = 10MB
+  At 350000 step, memory usage = 10MB
+  At 360000 step, memory usage = 10MB
+  At 370000 step, memory usage = 11MB
+  At 380000 step, memory usage = 11MB
+  At 390000 step, memory usage = 11MB
+  At 400000 step, memory usage = 12MB
+  At 410000 step, memory usage = 12MB
+  At 420000 step, memory usage = 12MB
+  At 430000 step, memory usage = 13MB
+  At 440000 step, memory usage = 13MB
+  At 450000 step, memory usage = 13MB
+  At 460000 step, memory usage = 14MB
+  At 470000 step, memory usage = 14MB
+  At 480000 step, memory usage = 14MB
+  At 490000 step, memory usage = 14MB
+  At 500000 step, memory usage = 15MB
+  At 510000 step, memory usage = 15MB
+  At 520000 step, memory usage = 15MB
+  At 530000 step, memory usage = 16MB
+  At 540000 step, memory usage = 16MB
+  At 550000 step, memory usage = 16MB
+  At 560000 step, memory usage = 17MB
+  At 570000 step, memory usage = 17MB
+  At 580000 step, memory usage = 17MB
+  At 590000 step, memory usage = 18MB
+  At 600000 step, memory usage = 18MB
+  At 610000 step, memory usage = 18MB
+  At 620000 step, memory usage = 18MB
+  Error: Memory leak detected.
+  Failed (+0pt)
+  Stop executing this test case.
+
+Error: test case terminated prematurely.
+
+Score earned in phase1-testcase07 = 0pt
+
+--------------------------------------------------
+Compiling phase1-testcase08.cpp ...
+Compilation succeeded.
+Running phase1-testcase08 ...
+
+TESTCASE: check whether available space list has been implemented:
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 0 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 1 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 2 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 3 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 4 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 5 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 6 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 7 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 8 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 9 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 10 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 11 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 12 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 13 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 14 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 15 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 16 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 17 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 18 iteration, memory usage = 0MB
+  STEP 1: add many elements to the list.
+    Memory usage: 30MB
+  STEP 2: call cleanup().
+    Memory usage: 30MB
+    cleanup() does not release memory too early.
+  Passed (+1pt)
+  STEP 3: call remove() to remove all elements.
+    Memory usage: 30MB
+    remove() does not release memory.
+  Passed (+1pt)
+  STEP 4: call cleanup().
+    Memory usage: 0MB
+    cleanup() has released the memory.
+  Passed (+1pt)
+At the end of 19 iteration, memory usage = 0MB
+Score of this test case: (=60pt)
+
+Score earned in phase1-testcase08 = 60pt
+
+--------------------------------------------------
+Compiling phase1-testcase09.cpp ...
+Compilation succeeded.
+Running phase1-testcase09 ...
+
+TESTCASE: check memory leak due to the destructor:
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 1MB
+  At 50000 step, memory usage = 1MB
+  At 60000 step, memory usage = 1MB
+  At 70000 step, memory usage = 2MB
+  At 80000 step, memory usage = 2MB
+  At 90000 step, memory usage = 2MB
+  At 100000 step, memory usage = 3MB
+  At 110000 step, memory usage = 3MB
+  At 120000 step, memory usage = 3MB
+  At 130000 step, memory usage = 3MB
+  At 140000 step, memory usage = 4MB
+  At 150000 step, memory usage = 4MB
+  At 160000 step, memory usage = 4MB
+  At 170000 step, memory usage = 5MB
+  At 180000 step, memory usage = 5MB
+  At 190000 step, memory usage = 5MB
+  At 200000 step, memory usage = 6MB
+  At 210000 step, memory usage = 6MB
+  At 220000 step, memory usage = 6MB
+  At 230000 step, memory usage = 7MB
+  At 240000 step, memory usage = 7MB
+  At 250000 step, memory usage = 7MB
+  At 260000 step, memory usage = 7MB
+  At 270000 step, memory usage = 8MB
+  At 280000 step, memory usage = 8MB
+  At 290000 step, memory usage = 8MB
+  At 300000 step, memory usage = 9MB
+  At 310000 step, memory usage = 9MB
+  At 320000 step, memory usage = 9MB
+  At 330000 step, memory usage = 10MB
+  At 340000 step, memory usage = 10MB
+  At 350000 step, memory usage = 10MB
+  At 360000 step, memory usage = 10MB
+  At 370000 step, memory usage = 11MB
+  At 380000 step, memory usage = 11MB
+  At 390000 step, memory usage = 11MB
+  At 400000 step, memory usage = 12MB
+  At 410000 step, memory usage = 12MB
+  At 420000 step, memory usage = 12MB
+  At 430000 step, memory usage = 13MB
+  At 440000 step, memory usage = 13MB
+  At 450000 step, memory usage = 13MB
+  At 460000 step, memory usage = 14MB
+  At 470000 step, memory usage = 14MB
+  At 480000 step, memory usage = 14MB
+  At 490000 step, memory usage = 14MB
+  At 500000 step, memory usage = 15MB
+  At 510000 step, memory usage = 15MB
+  At 520000 step, memory usage = 15MB
+  At 530000 step, memory usage = 16MB
+  At 540000 step, memory usage = 16MB
+  At 550000 step, memory usage = 16MB
+  At 560000 step, memory usage = 17MB
+  At 570000 step, memory usage = 17MB
+  At 580000 step, memory usage = 17MB
+  At 590000 step, memory usage = 18MB
+  At 600000 step, memory usage = 18MB
+  At 610000 step, memory usage = 18MB
+  At 620000 step, memory usage = 18MB
+  Error: Memory leak detected.
+  Failed (+0pt)
+  Stop executing this test case.
+
+Error: test case terminated prematurely.
+
+Score earned in phase1-testcase09 = 0pt
+
+==================================================
+=== PHASE 2: Tests for assignment1.cpp ===========
+==================================================
+The file named assignment1.cpp exists.
+Score earned for the existence of the assignment1.cpp file = 10pt
+
+--------------------------------------------------
+Compiling phase2-testcase01.cpp ...
+Compilation succeeded.
+Running phase2-testcase01 ...
+
+TESTCASE: test the behavior of getPriority():
+Check whether getPriority() accepts +.
+  Passed (+1pt)
+Check whether getPriority() accepts -.
+  Passed (+1pt)
+Check whether getPriority() accepts *.
+  Passed (+1pt)
+Check whether getPriority() accepts /.
+  Passed (+1pt)
+Check whether getPriority() accepts (.
+  Passed (+1pt)
+Check whether getPriority() throws an exception if the token is ).
+  Exception: token is a CLOSE_PARANTHESIS_OPERATOR
+  Passed (+1pt)
+Check whether getPriority() throws an exception if the token is not an operator.
+  Exception: Not an operator token.
+  Passed (+1pt)
+Check whether ( has a higher priority than *.
+  Passed (+1pt)
+Check whether ( has a higher priority than /.
+  Passed (+1pt)
+Check whether * has the same priority as /.
+  Passed (+1pt)
+Check whether * has a higher priority than +.
+  Passed (+1pt)
+Check whether * has a higher priority than -.
+  Passed (+1pt)
+Check whether / has a higher priority than +.
+  Passed (+1pt)
+Check whether / has a higher priority than -.
+  Passed (+1pt)
+Check whether + has the same priority as -.
+  Passed (+1pt)
+Score of this test case: (=15pt)
+
+Score earned in phase2-testcase01 = 15pt
+
+--------------------------------------------------
+Compiling phase2-testcase02.cpp ...
+Compilation succeeded.
+Running phase2-testcase02 ...
+
+TESTCASE: test the behavior of getInStackPriority():
+Check whether getInStackPriority() accepts +.
+  Passed (+1pt)
+Check whether getInStackPriority() accepts -.
+  Passed (+1pt)
+Check whether getInStackPriority() accepts *.
+  Passed (+1pt)
+Check whether getInStackPriority() accepts /.
+  Passed (+1pt)
+Check whether getInStackPriority() accepts (.
+  Passed (+1pt)
+Check whether getInStackPriority() throws an exception if the token is ).
+  Exception: token is a CLOSE_PARANTHESIS_OPERATOR
+  Passed (+1pt)
+Check whether getInStackPriority() throws an exception if the token is not an operator.
+  Exception: Not an operator token.
+  Passed (+1pt)
+Check whether * has the same priority as /.
+  Passed (+1pt)
+Check whether * has a higher priority than +.
+  Passed (+1pt)
+Check whether * has a higher priority than -.
+  Passed (+1pt)
+Check whether / has a higher priority than +.
+  Passed (+1pt)
+Check whether / has a higher priority than -.
+  Passed (+1pt)
+Check whether + has the same priority as -.
+  Passed (+1pt)
+Check whether + has a higher priority than (.
+  Passed (+1pt)
+Check whether - has a higher priority than (.
+  Passed (+1pt)
+Score of this test case: (=15pt)
+
+Score earned in phase2-testcase02 = 15pt
+
+--------------------------------------------------
+Compiling phase2-testcase03.cpp ...
+Compilation succeeded.
+Running phase2-testcase03 ...
+
+TESTCASE: test the behavior of postfix():
+Check the result of postfix()
+  Passed (+2pt)
+Check the result of postfix(1)
+  Passed (+2pt)
+Check the result of postfix(-1)
+  Passed (+2pt)
+Check the result of postfix(1 + 1)
+  Passed (+2pt)
+Check the result of postfix(1 - 1)
+  Passed (+2pt)
+Check the result of postfix(1 * 1)
+  Passed (+2pt)
+Check the result of postfix(-1 / 1)
+  Passed (+2pt)
+Check the result of postfix(1 + 2 + 3)
+  Passed (+2pt)
+Check the result of postfix(1 * 2 + 3)
+  Passed (+2pt)
+Check the result of postfix(1 + 2 * 3)
+  Passed (+2pt)
+Check the result of postfix(1 * (2 + 3) / 4)
+  Passed (+2pt)
+Check the result of postfix(1 + (2 * 3) / 4 - 5)
+  Passed (+2pt)
+Check the result of postfix(1 + (2 * 3) / 4 - 5)
+  Passed (+2pt)
+Check the result of postfix(1 + ((2 * 3) / 4 - 5))
+  Passed (+2pt)
+Check the result of postfix(1 + ((((2 * 3) / 4 - 5))))
+  Passed (+2pt)
+Check the result of postfix(((1)) + ((2 * 3) / (4) - 5))
+  Passed (+2pt)
+Check the result of postfix(( 1 - 2 ) / ( 3 + 4 ))
+  Passed (+2pt)
+Check the result of postfix(1 * ( 2 + 3 ) * 4)
+  Passed (+2pt)
+Check the result of postfix(1 / 2 - 3 + 4 * 5 - 1 * 3)
+  Passed (+2pt)
+Check the result of postfix(1 + 2 * ( 3 + 4 * ( 5 + 6 * 7 ) ))
+  Passed (+2pt)
+Score of this test case: (=40pt)
+
+Score earned in phase2-testcase03 = 40pt
+
+--------------------------------------------------
+Compiling phase2-testcase04.cpp ...
+Compilation succeeded.
+Running phase2-testcase04 ...
+
+TESTCASE: test the behavior of eval():
+Check the result of eval(1)
+  Passed (+2pt)
+Check the result of eval(1 2 +)
+  Passed (+2pt)
+Check the result of eval(1 2 / 3 - 4 5 * + 1 3 * -)
+  Passed (+2pt)
+Check the eval() throws an exception
+  Exception: Cannot get the top element from an empty stack.
+  Passed (+2pt)
+Check the eval(+) throws an exception
+  Exception: Operator and operand does not match
+  Passed (+2pt)
+Check the eval(1 + 2) throws an exception
+  Exception: Cannot get the top element from an empty stack.
+  Passed (+2pt)
+Check the eval(/ 1 2) throws an exception
+  Exception: Operator and operand does not match
+  Passed (+2pt)
+Check the eval(1 +) throws an exception
+  Exception: Cannot get the top element from an empty stack.
+  Passed (+2pt)
+Check the eval(1 2) throws an exception
+  Failed (+0pt)
+Check the result of eval(1 2 + 3 +)
+  Passed (+2pt)
+Check the eval(1 2 + 3 + +) throws an exception
+  Exception: Cannot get the top element from an empty stack.
+  Passed (+2pt)
+Check the eval(1 2 + 3 + + +) throws an exception
+  Exception: Cannot get the top element from an empty stack.
+  Passed (+2pt)
+Check the eval(1 2 + 3 4 +) throws an exception
+  Failed (+0pt)
+Check the result of eval(1 2 * 3 +)
+  Passed (+2pt)
+Check the result of eval(1 2 3 * +)
+  Passed (+2pt)
+Check the result of eval(1 2 3 + * 4 /)
+  Passed (+2pt)
+Check the result of eval(1 2 + 3 4 + * 5 6 - 7 8 - * +)
+  Passed (+2pt)
+Check the result of eval(1 2 3 * 4 / + 5 -)
+  Passed (+2pt)
+Check the result of eval(1 2 3 * 4 / 5 - +)
+  Passed (+2pt)
+Check the result of eval(1 2 - 3 4 + /)
+  Passed (+2pt)
+Check the result of eval(1 2 3 + * 4 *)
+  Passed (+2pt)
+Check the result of eval(1 2 / 3 - 4 5 * + 1 3 * -)
+  Passed (+2pt)
+Check the result of eval(1 2 3 4 5 6 7 * + * + * +)
+  Passed (+2pt)
+Score of this test case: (=42pt)
+
+Score earned in phase2-testcase04 = 42pt
+
+==================================================
+=== PHASE 3: Behavioral Tests ====================
+==================================================
+Compiling submitted files ...
+Compilation succeeded.
+--------------------------------------------------
+Input file: input01.txt
+Correct output.
+Score earned in input01 = 5pt
+
+--------------------------------------------------
+Input file: input02.txt
+Correct output.
+Score earned in input02 = 5pt
+
+--------------------------------------------------
+Input file: input03.txt
+Correct output.
+Score earned in input03 = 5pt
+
+--------------------------------------------------
+Input file: input04.txt
+Correct output.
+Score earned in input04 = 5pt
+
+--------------------------------------------------
+Input file: input05.txt
+Correct output.
+Score earned in input05 = 5pt
+
+--------------------------------------------------
+Input file: input06.txt
+Correct output.
+Score earned in input06 = 5pt
+
+--------------------------------------------------
+Input file: input07.txt
+Correct output.
+Score earned in input07 = 5pt
+
+--------------------------------------------------
+Input file: input08.txt
+Correct output.
+Score earned in input08 = 5pt
+
+--------------------------------------------------
+Input file: input09.txt
+Correct output.
+Score earned in input09 = 5pt
+
+--------------------------------------------------
+Input file: input10.txt
+Correct output.
+Score earned in input10 = 5pt
+
+--------------------------------------------------
+Input file: input11.txt
+Correct output.
+Score earned in input11 = 5pt
+
+--------------------------------------------------
+Input file: input12.txt
+Correct output.
+Score earned in input12 = 5pt
+
+--------------------------------------------------
+Input file: input13.txt
+Correct output.
+Score earned in input13 = 5pt
+
+--------------------------------------------------
+Input file: input14.txt
+Correct output.
+Score earned in input14 = 5pt
+
+--------------------------------------------------
+Input file: input15.txt
+Correct output.
+Score earned in input15 = 5pt
+
+==================================================
+=== SUMMARY ======================================
+==================================================
+Total score = 464pt out of 590pt
+The final score = 79%

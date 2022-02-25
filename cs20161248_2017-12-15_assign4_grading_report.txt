@@ -1,0 +1,1488 @@
+Grading Report for cs20161248 for programs submitted on 2017-12-15
+This file is generated at 17:04:02 on 2017-12-18.
+
+==================================================
+=== PRELIMINARY TESTS ============================
+==================================================
+The file named README.TXT exists.
+Score earned for the existence of the README.TXT file = 10pt
+
+=======================================================
+=== PHASE 1: Tests for AdjacencyListDirectedGraph.h ===
+=======================================================
+The file named AdjacencyListDirectedGraph.h exists.
+Score earned for the existence of the AdjacencyListDirectedGraph.h file = 10pt
+
+--------------------------------------------------
+Compiling phase1-testcase01.cpp ...
+Compilation succeeded.
+Running phase1-testcase01 ...
+
+TESTCASE: Create an empty AdjacencyListDirectedGraph:
+Create an AdjacencyListDirectedGraph<string,int>.
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty().
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Score of this test case: (=5pt)
+
+Score earned in phase1-testcase01 = 5pt
+
+--------------------------------------------------
+Compiling phase1-testcase02.cpp ...
+Compilation succeeded.
+Running phase1-testcase02 ...
+
+TESTCASE: Create an AdjacencyListDirectedGraph which has one vertex:
+Create an AdjacencyListDirectedGraph<string,int>.
+  Passed (+1pt)
+Create an AdjacencyListDirectedGraph<string,int>::VertexItor.
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty().
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Add 'BOS' vertex to graph.
+  Passed (+1pt)
+Check graph.vertices().size() == 1.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Assign vertex iterator to begin of vertex list
+  Passed (+1pt)
+Check whether the first element of graph.vertices() is 'BOS' via VertexItor.
+  Passed (+1pt)
+Check whether the first element of graph.vertices() is 'BOS' via vertices().begin().
+  Passed (+1pt)
+Check whether the first element of graph.vertices() is 'BOS' via vertices().front().
+  Passed (+1pt)
+Check whether we can remove 'BOS' from graph.vertices() via eraseVertex().
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty().
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Score of this test case: (=19pt)
+
+Score earned in phase1-testcase02 = 19pt
+
+--------------------------------------------------
+Compiling phase1-testcase03.cpp ...
+Compilation succeeded.
+Running phase1-testcase03 ...
+
+TESTCASE: Create an empty AdjacencyListDirectedGraph which has two vertex and one edge
+Create an AdjacencyListDirectedGraph<string,int>.
+  Passed (+1pt)
+Create a Edge variable e1 to store the 'BOS' to 'MIA' edge.
+  Passed (+1pt)
+Create Vertex variables v1 and v2 to store the 'BOS' and 'MIA' vertices.
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty().
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Add 'BOS' vertex to graph.
+  Passed (+1pt)
+Add 'MIA' vertex to graph.
+  Passed (+1pt)
+Check graph.vertices().size() == 2.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Assign 'v1' to the 'BOS'.
+  Passed (+1pt)
+Assign 'v2' to the 'MIA'.
+  Passed (+1pt)
+Add 'BOS' to 'MIA' edge of graph and the element of edge is 1258
+  Passed (+1pt)
+Check graph.edges().size() == 1.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Assign 'e1' to edge that 'BOS' to 'MIA'
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v1, v2, 1258) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether element of 'v1' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v2' is 'MIA' vertex
+  Passed (+1pt)
+Check whether v1 and v2 isAdjacentTo()
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v2)
+  Passed (+1pt)
+Check whether v2.outgoingEdge(v1) throws an exception.
+  Failed (+0pt)
+Check whether v1.outgoingEdge(v2) is 'e1'
+  Passed (+1pt)
+Check whether the first element of v1.outgoingEdges() is 'e1'
+  Passed (+1pt)
+Check whether element of 'e1' is 1258
+  Passed (+1pt)
+Check whether origin vertex of 'e1' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether dest vertex of 'e1' is 'MIA' via  endVertices()
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'MIA' at 'e1'
+  Passed (+1pt)
+Check whether 'MIA' opposite is 'BOS' at 'e1'
+  Passed (+1pt)
+Check whether v1 == *graph.vertices().begin()
+  Passed (+1pt)
+Check whether v2 == *graph.vertices().begin() is false
+  Passed (+1pt)
+Check whether we can remove 'MIA' from graph.vertices() via eraseVertex().
+  Passed (+1pt)
+Check graph.vertices().size() == 1.
+  Passed (+1pt)
+Check whether v1 and v2 isAdjacentTo() is false
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v2) is false
+  Passed (+1pt)
+Check whether v2.outgoingEdge(v1) throws an exception.
+  Exception: There is no directed edge
+  Passed (+1pt)
+Check whether we can remove 'BOS' from graph.vertices() via eraseVertex().
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty().
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Add 'BOS' vertex to graph.
+  Passed (+1pt)
+Add 'MIA' vertex to graph.
+  Passed (+1pt)
+Check graph.vertices().size() == 2.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Assign 'v1' to the 'BOS'.
+  Passed (+1pt)
+Assign 'v2' to the 'MIA'.
+  Passed (+1pt)
+Add 'BOS' to 'MIA' edge of graph and the element of edge is 1258
+  Passed (+1pt)
+Check graph.edges().size() == 1.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Assign 'e1' to edge that 'BOS' to 'MIA'
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v1, v2, 1258) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether element of 'v1' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v2' is 'MIA' vertex
+  Passed (+1pt)
+Check whether v1 and v2 isAdjacentTo()
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v2)
+  Passed (+1pt)
+Check whether v2.outgoingEdge(v1) throws an exception.
+  Failed (+0pt)
+Check whether v1.outgoingEdge(v2) is 'e1'
+  Passed (+1pt)
+Check whether the first element of v1.outgoingEdges() is 'e1'
+  Passed (+1pt)
+Check whether element of 'e1' is 1258
+  Passed (+1pt)
+Check whether origin vertex of 'e1' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether dest vertex of 'e1' is 'MIA' via  endVertices()
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'MIA' at 'e1'
+  Passed (+1pt)
+Check whether 'MIA' opposite is 'BOS' at 'e1'
+  Passed (+1pt)
+Check whether v1 == *graph.vertices().begin()
+  Passed (+1pt)
+Check whether v2 == *graph.vertices().begin() is false
+  Passed (+1pt)
+Check whether we can remove 'MIA' from graph.vertices() via eraseVertex().
+  Passed (+1pt)
+Check graph.vertices().size() == 1.
+  Passed (+1pt)
+Check whether v1 and v2 isAdjacentTo() is false
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v2) is false
+  Passed (+1pt)
+Check whether v2.outgoingEdge(v1) throws an exception.
+  Exception: There is no directed edge
+  Passed (+1pt)
+Check whether we can remove 'BOS' from graph.vertices() via eraseVertex().
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty().
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Score of this test case: (=77pt)
+
+Score earned in phase1-testcase03 = 77pt
+
+--------------------------------------------------
+Compiling phase1-testcase04.cpp ...
+Compilation succeeded.
+Running phase1-testcase04 ...
+
+TESTCASE: Modify an empty AdjacencyListDirectedGraph which has two vertex and one edge
+Create an AdjacencyListDirectedGraph<string,int>.
+  Passed (+1pt)
+Create variables to store the BOS to MIA edge.
+  Passed (+1pt)
+Create variables to store the BOS and MIA vertices.
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty().
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Add 'BOS' vertex to graph.
+  Passed (+1pt)
+Add 'MIA' vertex to graph.
+  Passed (+1pt)
+Check graph.vertices().size() == 2.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Assign 'v1' to the 'BOS'.
+  Passed (+1pt)
+Assign 'v2' to the 'MIA'.
+  Passed (+1pt)
+Check whether we can remove 'MIA' from graph.vertices() via eraseVertex().
+  Passed (+1pt)
+Check graph.vertices().size() == 1.
+  Passed (+1pt)
+Add 'MIA' vertex to graph.
+  Passed (+1pt)
+Check graph.vertices().size() == 2.
+  Passed (+1pt)
+Assign 'v2' to the 'MIA'.
+  Passed (+1pt)
+Check whether element of 'v1' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v2' is 'MIA' vertex
+  Passed (+1pt)
+Add 'BOS' to 'MIA' edge of graph and the element of edge is 1258
+  Passed (+1pt)
+Check graph.edges().size() == 1.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Assign 'e1' to edge that 'BOS' to 'MIA'
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v1, v2, 1258) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether element of 'v1' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v2' is 'MIA' vertex
+  Passed (+1pt)
+Check whether v1 and v2 isAdjacentTo()
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v2)
+  Passed (+1pt)
+Check whether v2.outgoingEdge(v1) throws an exception.
+  Failed (+0pt)
+Check whether v1.outgoingEdge(v2) is 'e1'
+  Passed (+1pt)
+Check whether the first element of v1.outgoingEdges() is 'e1'
+  Passed (+1pt)
+Check whether we can remove 'e1' from graph.edge() via eraseEdge().
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Add 'BOS' to 'MIA' edge of graph and the element of edge is 1258
+  Passed (+1pt)
+Check graph.edges().size() == 1.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Assign 'e1' to edge that 'BOS' to 'MIA'
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v1, v2, 1258) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether element of 'v1' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v2' is 'MIA' vertex
+  Passed (+1pt)
+Check whether v1 and v2 isAdjacentTo()
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v2)
+  Passed (+1pt)
+Check whether v2.outgoingEdge(v1) throws an exception.
+  Failed (+0pt)
+Check whether v1.outgoingEdge(v2) is 'e1'
+  Passed (+1pt)
+Check whether the first element of v1.outgoingEdges() is 'e1'
+  Passed (+1pt)
+Check whether element of 'e1' is 1258
+  Passed (+1pt)
+Check whether origin vertex of 'e1' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e1' is 'MIA' via  endVertices()
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'MIA' at 'e1'
+  Passed (+1pt)
+Check whether 'MIA' opposite is 'BOS' at 'e1'
+  Passed (+1pt)
+Check whether we can modify the element of vertex 'MIA' to 'JFK'.
+  Passed (+1pt)
+Check graph.graph().vertices() == 2.
+  Passed (+1pt)
+Check whether element of 'v1' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v2' is 'JFK' vertex
+  Passed (+1pt)
+Check whether v1 and v2 isAdjacentTo()
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v2)
+  Passed (+1pt)
+Check whether v2.outgoingEdge(v1) throws an exception.
+  Failed (+0pt)
+Check whether v1.outgoingEdge(v2) is 'e1'
+  Passed (+1pt)
+Check whether the first element of v1.outgoingEdges() is 'e1'
+  Passed (+1pt)
+Check whether element of 'e1' is 1258
+  Passed (+1pt)
+Check whether origin vertex of 'e1' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e1' is 'JFK' via  endVertices()
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'JFK' at 'e1'
+  Passed (+1pt)
+Check whether 'JFK' opposite is 'BOS' at 'e1'
+  Passed (+1pt)
+Check whether we can modify the element of edge 'e1' 1258 to 867.
+  Passed (+1pt)
+Check graph.edges().size() == 1.
+  Passed (+1pt)
+Check whether element of 'v1' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v2' is 'JFK' vertex
+  Passed (+1pt)
+Check whether v1 and v2 isAdjacentTo()
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v2)
+  Passed (+1pt)
+Check whether v2.outgoingEdge(v1) throws an exception.
+  Failed (+0pt)
+Check whether v1.outgoingEdge(v2) is 'e1'
+  Passed (+1pt)
+Check whether the first element of v1.outgoingEdges() is 'e1'
+  Passed (+1pt)
+Check whether element of 'e1' is 867
+  Passed (+1pt)
+Check whether origin vertex of 'e1' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e1' is 'JFK' via  endVertices()
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'JFK' at 'e1'
+  Passed (+1pt)
+Check whether 'JFK' opposite is 'BOS' at 'e1'
+  Passed (+1pt)
+Check whether we can remove 'JFK' from graph.vertices() via eraseVertex().
+  Passed (+1pt)
+Check graph.vertices().size() == 1.
+  Passed (+1pt)
+Add 'ORD' vertex to graph.
+  Passed (+1pt)
+Check graph.vertices().size() == 2.
+  Passed (+1pt)
+Assign 'v3' to the second vertex of graph.vertices().
+  Passed (+1pt)
+Add 'BOS' to 'ORD' edge of graph and the element of edge is 456
+  Passed (+1pt)
+Check graph.edges().size() == 1.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Assign 'e2' to edge that 'BOS' to 'ORD'
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v1, v3, 456) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether element of 'v1' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v3' is 'ORD' vertex
+  Passed (+1pt)
+Check whether v1 and v3 isAdjacentTo()
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v3)
+  Passed (+1pt)
+Check whether v3.outgoingEdge(v1) throws an exception.
+  Failed (+0pt)
+Check whether v1.outgoingEdge(v3) is 'e2'
+  Passed (+1pt)
+Check whether the first element of v1.outgoingEdges() is 'e2'
+  Passed (+1pt)
+Check whether element of 'e2' is 867
+  Passed (+1pt)
+Check whether origin vertex of 'e2' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e2' is 'ORD' via  endVertices()
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'ORD' at 'e2'
+  Passed (+1pt)
+Check whether 'ORD' opposite is 'BOS' at 'e2'
+  Passed (+1pt)
+Check whether we can remove 'e2' from graph.edge() via eraseEdge().
+  Passed (+1pt)
+Check whether v3.isOutgoingTo(v1) is false
+  Passed (+1pt)
+Check whether v1 and v3 isAdjacentTo() is false
+  Passed (+1pt)
+Check whether v3.outgoingEdge(v1) throws an exception.
+  Exception: There is no directed edge
+  Passed (+1pt)
+Check graph.vertices().size() == 2.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Score of this test case: (=105pt)
+
+Score earned in phase1-testcase04 = 105pt
+
+--------------------------------------------------
+Compiling phase1-testcase05.cpp ...
+Compilation succeeded.
+Running phase1-testcase05 ...
+
+TESTCASE: Create an empty AdjacencyListDirectedGraph which has two vertex and one edge
+Create an AdjacencyListDirectedGraph<string,int>.
+  Passed (+1pt)
+Create variables to store edges.
+  Passed (+1pt)
+Create variables to store vertices.
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty().
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Add 'BOS' vertex to graph.
+  Passed (+1pt)
+Add 'MIA' vertex to graph.
+  Passed (+1pt)
+Add 'JFK' vertex to graph.
+  Passed (+1pt)
+Check graph.vertices().size() == 3.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Assign 'v1' to the 'BOS'.
+  Passed (+1pt)
+Assign 'v2' to the 'MIA'.
+  Passed (+1pt)
+Assign 'v3' to the 'JFK'.
+  Passed (+1pt)
+Add 'BOS' to 'MIA' edge of graph and the element of edge is 1258
+  Passed (+1pt)
+Add 'BOS' to 'JFK' edge of graph and the element of edge is 187
+  Passed (+1pt)
+Check graph.edges().size() == 2.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Assign 'e1' to edge that 'BOS' to 'MIA'
+  Passed (+1pt)
+Assign 'e2' to BOS to JFK edge.
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v1, v2, 1258) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v1, v3, 187) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether element of 'v1' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v2' is 'MIA' vertex
+  Passed (+1pt)
+Check whether element of 'v3' is 'JFK' vertex
+  Passed (+1pt)
+Check whether v1 and v2 isAdjacentTo()
+  Passed (+1pt)
+Check whether v1 and v3 isAdjacentTo()
+  Passed (+1pt)
+Check whether v2 and v3 isAdjacentTo() is false
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v2)
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v3)
+  Passed (+1pt)
+Check whether v2.isOutgoingTo(v3) is false
+  Passed (+1pt)
+Check whether v1.outgoingEdge(v2) is 'e1'
+  Passed (+1pt)
+Check whether v1.outgoingEdge(v3) is 'e2'
+  Passed (+1pt)
+Check whether v2.outgoingEdge(v3) is 'e2' throws an exception.
+  Exception: There is no directed edge
+  Passed (+1pt)
+Check whether the first element of v1.outgoingEdges() is 'e1'
+  Passed (+1pt)
+Check whether the second element of v1.outgoingEdges() is 'e2'
+  Passed (+1pt)
+Check whether element of 'e1' is 1258
+  Passed (+1pt)
+Check whether element of 'e2' is 187
+  Passed (+1pt)
+Check whether origin vertex of 'e1' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e1' is 'MIA' via  endVertices()
+  Passed (+1pt)
+Check whether origin vertex of 'e2' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e2' is 'JFK' via  endVertices()
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'MIA' at 'e1'
+  Passed (+1pt)
+Check whether 'MIA' opposite is 'BOS' at 'e1'
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'JFK' at 'e2'
+  Passed (+1pt)
+Check whether 'JFK' opposite is 'BOS' at 'e2'
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'JFK' at 'e1' throws an exception.
+  Failed (+0pt)
+Check whether 'BOS' opposite is 'MIA' at 'e2' throws an exception.
+  Failed (+0pt)
+Check whether e1 and e2 isAdjacentTo()
+  Passed (+1pt)
+Check graph.vertices().size() == 3.
+  Passed (+1pt)
+Check graph.edges().size() == 2.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Score of this test case: (=52pt)
+
+Score earned in phase1-testcase05 = 52pt
+
+--------------------------------------------------
+Compiling phase1-testcase06.cpp ...
+Compilation succeeded.
+Running phase1-testcase06 ...
+
+TESTCASE: Create an empty AdjacencyListDirectedGraph which has two vertex and one edge
+Create an AdjacencyListDirectedGraph<string,int>.
+  Passed (+1pt)
+Create variables to store edges.
+  Passed (+1pt)
+Create variables to store vertices.
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty().
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Add 'BOS' vertex to graph.
+  Passed (+1pt)
+Add 'MIA' vertex to graph.
+  Passed (+1pt)
+Add 'JFK' vertex to graph.
+  Passed (+1pt)
+Check graph.vertices().size() == 3.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Assign 'v1' to the 'BOS'.
+  Passed (+1pt)
+Assign 'v2' to the 'MIA'.
+  Passed (+1pt)
+Assign 'v3' to the 'JFK'.
+  Passed (+1pt)
+Add 'BOS' to 'MIA' edge of graph and the element of edge is 1258
+  Passed (+1pt)
+Add 'BOS' to 'JFK' edge of graph and the element of edge is 187
+  Passed (+1pt)
+Add 'MIA' to 'JFK' edge of graph and the element of edge is 456
+  Passed (+1pt)
+Check graph.edges().size() == 3.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Assign 'e1' to edge that 'BOS' to 'MIA'
+  Passed (+1pt)
+Assign 'e2' to BOS to JFK edge.
+  Passed (+1pt)
+Assign 'e3' to MIA to JFK edge.
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v1, v2, 1258) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v1, v3, 187) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v2, v3, 456) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether element of 'v1' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v2' is 'MIA' vertex
+  Passed (+1pt)
+Check whether element of 'v3' is 'JFK' vertex
+  Passed (+1pt)
+Check whether v1 and v2 isAdjacentTo()
+  Passed (+1pt)
+Check whether v1 and v3 isAdjacentTo()
+  Passed (+1pt)
+Check whether v2 and v3 isAdjacentTo()
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v2)
+  Passed (+1pt)
+Check whether v1.isOutgoingTo(v3)
+  Passed (+1pt)
+Check whether v2.isOutgoingTo(v3)
+  Passed (+1pt)
+Check whether v1.outgoingEdge(v2) is 'e1'
+  Passed (+1pt)
+Check whether v1.outgoingEdge(v3) is 'e2'
+  Passed (+1pt)
+Check whether v2.outgoingEdge(v3) is 'e3'
+  Passed (+1pt)
+Check whether the first element of v1.outgoingEdges() is 'e1'
+  Passed (+1pt)
+Check whether the second element of v1.outgoingEdges() is 'e2'
+  Passed (+1pt)
+Check whether the first element of v2.outgoingEdges() is 'e3'
+  Passed (+1pt)
+Check whether element of 'e1' is 1258
+  Passed (+1pt)
+Check whether element of 'e2' is 187
+  Passed (+1pt)
+Check whether element of 'e3' is 456
+  Passed (+1pt)
+Check whether origin vertex of 'e1' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e1' is 'MIA' via  endVertices()
+  Passed (+1pt)
+Check whether origin vertex of 'e2' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e2' is 'JFK' via  endVertices()
+  Passed (+1pt)
+Check whether origin vertex of 'e3' is 'MIA' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e3' is 'JFK' via  endVertices()
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'MIA' at 'e1'
+  Passed (+1pt)
+Check whether 'MIA' opposite is 'BOS' at 'e1'
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'JFK' at 'e2'
+  Passed (+1pt)
+Check whether 'JFK' opposite is 'BOS' at 'e2'
+  Passed (+1pt)
+Check whether 'MIA' opposite is 'JFK' at 'e3'
+  Passed (+1pt)
+Check whether 'JFK' opposite is 'MIA' at 'e3'
+  Passed (+1pt)
+Check whether e1 and e2 isAdjacentTo()
+  Passed (+1pt)
+Check whether e2 and e3 isAdjacentTo()
+  Passed (+1pt)
+Check graph.vertices().size() == 3.
+  Passed (+1pt)
+Check graph.edges().size() == 3.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Score of this test case: (=62pt)
+
+Score earned in phase1-testcase06 = 62pt
+
+--------------------------------------------------
+Compiling phase1-testcase07.cpp ...
+Compilation succeeded.
+Running phase1-testcase07 ...
+
+TESTCASE: Create an empty AdjacencyListDirectedGraph which has two vertex and one edge
+Create an AdjacencyListDirectedGraph<string,int>.
+  Passed (+1pt)
+Create variables to store edges..
+  Passed (+1pt)
+Create variables to store vertices.
+  Passed (+1pt)
+Check graph.vertices().size() == 0.
+  Passed (+1pt)
+Check graph.edges().size() == 0.
+  Passed (+1pt)
+Check whether graph.vertices().empty().
+  Passed (+1pt)
+Check whether graph.edges().empty().
+  Passed (+1pt)
+Add 'BOS' vertex to graph.
+  Passed (+1pt)
+Add 'MIA' vertex to graph.
+  Passed (+1pt)
+Add 'JFK' vertex to graph.
+  Passed (+1pt)
+Add 'ORD' vertex to graph.
+  Passed (+1pt)
+Add 'SFO' vertex to graph.
+  Passed (+1pt)
+Check graph.vertices().size() == 5.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Assign 'v[0]' to the 'BOS'.
+  Passed (+1pt)
+Assign 'v[1]' to the 'MIA'.
+  Passed (+1pt)
+Assign 'v[2]' to the 'JFK'.
+  Passed (+1pt)
+Assign 'v[3]' to the 'ORD'.
+  Passed (+1pt)
+Assign 'v[4]' to the 'SFO'.
+  Passed (+1pt)
+Add 'BOS' to 'MIA' edge of graph and the element of edge is 1258
+  Passed (+1pt)
+Add 'BOS' to 'JFK' edge of graph and the element of edge is 187
+  Passed (+1pt)
+Add 'MIA' to 'JFK' edge of graph and the element of edge is 456
+  Passed (+1pt)
+Add 'MIA' to 'ORD' edge of graph and the element of edge is 867
+  Passed (+1pt)
+Add 'ORD' to 'SFO' edge of graph and the element of edge is 2704
+  Passed (+1pt)
+Check graph.edges().size() == 5.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Assign 'e[0]' to edge that 'BOS' to 'MIA'
+  Passed (+1pt)
+Assign 'e[1]' to BOS to JFK edge.
+  Passed (+1pt)
+Assign 'e[2]' to MIA to JFK edge.
+  Passed (+1pt)
+Assign 'e[3]' to MIA to ORD edge.
+  Passed (+1pt)
+Assign 'e[4]' to ORD to SFO edge.
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v[0], v[1], 1258) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v[0], v[2], 187) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v[1], v[2], 456) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v[1], v[3], 867) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether graph.insertDirectedEdge(v[3], v[4], 2704) throws an exception.
+  Exception: Edge already exist
+  Passed (+1pt)
+Check whether element of 'v[0]' is 'BOS' vertex
+  Passed (+1pt)
+Check whether element of 'v[1]' is 'MIA' vertex
+  Passed (+1pt)
+Check whether element of 'v[2]' is 'JFK' vertex
+  Passed (+1pt)
+Check whether element of 'v[3]' is 'ORD' vertex
+  Passed (+1pt)
+Check whether element of 'v[4]' is 'SFO' vertex
+  Passed (+1pt)
+Check whether v[0] and v[1] isAdjacentTo()
+  Passed (+1pt)
+Check whether v[0] and v[2] isAdjacentTo()
+  Passed (+1pt)
+Check whether v[1] and v[2] isAdjacentTo()
+  Passed (+1pt)
+Check whether v[1] and v[3] isAdjacentTo()
+  Passed (+1pt)
+Check whether v[3] and v[4] isAdjacentTo()
+  Passed (+1pt)
+Check whether v[0].isOutgoingTo(v[1])
+  Passed (+1pt)
+Check whether v[0].isOutgoingTo(v[2])
+  Passed (+1pt)
+Check whether v[1].isOutgoingTo(v[2])
+  Passed (+1pt)
+Check whether v[1].isOutgoingTo(v[3])
+  Passed (+1pt)
+Check whether v[3].isOutgoingTo(v[4])
+  Passed (+1pt)
+Check whether v[0].outgoingEdge(v[1]) is 'e[0]'
+  Passed (+1pt)
+Check whether v[0].outgoingEdge(v[2]) is 'e[1]'
+  Passed (+1pt)
+Check whether v[1].outgoingEdge(v[2]) is 'e[2]'
+  Passed (+1pt)
+Check whether v[1].outgoingEdge(v[3]) is 'e[3]'
+  Passed (+1pt)
+Check whether v[3].outgoingEdge(v[4]) is 'e[4]'
+  Passed (+1pt)
+Check whether the first element of v[0].outgoingEdges() is 'e[0]'
+  Passed (+1pt)
+Check whether the second element of v[0].outgoingEdges() is 'e[1]'
+  Passed (+1pt)
+Check whether the first element of v[1].outgoingEdges() is 'e[2]'
+  Passed (+1pt)
+Check whether the second element of v[1].outgoingEdges() is 'e[3]'
+  Passed (+1pt)
+Check whether the first element of v[3].outgoingEdges() is 'e[4]'
+  Passed (+1pt)
+Check whether element of 'e[0]' is 1258
+  Passed (+1pt)
+Check whether element of 'e[1]' is 187
+  Passed (+1pt)
+Check whether element of 'e[2]' is 456
+  Passed (+1pt)
+Check whether element of 'e[3]' is 867
+  Passed (+1pt)
+Check whether element of 'e[4]' is 2704
+  Passed (+1pt)
+Check whether origin vertex of 'e[0]' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e[0]' is 'MIA' via  endVertices()
+  Passed (+1pt)
+Check whether origin vertex of 'e[1]' is 'BOS' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e[1]' is 'JFK' via  endVertices()
+  Passed (+1pt)
+Check whether origin vertex of 'e[2]' is 'MIA' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e[2]' is 'JFK' via  endVertices()
+  Passed (+1pt)
+Check whether origin vertex of 'e[3]' is 'MIA' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e[3]' is 'ORD' via  endVertices()
+  Passed (+1pt)
+Check whether origin vertex of 'e[4]' is 'ORD' via  endVertices()
+  Passed (+1pt)
+Check whether destination vertex of 'e[4]' is 'SFO' via  endVertices()
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'MIA' at 'e[0]'
+  Passed (+1pt)
+Check whether 'MIA' opposite is 'BOS' at 'e[0]'
+  Passed (+1pt)
+Check whether 'BOS' opposite is 'JFK' at 'e[1]'
+  Passed (+1pt)
+Check whether 'JFK' opposite is 'BOS' at 'e[1]'
+  Passed (+1pt)
+Check whether 'MIA' opposite is 'JFK' at 'e[2]'
+  Passed (+1pt)
+Check whether 'JFK' opposite is 'MIA' at 'e[2]'
+  Passed (+1pt)
+Check whether 'MIA' opposite is 'ORD' at 'e[3]'
+  Passed (+1pt)
+Check whether 'ORD' opposite is 'MIA' at 'e[3]'
+  Passed (+1pt)
+Check whether 'ORD' opposite is 'SFO' at 'e[4]'
+  Passed (+1pt)
+Check whether 'SFO' opposite is 'ORD' at 'e[4]'
+  Passed (+1pt)
+Check whether e[0] and e[1] isAdjacentTo()
+  Passed (+1pt)
+Check whether e[1] and e[2] isAdjacentTo()
+  Passed (+1pt)
+Check whether e[3] and e[4] isAdjacentTo()
+  Passed (+1pt)
+Check graph.vertices().size() == 5.
+  Passed (+1pt)
+Check graph.edges().size() == 5.
+  Passed (+1pt)
+Check whether graph.vertices().empty() is false.
+  Passed (+1pt)
+Check whether graph.edges().empty() is false.
+  Passed (+1pt)
+Score of this test case: (=93pt)
+
+Score earned in phase1-testcase07 = 93pt
+
+--------------------------------------------------
+Compiling phase1-testcase08.cpp ...
+Compilation succeeded.
+Running phase1-testcase08 ...
+
+TESTCASE: check memory leak due to remove():
+Create an int graph called "graph".
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 0MB
+  At 50000 step, memory usage = 0MB
+  At 60000 step, memory usage = 0MB
+  At 70000 step, memory usage = 0MB
+  At 80000 step, memory usage = 0MB
+  At 90000 step, memory usage = 0MB
+  At 100000 step, memory usage = 0MB
+  At 110000 step, memory usage = 0MB
+  At 120000 step, memory usage = 0MB
+  At 130000 step, memory usage = 0MB
+  At 140000 step, memory usage = 0MB
+  At 150000 step, memory usage = 0MB
+  At 160000 step, memory usage = 0MB
+  At 170000 step, memory usage = 0MB
+  At 180000 step, memory usage = 0MB
+  At 190000 step, memory usage = 0MB
+  At 200000 step, memory usage = 0MB
+  At 210000 step, memory usage = 0MB
+  At 220000 step, memory usage = 0MB
+  At 230000 step, memory usage = 0MB
+  At 240000 step, memory usage = 0MB
+  At 250000 step, memory usage = 0MB
+  At 260000 step, memory usage = 0MB
+  At 270000 step, memory usage = 0MB
+  At 280000 step, memory usage = 0MB
+  At 290000 step, memory usage = 0MB
+  At 300000 step, memory usage = 0MB
+  At 310000 step, memory usage = 0MB
+  At 320000 step, memory usage = 0MB
+  At 330000 step, memory usage = 0MB
+  At 340000 step, memory usage = 0MB
+  At 350000 step, memory usage = 0MB
+  At 360000 step, memory usage = 0MB
+  At 370000 step, memory usage = 0MB
+  At 380000 step, memory usage = 0MB
+  At 390000 step, memory usage = 0MB
+  At 400000 step, memory usage = 0MB
+  At 410000 step, memory usage = 0MB
+  At 420000 step, memory usage = 0MB
+  At 430000 step, memory usage = 0MB
+  At 440000 step, memory usage = 0MB
+  At 450000 step, memory usage = 0MB
+  At 460000 step, memory usage = 0MB
+
+Error: Program cannot terminate within 10s. Zero point for the rest of this test case.
+
+Score earned in phase1-testcase08 = 0pt
+
+--------------------------------------------------
+Compiling phase1-testcase09.cpp ...
+Compilation succeeded.
+Running phase1-testcase09 ...
+
+TESTCASE: check memory leak due to remove():
+Create an int graph called "graph".
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 0MB
+  At 50000 step, memory usage = 0MB
+  At 60000 step, memory usage = 0MB
+  At 70000 step, memory usage = 0MB
+  At 80000 step, memory usage = 0MB
+  At 90000 step, memory usage = 0MB
+  At 100000 step, memory usage = 0MB
+  At 110000 step, memory usage = 0MB
+  At 120000 step, memory usage = 0MB
+  At 130000 step, memory usage = 0MB
+  At 140000 step, memory usage = 0MB
+  At 150000 step, memory usage = 0MB
+  At 160000 step, memory usage = 0MB
+  At 170000 step, memory usage = 0MB
+  At 180000 step, memory usage = 0MB
+  At 190000 step, memory usage = 0MB
+  At 200000 step, memory usage = 0MB
+  At 210000 step, memory usage = 0MB
+  At 220000 step, memory usage = 0MB
+  At 230000 step, memory usage = 0MB
+  At 240000 step, memory usage = 0MB
+  At 250000 step, memory usage = 0MB
+  At 260000 step, memory usage = 0MB
+  At 270000 step, memory usage = 0MB
+  At 280000 step, memory usage = 0MB
+  At 290000 step, memory usage = 0MB
+  At 300000 step, memory usage = 0MB
+  At 310000 step, memory usage = 0MB
+  At 320000 step, memory usage = 0MB
+  At 330000 step, memory usage = 0MB
+  At 340000 step, memory usage = 0MB
+  At 350000 step, memory usage = 0MB
+  At 360000 step, memory usage = 0MB
+  At 370000 step, memory usage = 0MB
+  At 380000 step, memory usage = 0MB
+  At 390000 step, memory usage = 0MB
+  At 400000 step, memory usage = 0MB
+  At 410000 step, memory usage = 0MB
+  At 420000 step, memory usage = 0MB
+  At 430000 step, memory usage = 0MB
+  At 440000 step, memory usage = 0MB
+  At 450000 step, memory usage = 0MB
+  At 460000 step, memory usage = 0MB
+  At 470000 step, memory usage = 0MB
+  At 480000 step, memory usage = 0MB
+
+Error: Program cannot terminate within 10s. Zero point for the rest of this test case.
+
+Score earned in phase1-testcase09 = 0pt
+
+==================================================
+=== PHASE 2: Tests for assignment4.cpp ===========
+==================================================
+The file named assignment4.cpp exists.
+Score earned for the existence of the assignment4.cpp file = 10pt
+
+The file named FlightMap.h exists.
+Score earned for the existence of the FlightMap.h file = 10pt
+
+--------------------------------------------------
+Compiling phase2-testcase01.cpp ...
+Compilation succeeded.
+Running phase2-testcase01 ...
+
+TESTCASE: Create an empty FlightMap:
+Create a FlightMap.
+Loading graph5.txt ...
+path = map.findShortestRoute("SFO", "JFK").
+  Passed (+2pt)
+Check path.size() == 3
+  Passed (+2pt)
+Check map.calcRouteDistance(path) == 2586
+  Passed (+2pt)
+Score of this test case: (=6pt)
+
+Score earned in phase2-testcase01 = 6pt
+
+--------------------------------------------------
+Compiling phase2-testcase02.cpp ...
+Compilation succeeded.
+Running phase2-testcase02 ...
+
+TESTCASE: Create an  FlightMap which has one airport:
+Create a FlightMap which has one vertex and no edges.
+Create path ...
+Add 'BOS' to Flightmap.
+  Passed (+1pt)
+Check whether path = map.findRoute("BOS", "MIA"). throws an exception.
+  Exception: Airport does not exist
+  Passed (+1pt)
+Check path.size() == 0
+  Passed (+2pt)
+Check map.calcRouteDistance(path) == 0
+  Exception: Route does not exist
+  Failed (+0pt)
+Check whether Shortest_path = map.findShortestRoute("BOS", "MIA"). throws an exception.
+  Exception: Airport does not exist
+  Passed (+1pt)
+Check Shortest_path.size() == 0
+  Passed (+2pt)
+Check map.calcRouteDistance(Shortest_path) == 0
+  Exception: Route does not exist
+  Failed (+0pt)
+Check whether Reachable_airport = map.findReachableAirports("BOS"). dose not throws an exception.
+  Passed (+2pt)
+Check Reachable_airport.size() == 0
+  Passed (+2pt)
+Score of this test case: (=11pt)
+
+Score earned in phase2-testcase02 = 11pt
+
+--------------------------------------------------
+Compiling phase2-testcase03.cpp ...
+Compilation succeeded.
+Running phase2-testcase03 ...
+
+TESTCASE: Create an FlightMap which has three airports and two edges:
+Create a FlightMap.
+Loading graph2.txt ...
+Create variables to store path.
+Create variables to store airports.
+Assign p1 to map.findRoute("BOS", "MIA").
+  Passed (+5pt)
+Assign p2 to map.findRoute("BOS", "JFK").
+  Passed (+5pt)
+Assign p3 to map.findRoute("MIA", "JFK").
+  Passed (+5pt)
+Check whether p4 = map.findRoute("OFD", "JFK"). throws an exception.
+  Exception: Airport does not exist
+  Passed (+1pt)
+Check p1.size() == 2
+  Passed (+5pt)
+Check p2.size() == 2
+  Passed (+5pt)
+Check p3.size() == 3
+  Passed (+5pt)
+Check whether the first element of p1 is 'BOS'
+  Passed (+5pt)
+Check whether the second element of p1 is 'MIA'
+  Passed (+5pt)
+Check whether the first element of p2 is 'BOS'
+  Passed (+5pt)
+Check whether the second element of p2 is 'JFK'
+  Passed (+5pt)
+Check whether the first element of p3 is 'MIA'
+  Passed (+5pt)
+Check whether the second element of p3 is 'BOS'
+  Passed (+5pt)
+Check whether the third element of p3 is 'JFK'
+  Passed (+5pt)
+Check whether p1 distance is 1258
+  Passed (+4pt)
+Check whether p1 distance is 187
+  Passed (+4pt)
+Check whether p1 distance is 1445
+  Passed (+4pt)
+Assign p1 to map.findShortestRoute("BOS", "MIA").
+  Passed (+2pt)
+Assign p2 to map.findShortestRoute("BOS", "JFK").
+  Passed (+2pt)
+Assign p3 to map.findShortestRoute("MIA", "JFK").
+  Passed (+2pt)
+Check whether p4 = map.findShortestRoute("OFD", "JFK"). throws an exception.
+  Exception: Airport does not exist
+  Passed (+1pt)
+Check p1.size() == 2
+  Passed (+2pt)
+Check p2.size() == 2
+  Passed (+2pt)
+Check p3.size() == 3
+  Passed (+2pt)
+Check whether the first element of p1 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of p1 is 'MIA'
+  Passed (+2pt)
+Check whether the first element of p2 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of p2 is 'JFK'
+  Passed (+2pt)
+Check whether the first element of p3 is 'MIA'
+  Passed (+2pt)
+Check whether the second element of p3 is 'BOS'
+  Passed (+2pt)
+Check whether the third element of p3 is 'JFK'
+  Passed (+2pt)
+Check whether p1 distance is 1258
+  Passed (+2pt)
+Check whether p2 distance is 187
+  Passed (+2pt)
+Check whether p3 distance is 1445
+  Passed (+2pt)
+Assign a1 to map.findShortestRoute("BOS").
+  Passed (+2pt)
+Assign a2 to map.findShortestRoute("MIA").
+  Passed (+2pt)
+Assign a3 to map.findShortestRoute("JFK").
+  Passed (+2pt)
+Check whether a4 = map.findShortestRoute("OFD"). throws an exception.
+  Exception: Airport does not exist
+  Passed (+1pt)
+Check a1.size() == 2
+  Passed (+2pt)
+Check a2.size() == 2
+  Failed (+0pt)
+Check a3.size() == 2
+  Failed (+0pt)
+Check whether the first element of a1 is 'MIA'
+  Passed (+2pt)
+Check whether the second element of a1 is 'JFK'
+  Passed (+2pt)
+Check whether the first element of a2 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of a2 is 'JFK'
+  Failed (+0pt)
+Check whether the first element of a3 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of a3 is 'MIA'
+  Failed (+0pt)
+Score of this test case: (=128pt)
+
+Score earned in phase2-testcase03 = 128pt
+
+--------------------------------------------------
+Compiling phase2-testcase04.cpp ...
+Compilation succeeded.
+Running phase2-testcase04 ...
+
+TESTCASE: Create an FlightMap which has three airports and three edges with fully-connected:
+Create a FlightMap.
+Loading graph3.txt ...
+Create variables to store path.
+Create variables to store airports.
+Assign p1 to map.findShortestRoute("BOS", "MIA").
+  Passed (+2pt)
+Assign p2 to map.findShortestRoute("BOS", "JFK").
+  Passed (+2pt)
+Assign p3 to map.findShortestRoute("MIA", "JFK").
+  Passed (+2pt)
+Check whether p4 = map.findShortestRoute("OFD", "JFK"). throws an exception.
+  Exception: Airport does not exist
+  Passed (+1pt)
+Check p1.size() == 3
+  Passed (+2pt)
+Check p2.size() == 2
+  Passed (+2pt)
+Check p3.size() == 2
+  Passed (+2pt)
+Check whether the first element of p1 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of p1 is 'JFK'
+  Passed (+2pt)
+Check whether the third element of p1 is 'MIA'
+  Passed (+2pt)
+Check whether the first element of p2 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of p2 is 'JFK'
+  Passed (+2pt)
+Check whether the first element of p3 is 'MIA'
+  Passed (+2pt)
+Check whether the second element of p3 is 'JFK'
+  Passed (+2pt)
+Check whether p1 distance is 643
+  Passed (+2pt)
+Check whether p2 distance is 187
+  Passed (+2pt)
+Check whether p3 distance is 456
+  Passed (+2pt)
+Assign a1 to map.findReachableAirports("BOS").
+  Passed (+2pt)
+Assign a2 to map.findReachableAirports("MIA").
+  Passed (+2pt)
+Assign a3 to map.findReachableAirports("JFK").
+  Passed (+2pt)
+Check whether a4 = map.findReachableAirports("OFD"). throws an exception.
+  Exception: Airport does not exist
+  Passed (+1pt)
+Check a1.size() == 2
+  Passed (+2pt)
+Check a2.size() == 2
+  Passed (+2pt)
+Check a3.size() == 2
+  Passed (+2pt)
+Check whether the first element of a1 is 'MIA'
+  Passed (+2pt)
+Check whether the second element of a1 is 'JFK'
+  Passed (+2pt)
+Check whether the first element of a2 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of a2 is 'JFK'
+  Passed (+2pt)
+Check whether the first element of a3 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of a3 is 'MIA'
+  Passed (+2pt)
+Score of this test case: (=58pt)
+
+Score earned in phase2-testcase04 = 58pt
+
+--------------------------------------------------
+Compiling phase2-testcase05.cpp ...
+Compilation succeeded.
+Running phase2-testcase05 ...
+
+TESTCASE: Create an FlightMap which has five airports and five edges:
+Create a FlightMap.
+Loading graph4.txt ...
+Create variables to store path.
+Create variables to store airports.
+Assign p4 to map.findRoute("BOS", "ORD").
+  Passed (+4pt)
+Assign p5 to map.findRoute("BOS", "SFO").
+  Passed (+4pt)
+Check p4.size() == 2
+  Passed (+4pt)
+Check p5.size() == 2
+  Passed (+4pt)
+Check whether the first element of p4 is 'BOS'
+  Passed (+4pt)
+Check whether the second element of p4 is 'ORD'
+  Passed (+4pt)
+Check whether the first element of p5 is 'BOS'
+  Passed (+4pt)
+Check whether the second element of p5 is 'SFO'
+  Passed (+4pt)
+Check whether p4 distance is 867
+  Passed (+4pt)
+Check whether p5 distance is 2704
+  Passed (+4pt)
+Assign p1 to map.findShortestRoute("BOS", "MIA").
+  Passed (+2pt)
+Assign p2 to map.findShortestRoute("BOS", "JFK").
+  Passed (+2pt)
+Assign p3 to map.findShortestRoute("MIA", "JFK").
+  Passed (+2pt)
+Assign p3 to map.findShortestRoute("BOS", "ORD").
+  Passed (+2pt)
+Assign p3 to map.findShortestRoute("BOS", "SFO").
+  Passed (+2pt)
+Check p1.size() == 3
+  Passed (+2pt)
+Check p2.size() == 2
+  Passed (+2pt)
+Check p3.size() == 2
+  Passed (+2pt)
+Check p4.size() == 2
+  Passed (+2pt)
+Check p5.size() == 2
+  Passed (+2pt)
+Check whether the first element of p1 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of p1 is 'JFK'
+  Passed (+2pt)
+Check whether the third element of p1 is 'MIA'
+  Passed (+2pt)
+Check whether the first element of p2 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of p2 is 'JFK'
+  Passed (+2pt)
+Check whether the first element of p3 is 'MIA'
+  Passed (+2pt)
+Check whether the second element of p3 is 'JFK'
+  Passed (+2pt)
+Check whether the first element of p4 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of p4 is 'ORD'
+  Passed (+2pt)
+Check whether the first element of p5 is 'BOS'
+  Passed (+2pt)
+Check whether the second element of p5 is 'SFO'
+  Passed (+2pt)
+Check whether p1 distance is 643
+  Passed (+2pt)
+Check whether p2 distance is 187
+  Passed (+2pt)
+Check whether p3 distance is 456
+  Passed (+2pt)
+Check whether p4 distance is 867
+  Passed (+2pt)
+Check whether p5 distance is 2704
+  Passed (+2pt)
+Assign a1 to map.findReachableAirports("BOS").
+  Passed (+2pt)
+Assign a2 to map.findReachableAirports("MIA").
+  Passed (+2pt)
+Assign a3 to map.findReachableAirports("JFK").
+  Passed (+2pt)
+Assign a4 to map.findReachableAirports("ORD").
+  Passed (+2pt)
+Assign a5 to map.findReachableAirports("SFO").
+  Passed (+2pt)
+Check a1.size() == 4
+  Passed (+2pt)
+Check a2.size() == 4
+  Failed (+0pt)
+Check a3.size() == 4
+  Failed (+0pt)
+Check a4.size() == 4
+  Failed (+0pt)
+Check a5.size() == 4
+  Failed (+0pt)
+Check whether the first element of a1 is 'MIA'
+  Passed (+2pt)
+Check whether the second element of a1 is 'JFK'
+  Passed (+2pt)
+Check whether the third element of a1 is 'ORD'
+  Passed (+2pt)
+Check whether the forth element of a1 is 'SFO'
+  Passed (+2pt)
+Score of this test case: (=112pt)
+
+Score earned in phase2-testcase05 = 112pt
+
+==================================================
+=== PHASE 3: Behavioral Tests ====================
+==================================================
+Compiling submitted files ...
+Compilation succeeded.
+--------------------------------------------------
+Input file: input01.txt
+Correct output.
+Score earned in input01 = 15pt
+
+--------------------------------------------------
+Input file: input02.txt
+Correct output.
+Score earned in input02 = 15pt
+
+--------------------------------------------------
+Input file: input03.txt
+Correct output.
+Score earned in input03 = 20pt
+
+--------------------------------------------------
+Input file: input04.txt
+Correct output.
+Score earned in input04 = 20pt
+
+--------------------------------------------------
+Input file: input05.txt
+Correct output.
+Score earned in input05 = 20pt
+
+--------------------------------------------------
+Input file: input06.txt
+Correct output.
+Score earned in input06 = 20pt
+
+--------------------------------------------------
+Input file: input07.txt
+Correct output.
+Score earned in input07 = 20pt
+
+--------------------------------------------------
+Input file: input08.txt
+Correct output.
+Score earned in input08 = 30pt
+
+--------------------------------------------------
+Input file: input09.txt
+Correct output.
+Score earned in input09 = 30pt
+
+--------------------------------------------------
+Input file: input10.txt
+Correct output.
+Score earned in input10 = 30pt
+
+==================================================
+=== SUMMARY ======================================
+==================================================
+Total score = 988pt out of 1037pt
+The final score = 95%

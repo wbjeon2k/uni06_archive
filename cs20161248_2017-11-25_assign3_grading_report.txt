@@ -1,0 +1,2658 @@
+Grading Report for cs20161248 for programs submitted on 2017-11-25
+This file is generated at 10:37:48 on 2017-11-27.
+
+==================================================
+=== PRELIMINARY TESTS ============================
+==================================================
+The file named README.TXT does not exist.
+Score earned for the existence of the README.TXT file = 0pt
+
+==================================================
+=== PHASE 1: Tests for HashMap.h =================
+==================================================
+The file named HashMap.h exists.
+Score earned for the existence of the HashMap.h file = 10pt
+
+--------------------------------------------------
+Compiling phase1-testcase01.cpp ...
+Compilation succeeded.
+Running phase1-testcase01 ...
+
+TESTCASE: Create an empty hash map:
+Create a  int to string hash map called "hmap".
+  Passed (+1pt)
+Check hmap.size() == 0.
+  Passed (+1pt)
+Check whether hmap.empty().
+  Passed (+1pt)
+Score of this test case: (=3pt)
+
+Score earned in phase1-testcase01 = 3pt
+
+--------------------------------------------------
+Compiling phase1-testcase02.cpp ...
+Compilation succeeded.
+Running phase1-testcase02 ...
+
+TESTCASE: Create an hash map with one element:
+Create a  int to string hash map called "hmap".
+  Passed (+1pt)
+Add a table with the key is 1 and the value is "hello" to hmap.
+  Passed (+1pt)
+Check hmap.size() == 1.
+  Passed (+1pt)
+Check whether hmap.empty() is false.
+  Passed (+1pt)
+Check (*hmap.begin()).value() == "hello".
+  Passed (+1pt)
+Check (*hmap.find(1)).value() == "hello".
+  Passed (+1pt)
+Check (*hmap.find(1)).key() == 1.
+  Passed (+1pt)
+Check hmap[1] == "hello".
+  Passed (+1pt)
+Check whether we can remove "hello"' from hmap.
+  Passed (+1pt)
+Check whether hamp.erase(1) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check whether (*hmap.find(1)).value() does not throw an exception.
+  Passed (+1pt)
+Check hmap.size() == 0.
+  Passed (+1pt)
+Check whether hmap.empty().
+  Passed (+1pt)
+Score of this test case: (=13pt)
+
+Score earned in phase1-testcase02 = 13pt
+
+--------------------------------------------------
+Compiling phase1-testcase03.cpp ...
+Compilation succeeded.
+Running phase1-testcase03 ...
+
+TESTCASE: Modify an hash map with one element:
+Create a  int to string hash map called "hmap".
+  Passed (+1pt)
+Add a table with the key is 1 and the value is "hello" to hmap.
+  Passed (+1pt)
+Check hmap.size() == 1.
+  Passed (+1pt)
+Check whether map.empty() is false.
+  Passed (+1pt)
+Check (*hmap.begin()).value() == "hello".
+  Passed (+1pt)
+Check (*hmap.find(1)).value() == "hello".
+  Passed (+1pt)
+Check (*hmap.find(1)).key() == 1.
+  Passed (+1pt)
+Check hmap[1] == "hello".
+  Passed (+1pt)
+Change "hello" to "world" via operator[].
+  Passed (+1pt)
+Check (*hmap.begin()).value() == "world".
+  Passed (+1pt)
+Check (*hmap.find(1)).value() == "world".
+  Passed (+1pt)
+Check (*hmap.find(1)).key() == 1.
+  Passed (+1pt)
+Check hmap[1] == "world".
+  Passed (+1pt)
+Change "world" to "data structure" via setValue().
+  Passed (+1pt)
+Check (*hmap.begin()).value() == "data structure".
+  Passed (+1pt)
+Check (*hmap.find(1)).value() == "data structure".
+  Passed (+1pt)
+Check (*hmap.find(1)).key() == 1.
+  Passed (+1pt)
+Check hmap[1] == "data structure".
+  Passed (+1pt)
+Check whether we can remove "data structure"' from hmap.
+  Passed (+1pt)
+Check whether (*hmap.find(1)).value() does not throw an exception.
+  Passed (+1pt)
+Check whether hmap.erase(1) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check hmap.size() == 0.
+  Passed (+1pt)
+Check whether hmap.empty().
+  Passed (+1pt)
+Score of this test case: (=23pt)
+
+Score earned in phase1-testcase03 = 23pt
+
+--------------------------------------------------
+Compiling phase1-testcase04.cpp ...
+Compilation succeeded.
+Running phase1-testcase04 ...
+
+TESTCASE: Create an hash map with two element:
+Create a  int to string hash map called "hmap".
+  Passed (+1pt)
+Add a table with the key is 1 and the value is "hello" to hmap.
+  Passed (+1pt)
+Add a table with the key is 1 and the value is "world" to hmap.
+  Passed (+1pt)
+Check hmap.size() == 2.
+  Passed (+1pt)
+Check whether map.empty() is false.
+  Passed (+1pt)
+Check (*hmap.begin()).value() == "hello".
+  Passed (+1pt)
+Check (*hmap.find(1)).value() == "hello".
+  Passed (+1pt)
+Check (*hmap.find(1)).key() == 1.
+  Passed (+1pt)
+Check hmap[1] == "hello".
+  Passed (+1pt)
+Check (*(++hmap.begin())).value() == "world".
+  Passed (+1pt)
+Check (*hmap.find(2)).value() == "world".
+  Passed (+1pt)
+Check (*hmap.find(2)).key() == 2.
+  Passed (+1pt)
+Check hmap[2] == "world".
+  Passed (+1pt)
+Check whether we can remove "hello"' from hmap.
+  Passed (+1pt)
+Check whether (*hmap.find(1)).value() does not throw an exception.
+  Passed (+1pt)
+Check whether hamp.erase(1) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check hmap.size() == 1.
+  Passed (+1pt)
+Check whether map.empty() is false.
+  Passed (+1pt)
+Check whether we can remove "world"' from hmap.
+  Passed (+1pt)
+Check whether (*hmap.find(2)).value() does not throw an exception.
+  Passed (+1pt)
+Check whether hamp.erase(2) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check hmap.size() == 0.
+  Passed (+1pt)
+Check whether hmap.empty().
+  Passed (+1pt)
+Score of this test case: (=23pt)
+
+Score earned in phase1-testcase04 = 23pt
+
+--------------------------------------------------
+Compiling phase1-testcase05.cpp ...
+Compilation succeeded.
+Running phase1-testcase05 ...
+
+TESTCASE: Create an hash map with three element:
+Create a  int to string hash map called "hmap".
+  Passed (+1pt)
+Add a table with the key is 0 and the value is "hello" to hmap.
+  Passed (+1pt)
+Add a table with the key is 1 and the value is "world" to hmap.
+  Passed (+1pt)
+Add a table with the key is 1 and the value is "data" to hmap.
+  Passed (+1pt)
+Check hmap.size() == 3.
+  Passed (+1pt)
+Check whether map.empty() is false.
+  Passed (+1pt)
+Check (*hmap.begin()).value() == "hello".
+  Passed (+1pt)
+Check (*hmap.find(1)).value() == "hello".
+  Passed (+1pt)
+Check (*hmap.find(1)).key() == 1.
+  Passed (+1pt)
+Check hmap[1] == "hello".
+  Passed (+1pt)
+Check (*(++hmap.begin())).value() == "world".
+  Passed (+1pt)
+Check (*hmap.find(2)).value() == "world".
+  Passed (+1pt)
+Check (*hmap.find(2)).key() == 2.
+  Passed (+1pt)
+Check hmap[2] == "world".
+  Passed (+1pt)
+Check (*hmap.find(3)).value() == "data".
+  Passed (+1pt)
+Check (*hmap.find(3)).key() == 3.
+  Passed (+1pt)
+Check hmap[3] == "data".
+  Passed (+1pt)
+Check whether we can remove "hello"' from hmap.
+  Passed (+1pt)
+Check whether (*hmap.find(1)).value() does not throw an exception.
+  Passed (+1pt)
+Check whether hamp.erase(1) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check hmap.size() == 2.
+  Passed (+1pt)
+Check whether map.empty() is false.
+  Passed (+1pt)
+Check whether we can remove "world"' from hmap.
+  Passed (+1pt)
+Check whether (*hmap.find(2)).value() does not throw an exception.
+  Passed (+1pt)
+Check whether hamp.erase(2) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check whether hamp.erase(1) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check map.size() == 1.
+  Passed (+1pt)
+Check whether map.empty() is false.
+  Passed (+1pt)
+Check whether we can remove "data"' from hmap.
+  Passed (+1pt)
+Check whether (*hmap.find(2)).value() does not throw an exception.
+  Passed (+1pt)
+Check whether hamp.erase(3) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check whether hamp.erase(2) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check whether hamp.erase(1) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check hamp.size() == 0.
+  Passed (+1pt)
+Check whether hamp.empty().
+  Passed (+1pt)
+Score of this test case: (=35pt)
+
+Score earned in phase1-testcase05 = 35pt
+
+--------------------------------------------------
+Compiling phase1-testcase06.cpp ...
+Compilation succeeded.
+Running phase1-testcase06 ...
+
+TESTCASE: Create an hash map with four element:
+Create a  int to string hash map called "hmap".
+  Passed (+1pt)
+Add a table with the key is 0 and the value is "hello" to hmap.
+  Passed (+1pt)
+Add a table with the key is 1 and the value is "world" to hmap.
+  Passed (+1pt)
+Add a table with the key is 1 and the value is "data" to hmap.
+  Passed (+1pt)
+Add a table with the key is 1 and the value is "structure" to hmap.
+  Passed (+1pt)
+Check hmap.size() == 4.
+  Passed (+1pt)
+Check whether map.empty() is false.
+  Passed (+1pt)
+Check (*hmap.begin()).value() == "hello".
+  Passed (+1pt)
+Check (*hmap.find(1)).value() == "hello".
+  Passed (+1pt)
+Check (*hmap.find(1)).key() == 1.
+  Passed (+1pt)
+Check hmap[1] == "hello".
+  Passed (+1pt)
+Check (*(++hmap.begin())).value() == "world".
+  Passed (+1pt)
+Check (*hmap.find(2)).value() == "world".
+  Passed (+1pt)
+Check (*hmap.find(2)).key() == 2.
+  Passed (+1pt)
+Check hmap[2] == "world".
+  Passed (+1pt)
+Check (*hmap.find(3)).value() == "data".
+  Passed (+1pt)
+Check (*hmap.find(3)).key() == 3.
+  Passed (+1pt)
+Check hmap[3] == "data".
+  Passed (+1pt)
+Check (*hmap.find(7)).value() == "structure".
+  Passed (+1pt)
+Check (*hmap.find(7)).key() == 7.
+  Passed (+1pt)
+Check hmap[7] == "structure".
+  Passed (+1pt)
+Change "hello" to "bye" via operator[].
+  Passed (+1pt)
+Check (*hmap.find(1)).value() == "bye".
+  Passed (+1pt)
+Check hmap[1] == "bye".
+  Passed (+1pt)
+Check whether we can remove "bye"' from hmap.
+  Passed (+1pt)
+Check whether (*hmap.find(1)).value() does not throw an exception.
+  Passed (+1pt)
+Check whether hamp.erase(8) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check hmap.size() == 3.
+  Passed (+1pt)
+Check whether map.empty() is false.
+  Passed (+1pt)
+Check whether we can remove "world"' from hmap.
+  Passed (+1pt)
+Check whether (*hmap.find(2)).value() does not throw an exception.
+  Passed (+1pt)
+Check whether hamp.erase(2) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check whether hamp.erase(1) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check map.size() == 2.
+  Passed (+1pt)
+Check whether map.empty() is false.
+  Passed (+1pt)
+Check whether we can remove "data"' from hmap.
+  Passed (+1pt)
+Check whether (*hmap.find(2)).value() does not throw an exception.
+  Passed (+1pt)
+Check whether hamp.erase(3) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check whether hamp.erase(2) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check whether hamp.erase(1) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check map.size() == 1.
+  Passed (+1pt)
+Check whether we can remove "structure"' from hmap.
+  Passed (+1pt)
+Check whether (*hmap.find(7)).value() does not throw an exception.
+  Passed (+1pt)
+Check whether hamp.erase(3) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check whether hamp.erase(2) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check whether hamp.erase(1) throws an exception.
+  Exception: Erase of nonexistence
+  Passed (+1pt)
+Check map.size() == 0.
+  Passed (+1pt)
+Check whether map.empty().
+  Passed (+1pt)
+Score of this test case: (=48pt)
+
+Score earned in phase1-testcase06 = 48pt
+
+--------------------------------------------------
+Compiling phase1-testcase07.cpp ...
+Compilation succeeded.
+Running phase1-testcase07 ...
+
+TESTCASE: check memory leak due to erase():
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 0MB
+  At 50000 step, memory usage = 0MB
+  At 60000 step, memory usage = 0MB
+  At 70000 step, memory usage = 0MB
+  At 80000 step, memory usage = 0MB
+  At 90000 step, memory usage = 0MB
+  At 100000 step, memory usage = 0MB
+  At 110000 step, memory usage = 0MB
+  At 120000 step, memory usage = 0MB
+  At 130000 step, memory usage = 0MB
+  At 140000 step, memory usage = 0MB
+  At 150000 step, memory usage = 0MB
+  At 160000 step, memory usage = 0MB
+  At 170000 step, memory usage = 0MB
+  At 180000 step, memory usage = 0MB
+  At 190000 step, memory usage = 0MB
+  At 200000 step, memory usage = 0MB
+  At 210000 step, memory usage = 0MB
+  At 220000 step, memory usage = 0MB
+  At 230000 step, memory usage = 0MB
+  At 240000 step, memory usage = 0MB
+  At 250000 step, memory usage = 0MB
+  At 260000 step, memory usage = 0MB
+  At 270000 step, memory usage = 0MB
+  At 280000 step, memory usage = 0MB
+  At 290000 step, memory usage = 0MB
+  At 300000 step, memory usage = 0MB
+  At 310000 step, memory usage = 0MB
+  At 320000 step, memory usage = 0MB
+  At 330000 step, memory usage = 0MB
+  At 340000 step, memory usage = 0MB
+  At 350000 step, memory usage = 0MB
+  At 360000 step, memory usage = 0MB
+  At 370000 step, memory usage = 0MB
+  At 380000 step, memory usage = 0MB
+  At 390000 step, memory usage = 0MB
+  At 400000 step, memory usage = 0MB
+  At 410000 step, memory usage = 0MB
+  At 420000 step, memory usage = 0MB
+  At 430000 step, memory usage = 0MB
+  At 440000 step, memory usage = 0MB
+  At 450000 step, memory usage = 0MB
+  At 460000 step, memory usage = 0MB
+  At 470000 step, memory usage = 0MB
+  At 480000 step, memory usage = 0MB
+  At 490000 step, memory usage = 0MB
+  At 500000 step, memory usage = 0MB
+  At 510000 step, memory usage = 0MB
+  At 520000 step, memory usage = 0MB
+  At 530000 step, memory usage = 0MB
+  At 540000 step, memory usage = 0MB
+  At 550000 step, memory usage = 0MB
+  At 560000 step, memory usage = 0MB
+  At 570000 step, memory usage = 0MB
+  At 580000 step, memory usage = 0MB
+  At 590000 step, memory usage = 0MB
+  At 600000 step, memory usage = 0MB
+  At 610000 step, memory usage = 0MB
+  At 620000 step, memory usage = 0MB
+  At 630000 step, memory usage = 0MB
+  At 640000 step, memory usage = 0MB
+  At 650000 step, memory usage = 0MB
+  At 660000 step, memory usage = 0MB
+  At 670000 step, memory usage = 0MB
+  At 680000 step, memory usage = 0MB
+  At 690000 step, memory usage = 0MB
+  At 700000 step, memory usage = 0MB
+  At 710000 step, memory usage = 0MB
+  At 720000 step, memory usage = 0MB
+  At 730000 step, memory usage = 0MB
+  At 740000 step, memory usage = 0MB
+  At 750000 step, memory usage = 0MB
+  At 760000 step, memory usage = 0MB
+  At 770000 step, memory usage = 0MB
+  At 780000 step, memory usage = 0MB
+  At 790000 step, memory usage = 0MB
+  At 800000 step, memory usage = 0MB
+  At 810000 step, memory usage = 0MB
+  At 820000 step, memory usage = 0MB
+  At 830000 step, memory usage = 0MB
+  At 840000 step, memory usage = 0MB
+  At 850000 step, memory usage = 0MB
+  At 860000 step, memory usage = 0MB
+  At 870000 step, memory usage = 0MB
+  At 880000 step, memory usage = 0MB
+  At 890000 step, memory usage = 0MB
+  At 900000 step, memory usage = 0MB
+  At 910000 step, memory usage = 0MB
+  At 920000 step, memory usage = 0MB
+  At 930000 step, memory usage = 0MB
+  At 940000 step, memory usage = 0MB
+  At 950000 step, memory usage = 0MB
+  At 960000 step, memory usage = 0MB
+  At 970000 step, memory usage = 0MB
+  At 980000 step, memory usage = 0MB
+  At 990000 step, memory usage = 0MB
+  At 1000000 step, memory usage = 0MB
+  No memory leak is detected.
+  Passed (+25pt)
+Score of this test case: (=25pt)
+
+Score earned in phase1-testcase07 = 25pt
+
+==================================================
+=== PHASE 2: Tests for ArrayCompleteTree.h =======
+==================================================
+The file named ArrayCompleteTree.h exists.
+Score earned for the existence of the ArrayCompleteTree.h file = 10pt
+
+--------------------------------------------------
+Compiling phase2-testcase01.cpp ...
+Compilation succeeded.
+Running phase2-testcase01 ...
+
+TESTCASE: Create an empty array-based complete binary tree:
+Create an integer array-based complete binary tree called "cbtree".
+  Passed (+1pt)
+Check tree.cbtree() == 0.
+  Passed (+1pt)
+Check whether cbtree.root() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.last() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether removing from cbtree throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Score of this test case: (=11pt)
+
+Score earned in phase2-testcase01 = 11pt
+
+--------------------------------------------------
+Compiling phase2-testcase02.cpp ...
+Compilation succeeded.
+Running phase2-testcase02 ...
+
+TESTCASE: Create an array-based complete binary tree with one element:
+Create an char array-based complete binary tree called "cbtree".
+  Passed (+1pt)
+AddLast 'a' to cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 0.
+  Passed (+1pt)
+Check whether cbtree.root() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.last() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether removing from cbtree throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check cbtree.cleanup().
+  Exception: Tree is empty
+  Failed (+0pt)
+Score of this test case: (=22pt)
+
+Score earned in phase2-testcase02 = 22pt
+
+--------------------------------------------------
+Compiling phase2-testcase03.cpp ...
+Compilation succeeded.
+Running phase2-testcase03 ...
+
+TESTCASE: Modify an array-based complete binary tree with two element:
+Create an char array-based complete binary tree called "cbtree".
+  Passed (+1pt)
+AddLast 'a' to cbtree.
+  Passed (+1pt)
+Change 'a' to 'b' via root().
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Change 'b' to 'c' via last().
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'c'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 0.
+  Passed (+1pt)
+Check whether cbtree.root() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.last() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether removing from cbtree throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check cbtree.cleanup().
+  Exception: Tree is empty
+  Failed (+0pt)
+Score of this test case: (=33pt)
+
+Score earned in phase2-testcase03 = 33pt
+
+--------------------------------------------------
+Compiling phase2-testcase04.cpp ...
+Compilation succeeded.
+Running phase2-testcase04 ...
+
+TESTCASE: Create an array-based complete binary tree with two element:
+Create an char array-based complete binary tree called "cbtree".
+  Passed (+1pt)
+AddLast 'a' to cbtree.
+  Passed (+1pt)
+AddLast 'b' to cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 2.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Change 'b' to 'c' via cbtree.left(cbtree.root()).
+  Passed (+1pt)
+Check cbtree.size() == 2.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Swap 'a' to 'c' via swap().
+  Passed (+1pt)
+Check cbtree.size() == 2.
+  Passed (+1pt)
+Check whether cbtree.root() == 'c'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Swap 'c' to 'a' via swap().
+  Passed (+1pt)
+Check cbtree.size() == 2.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+AddLast 'b' to cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 0.
+  Passed (+1pt)
+Check whether cbtree.root() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.last() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether removing from cbtree throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check cbtree.cleanup().
+  Exception: Tree is empty
+  Failed (+0pt)
+Score of this test case: (=79pt)
+
+Score earned in phase2-testcase04 = 79pt
+
+--------------------------------------------------
+Compiling phase2-testcase05.cpp ...
+Compilation succeeded.
+Running phase2-testcase05 ...
+
+TESTCASE: Create an array-based complete binary tree with three element:
+Create an char array-based complete binary tree called "cbtree".
+  Passed (+1pt)
+AddLast 'a' to cbtree.
+  Passed (+1pt)
+AddLast 'b' to cbtree.
+  Passed (+1pt)
+AddLast 'c' to cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 3.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) == 'c'.
+  Passed (+1pt)
+Change 'b' to 'c' via cbtree.left(cbtree.root()).
+  Passed (+0pt)
+Check cbtree.size() == 3.
+  Passed (+0pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+0pt)
+Check whether cbtree.last() == 'c'.
+  Passed (+0pt)
+Check whether cbtree.left(cbtree.root()) == 'c'.
+  Passed (+0pt)
+Check whether cbtree.right(cbtree.root()) == 'c'.
+  Passed (+0pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+0pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+0pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+0pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+0pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+0pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+0pt)
+Change 'c' to 'b' via cbtree.right(cbtree.root()).
+  Passed (+1pt)
+Check cbtree.size() == 3.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'c'.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Swap 'c' to 'b' via swap().
+  Passed (+0pt)
+Check cbtree.size() == 3.
+  Passed (+0pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+0pt)
+Check whether cbtree.last() == 'c'.
+  Passed (+0pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+0pt)
+Check whether cbtree.right(cbtree.root()) == 'c'.
+  Passed (+0pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+0pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+0pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+0pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+0pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+0pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+0pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 2.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 0.
+  Passed (+1pt)
+Check whether cbtree.root() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.last() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether removing from cbtree throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+AddLast 'b' to cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 0.
+  Passed (+1pt)
+Check whether cbtree.root() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.last() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether removing from cbtree throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check cbtree.cleanup().
+  Exception: Tree is empty
+  Failed (+0pt)
+Score of this test case: (=81pt)
+
+Score earned in phase2-testcase05 = 81pt
+
+--------------------------------------------------
+Compiling phase2-testcase06.cpp ...
+Compilation succeeded.
+Running phase2-testcase06 ...
+
+TESTCASE: Create an array-based complete binary tree with four element:
+Create an char array-based complete binary tree called "cbtree".
+  Passed (+1pt)
+AddLast 'a' to cbtree.
+  Passed (+1pt)
+AddLast 'b' to cbtree.
+  Passed (+1pt)
+AddLast 'c' to cbtree.
+  Passed (+1pt)
+AddLast 'd' to cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 4.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'd'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) == 'b.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.left(cbtree.root())) == 'd'.
+  Passed (+1pt)
+Change 'd' to 'e' via cbtree.last().
+  Passed (+1pt)
+Check cbtree.size() == 4.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'e'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.left(cbtree.root())) == 'e'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.left(cbtree.root())) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 3.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) == 'c'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Change 'c' to 'b' via cbtree.right(cbtree.root()).
+  Passed (+1pt)
+Check cbtree.size() == 3.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 2.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Swap 'a' and 'b' via swap().
+  Passed (+0pt)
+Check cbtree.size() == 2.
+  Passed (+0pt)
+Check whether cbtree.root() == 'b'.
+  Passed (+0pt)
+Check whether cbtree.last() == 'a'.
+  Passed (+0pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+0pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+0pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+0pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+0pt)
+Check whether cbtree.right(cbtree.root()) throw an exception.
+  Exception: Index out of range
+  Passed (+0pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+0pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 0.
+  Passed (+1pt)
+Check whether cbtree.root() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.last() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether removing from cbtree throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check cbtree.cleanup().
+  Exception: Tree is empty
+  Failed (+0pt)
+Score of this test case: (=88pt)
+
+Score earned in phase2-testcase06 = 88pt
+
+--------------------------------------------------
+Compiling phase2-testcase07.cpp ...
+Compilation succeeded.
+Running phase2-testcase07 ...
+
+TESTCASE: Create an array-based complete binary tree with three element and check the doubling strategy:
+Create an char array-based complete binary tree called "cbtree".
+  Passed (+1pt)
+AddLast 'a' to cbtree.
+  Passed (+1pt)
+AddLast 'b' to cbtree.
+  Passed (+1pt)
+Position p[0] point to the root node 
+  Passed (+1pt)
+Position p[1] point to the last(left of the root node) node 
+  Passed (+1pt)
+Check cbtree.size() == 2.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether the element referred by root position == 'a'.
+  Passed (+1pt)
+Check whether the element referred by p[1] position == 'b'.
+  Passed (+1pt)
+AddLast 'c' to cbtree. doubling strategy
+  Passed (+1pt)
+Position p[2] point to the last(right of the root node) node 
+  Passed (+1pt)
+AddLast 'd' to cbtree.
+  Passed (+1pt)
+Position p[3] point to the last(right of the root node) node 
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'd'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) == 'b.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.left(cbtree.root())) == 'd'.
+  Passed (+1pt)
+Check whether the element referred by p[0] position == 'a'.
+  Passed (+1pt)
+Check whether the element referred by p[1] position == 'b'.
+  Passed (+1pt)
+Check whether the element referred by p[2] position == 'c'.
+  Passed (+1pt)
+Check whether the element referred by p[3] position == 'd'.
+  Passed (+1pt)
+Change 'd' to 'e' via cbtree.last().
+  Passed (+1pt)
+Check cbtree.size() == 4.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'e'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.left(cbtree.root())) == 'e'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.left(cbtree.root())) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether the element referred by p[0] position == 'a'.
+  Passed (+1pt)
+Check whether the element referred by p[1] position == 'b'.
+  Passed (+1pt)
+Check whether the element referred by p[2] position == 'c'.
+  Passed (+1pt)
+Check whether the element referred by p[3] position == 'e'.
+  Passed (+1pt)
+Swap 'c' and 'e' via swap() via p[2] and p[3].
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) == 'e'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.left(cbtree.root())) == 'c'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.left(cbtree.root())) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether the element referred by p[0] position == 'a'.
+  Passed (+1pt)
+Check whether the element referred by p[1] position == 'b'.
+  Passed (+1pt)
+Check whether the element referred by p[2] position == 'c'.
+  Passed (+1pt)
+Check whether the element referred by p[3] position == 'e'.
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 3.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'e'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) == 'e'.
+  Passed (+1pt)
+Check whether the element referred by p[0] position == 'a'.
+  Passed (+1pt)
+Check whether the element referred by p[1] position == 'b'.
+  Passed (+1pt)
+Check whether the element referred by p[2] position == 'e'.
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 2.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) == 'b'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) does not throw an exception.
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether the element referred by p[0] position == 'a'.
+  Passed (+1pt)
+Check whether the element referred by p[1] position == 'b'.
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether the element referred by root position == 'a'.
+  Passed (+1pt)
+Change 'a' to 'b' via root().
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.last() == 'b'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether the element referred by root position == 'b'.
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 0.
+  Passed (+1pt)
+Check whether cbtree.root() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.last() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether removing from cbtree throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+AddLast 'a' to cbtree.
+  Passed (+1pt)
+Position p[0] point to the root node 
+  Passed (+1pt)
+Check cbtree.size() == 1.
+  Passed (+1pt)
+Check whether cbtree.root() == 'a.
+  Passed (+1pt)
+Check whether cbtree.last() == 'a'.
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Index out of range
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Root have no parent
+  Passed (+1pt)
+Check whether the element referred by root position == 'a'.
+  Passed (+1pt)
+Check whether we can remove an last element from cbtree.
+  Passed (+1pt)
+Check cbtree.size() == 0.
+  Passed (+1pt)
+Check whether cbtree.root() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.last() throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.last()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.left(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.right(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether cbtree.parent(cbtree.root()) throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether removing from cbtree throws an exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check cbtree.cleanup().
+  Exception: Tree is empty
+  Failed (+0pt)
+Score of this test case: (=160pt)
+
+Score earned in phase2-testcase07 = 160pt
+
+--------------------------------------------------
+Compiling phase2-testcase08.cpp ...
+Compilation succeeded.
+Running phase2-testcase08 ...
+
+TESTCASE: check memory leak due to removeLast():
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 0MB
+  At 50000 step, memory usage = 0MB
+  At 60000 step, memory usage = 0MB
+  At 70000 step, memory usage = 0MB
+  At 80000 step, memory usage = 0MB
+  At 90000 step, memory usage = 0MB
+  At 100000 step, memory usage = 0MB
+  At 110000 step, memory usage = 0MB
+  At 120000 step, memory usage = 0MB
+  At 130000 step, memory usage = 0MB
+  At 140000 step, memory usage = 0MB
+  At 150000 step, memory usage = 0MB
+  At 160000 step, memory usage = 0MB
+  At 170000 step, memory usage = 0MB
+  At 180000 step, memory usage = 0MB
+  At 190000 step, memory usage = 0MB
+  At 200000 step, memory usage = 0MB
+  At 210000 step, memory usage = 0MB
+  At 220000 step, memory usage = 0MB
+  At 230000 step, memory usage = 0MB
+  At 240000 step, memory usage = 0MB
+  At 250000 step, memory usage = 0MB
+  At 260000 step, memory usage = 0MB
+  At 270000 step, memory usage = 0MB
+  At 280000 step, memory usage = 0MB
+  At 290000 step, memory usage = 0MB
+  At 300000 step, memory usage = 0MB
+  At 310000 step, memory usage = 0MB
+  At 320000 step, memory usage = 0MB
+  At 330000 step, memory usage = 0MB
+  At 340000 step, memory usage = 0MB
+  At 350000 step, memory usage = 0MB
+  At 360000 step, memory usage = 0MB
+  At 370000 step, memory usage = 0MB
+  At 380000 step, memory usage = 0MB
+  At 390000 step, memory usage = 0MB
+  At 400000 step, memory usage = 0MB
+  At 410000 step, memory usage = 0MB
+  At 420000 step, memory usage = 0MB
+  At 430000 step, memory usage = 0MB
+  At 440000 step, memory usage = 0MB
+  At 450000 step, memory usage = 0MB
+  At 460000 step, memory usage = 0MB
+  At 470000 step, memory usage = 0MB
+  At 480000 step, memory usage = 0MB
+  At 490000 step, memory usage = 0MB
+  At 500000 step, memory usage = 0MB
+  At 510000 step, memory usage = 0MB
+  At 520000 step, memory usage = 0MB
+  At 530000 step, memory usage = 0MB
+  At 540000 step, memory usage = 0MB
+  At 550000 step, memory usage = 0MB
+  At 560000 step, memory usage = 0MB
+  At 570000 step, memory usage = 0MB
+  At 580000 step, memory usage = 0MB
+  At 590000 step, memory usage = 0MB
+  At 600000 step, memory usage = 0MB
+  At 610000 step, memory usage = 0MB
+  At 620000 step, memory usage = 0MB
+  At 630000 step, memory usage = 0MB
+  At 640000 step, memory usage = 0MB
+  At 650000 step, memory usage = 0MB
+  At 660000 step, memory usage = 0MB
+  At 670000 step, memory usage = 0MB
+  At 680000 step, memory usage = 0MB
+  At 690000 step, memory usage = 0MB
+  At 700000 step, memory usage = 0MB
+  At 710000 step, memory usage = 0MB
+  At 720000 step, memory usage = 0MB
+  At 730000 step, memory usage = 0MB
+  At 740000 step, memory usage = 0MB
+  At 750000 step, memory usage = 0MB
+  At 760000 step, memory usage = 0MB
+  At 770000 step, memory usage = 0MB
+  At 780000 step, memory usage = 0MB
+  At 790000 step, memory usage = 0MB
+  At 800000 step, memory usage = 0MB
+  At 810000 step, memory usage = 0MB
+  At 820000 step, memory usage = 0MB
+  At 830000 step, memory usage = 0MB
+  At 840000 step, memory usage = 0MB
+  At 850000 step, memory usage = 0MB
+  At 860000 step, memory usage = 0MB
+  At 870000 step, memory usage = 0MB
+  At 880000 step, memory usage = 0MB
+  At 890000 step, memory usage = 0MB
+  At 900000 step, memory usage = 0MB
+  At 910000 step, memory usage = 0MB
+  At 920000 step, memory usage = 0MB
+  At 930000 step, memory usage = 0MB
+  At 940000 step, memory usage = 0MB
+  At 950000 step, memory usage = 0MB
+  At 960000 step, memory usage = 0MB
+  At 970000 step, memory usage = 0MB
+  At 980000 step, memory usage = 0MB
+  At 990000 step, memory usage = 0MB
+  At 1000000 step, memory usage = 0MB
+  No memory leak is detected.
+  Passed (+20pt)
+Score of this test case: (=20pt)
+
+Score earned in phase2-testcase08 = 20pt
+
+--------------------------------------------------
+Compiling phase2-testcase09.cpp ...
+Compilation succeeded.
+Running phase2-testcase09 ...
+
+TESTCASE: check memory leak due to the destructor
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 0MB
+  At 50000 step, memory usage = 0MB
+  At 60000 step, memory usage = 0MB
+  At 70000 step, memory usage = 0MB
+  At 80000 step, memory usage = 0MB
+  At 90000 step, memory usage = 0MB
+  At 100000 step, memory usage = 0MB
+  At 110000 step, memory usage = 0MB
+  At 120000 step, memory usage = 0MB
+  At 130000 step, memory usage = 0MB
+  At 140000 step, memory usage = 0MB
+  At 150000 step, memory usage = 0MB
+  At 160000 step, memory usage = 0MB
+  At 170000 step, memory usage = 0MB
+  At 180000 step, memory usage = 0MB
+  At 190000 step, memory usage = 0MB
+  At 200000 step, memory usage = 0MB
+  At 210000 step, memory usage = 0MB
+  At 220000 step, memory usage = 0MB
+  At 230000 step, memory usage = 0MB
+  At 240000 step, memory usage = 0MB
+  At 250000 step, memory usage = 0MB
+  At 260000 step, memory usage = 0MB
+  At 270000 step, memory usage = 0MB
+  At 280000 step, memory usage = 0MB
+  At 290000 step, memory usage = 0MB
+  At 300000 step, memory usage = 0MB
+  At 310000 step, memory usage = 0MB
+  At 320000 step, memory usage = 0MB
+  At 330000 step, memory usage = 0MB
+  At 340000 step, memory usage = 0MB
+  At 350000 step, memory usage = 0MB
+  At 360000 step, memory usage = 0MB
+  At 370000 step, memory usage = 0MB
+  At 380000 step, memory usage = 0MB
+  At 390000 step, memory usage = 0MB
+  At 400000 step, memory usage = 0MB
+  At 410000 step, memory usage = 0MB
+  At 420000 step, memory usage = 0MB
+  At 430000 step, memory usage = 0MB
+  At 440000 step, memory usage = 0MB
+  At 450000 step, memory usage = 0MB
+  At 460000 step, memory usage = 0MB
+  At 470000 step, memory usage = 0MB
+  At 480000 step, memory usage = 0MB
+  At 490000 step, memory usage = 0MB
+  At 500000 step, memory usage = 0MB
+  At 510000 step, memory usage = 0MB
+  At 520000 step, memory usage = 0MB
+  At 530000 step, memory usage = 0MB
+  At 540000 step, memory usage = 0MB
+  At 550000 step, memory usage = 0MB
+  At 560000 step, memory usage = 0MB
+  At 570000 step, memory usage = 0MB
+  At 580000 step, memory usage = 0MB
+  At 590000 step, memory usage = 0MB
+  At 600000 step, memory usage = 0MB
+  At 610000 step, memory usage = 0MB
+  At 620000 step, memory usage = 0MB
+  At 630000 step, memory usage = 0MB
+  At 640000 step, memory usage = 0MB
+  At 650000 step, memory usage = 0MB
+  At 660000 step, memory usage = 0MB
+  At 670000 step, memory usage = 0MB
+  At 680000 step, memory usage = 0MB
+  At 690000 step, memory usage = 0MB
+  At 700000 step, memory usage = 0MB
+  At 710000 step, memory usage = 0MB
+  At 720000 step, memory usage = 0MB
+  At 730000 step, memory usage = 0MB
+  At 740000 step, memory usage = 0MB
+  At 750000 step, memory usage = 0MB
+  At 760000 step, memory usage = 0MB
+  At 770000 step, memory usage = 0MB
+  At 780000 step, memory usage = 0MB
+  At 790000 step, memory usage = 0MB
+  At 800000 step, memory usage = 0MB
+  At 810000 step, memory usage = 0MB
+  At 820000 step, memory usage = 0MB
+  At 830000 step, memory usage = 0MB
+  At 840000 step, memory usage = 0MB
+  At 850000 step, memory usage = 0MB
+  At 860000 step, memory usage = 0MB
+  At 870000 step, memory usage = 0MB
+  At 880000 step, memory usage = 0MB
+  At 890000 step, memory usage = 0MB
+  At 900000 step, memory usage = 0MB
+  At 910000 step, memory usage = 0MB
+  At 920000 step, memory usage = 0MB
+  At 930000 step, memory usage = 0MB
+  At 940000 step, memory usage = 0MB
+  At 950000 step, memory usage = 0MB
+  At 960000 step, memory usage = 0MB
+  At 970000 step, memory usage = 0MB
+  At 980000 step, memory usage = 0MB
+  At 990000 step, memory usage = 0MB
+  At 1000000 step, memory usage = 0MB
+  No memory leak is detected.
+  Passed (+20pt)
+Score of this test case: (=20pt)
+
+Score earned in phase2-testcase09 = 20pt
+
+==================================================
+=== PHASE 3: Tests for HeapPriorityQueue.h =======
+==================================================
+The file named HeapPriorityQueue.h exists.
+Score earned for the existence of the HeapPriorityQueue.h file = 10pt
+
+--------------------------------------------------
+Compiling phase3-testcase01.cpp ...
+Compilation succeeded.
+Running phase3-testcase01 ...
+
+TESTCASE: Create an empty heap-based priority queue:
+Create an char circular list called "queue".
+  Passed (+2pt)
+Check queue.size() == 0.
+  Passed (+2pt)
+Check whether queue.empty().
+  Passed (+2pt)
+Check whether queue.min() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Check whether queue.removeMin() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Score of this test case: (=10pt)
+
+Score earned in phase3-testcase01 = 10pt
+
+--------------------------------------------------
+Compiling phase3-testcase02.cpp ...
+Compilation succeeded.
+Running phase3-testcase02 ...
+
+TESTCASE: Create an heap-based priority queue with one element:
+Create an char circular list called "queue".
+  Passed (+2pt)
+Add 'a' to queue.
+  Passed (+2pt)
+Check queue.size() == 1.
+  Passed (+2pt)
+Check whether queue.empty() is false.
+  Passed (+2pt)
+Check whether queue.min() == 'a'.
+  Passed (+2pt)
+Check whether we can remove 'a' from queue via removeMin().
+  Passed (+2pt)
+Check queue.size() == 0.
+  Passed (+2pt)
+Check whether queue.empty().
+  Passed (+2pt)
+Check whether queue.min() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Check whether queue.removeMin() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Score of this test case: (=20pt)
+
+Score earned in phase3-testcase02 = 20pt
+
+--------------------------------------------------
+Compiling phase3-testcase03.cpp ...
+Compilation succeeded.
+Running phase3-testcase03 ...
+
+TESTCASE: Modify an heap-based priority queue with one element
+Create an char circular list called "queue".
+  Passed (+2pt)
+Add 'a' to queue.
+  Passed (+2pt)
+Check whether we can replace 'a' to 'k' from queue via replace().
+  Passed (+2pt)
+Check queue.size() == 1.
+  Passed (+2pt)
+Check whether queue.empty() is false.
+  Passed (+2pt)
+Check whether queue.min() == 'k'.
+  Passed (+2pt)
+Check whether we can replace 'k' to 'b' from queue via replace().
+  Passed (+2pt)
+Check queue.size() == 1.
+  Passed (+2pt)
+Check whether queue.empty() is false.
+  Passed (+2pt)
+Check whether queue.min() == 'b'.
+  Passed (+2pt)
+Check whether we can remove 'b' from queue via removeMin().
+  Passed (+2pt)
+Check queue.size() == 0.
+  Passed (+2pt)
+Check whether queue.empty().
+  Passed (+2pt)
+Check whether queue.min() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Check whether queue.removeMin() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Score of this test case: (=30pt)
+
+Score earned in phase3-testcase03 = 30pt
+
+--------------------------------------------------
+Compiling phase3-testcase04.cpp ...
+Compilation succeeded.
+Running phase3-testcase04 ...
+
+TESTCASE: Create an empty heap-based priority queue:
+Create an char circular list called "queue".
+  Passed (+2pt)
+Add 'a' to queue.
+  Passed (+2pt)
+Add 'b' to queue.
+  Passed (+2pt)
+Check queue.size() == 2.
+  Passed (+2pt)
+Check whether queue.empty() is false.
+  Passed (+2pt)
+Check whether queue.min() == 'a'.
+  Passed (+2pt)
+Check whether we can replace 'a' to 'k' from queue via replace().
+  Passed (+2pt)
+Check whether queue.min() == 'b'.
+  Passed (+2pt)
+Check queue.size() == 2.
+  Passed (+2pt)
+Check whether we can remove 'b' from queue via remove().
+  Passed (+2pt)
+Check whether queue.min() == 'k'.
+  Passed (+2pt)
+Check queue.size() == 1.
+  Passed (+2pt)
+Add 'c' to queue.
+  Passed (+2pt)
+Check queue.size() == 2.
+  Passed (+2pt)
+Check whether queue.empty() is false.
+  Passed (+2pt)
+Check whether queue.min() == 'c'.
+  Passed (+2pt)
+Check whether we can remove 'c' from queue via removeMin().
+  Passed (+2pt)
+Check whether queue.min() == 'k'.
+  Passed (+2pt)
+Check queue.size() == 1.
+  Passed (+2pt)
+Check whether we can remove 'c' from queue via removeMin().
+  Passed (+2pt)
+Check queue.size() == 0.
+  Passed (+2pt)
+Check whether queue.empty().
+  Passed (+2pt)
+Check whether queue.min() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Check whether queue.removeMin() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Score of this test case: (=48pt)
+
+Score earned in phase3-testcase04 = 48pt
+
+--------------------------------------------------
+Compiling phase3-testcase05.cpp ...
+Compilation succeeded.
+Running phase3-testcase05 ...
+
+TESTCASE: Create an empty heap-based priority queue:
+Create an char circular list called "queue".
+  Passed (+2pt)
+Add 'a' to queue.
+  Passed (+2pt)
+Add 'b' to queue.
+  Passed (+2pt)
+Add 'c' to queue.
+  Passed (+2pt)
+Check queue.size() == 3.
+  Passed (+2pt)
+Check whether queue.empty() is false.
+  Passed (+2pt)
+Check whether queue.min() == 'a'.
+  Passed (+2pt)
+Check whether we can replace 'a' to 'k' from queue via replace().
+  Passed (+2pt)
+Check whether queue.min() == 'b'.
+  Passed (+2pt)
+Check whether we can replace 'b' to 'd' from queue via replace().
+  Passed (+2pt)
+Check whether queue.min() == 'c'.
+  Passed (+2pt)
+Check queue.size() == 3.
+  Passed (+2pt)
+Check whether we can remove 'd' from queue via remove().
+  Passed (+2pt)
+Check whether queue.min() == 'c'.
+  Passed (+2pt)
+Check queue.size() == 2.
+  Passed (+2pt)
+Check whether we can remove 'c' from queue via remove().
+  Passed (+2pt)
+Check whether queue.min() == 'k'.
+  Passed (+2pt)
+Check queue.size() == 1.
+  Passed (+2pt)
+Check whether we can remove 'k' from queue via removeMin().
+  Passed (+2pt)
+Check queue.size() == 0.
+  Passed (+2pt)
+Check whether queue.empty().
+  Passed (+2pt)
+Check whether queue.min() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Check whether queue.removeMin() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Add 'a' to queue.
+  Passed (+2pt)
+Add 'b' to queue.
+  Passed (+2pt)
+Add 'c' to queue.
+  Passed (+2pt)
+Check queue.size() == 3.
+  Passed (+2pt)
+Check whether queue.empty() is false.
+  Passed (+2pt)
+Check whether queue.min() == 'a'.
+  Passed (+2pt)
+Check whether we can remove 'a' from queue via remove().
+  Passed (+2pt)
+Check whether queue.min() == 'b'.
+  Passed (+2pt)
+Check queue.size() == 2.
+  Passed (+2pt)
+Add 'a' to queue.
+  Passed (+2pt)
+Check whether queue.min() == 'a.
+  Passed (+2pt)
+Check queue.size() == 3.
+  Passed (+2pt)
+Check whether we can remove 'a' from queue via removeMin().
+  Passed (+2pt)
+Check queue.size() == 2.
+  Passed (+2pt)
+Check whether queue.empty() is false.
+  Passed (+2pt)
+Add 'a' to queue.
+  Passed (+2pt)
+Check whether queue.min() == 'a.'
+  Passed (+2pt)
+Check queue.size() == 3.
+  Passed (+2pt)
+Check whether we can remove 'c' from queue via remove().
+  Passed (+2pt)
+Check whether queue.min() == 'a'.
+  Passed (+2pt)
+Check queue.size() == 2.
+  Passed (+2pt)
+Check whether we can remove 'a' from queue via removeMin().
+  Passed (+2pt)
+Check queue.size() == 1.
+  Passed (+2pt)
+Check whether queue.empty() is false.
+  Passed (+2pt)
+Check whether queue.min() == 'b'.
+  Passed (+2pt)
+Check whether we can remove 'b' from queue via removeMin().
+  Passed (+2pt)
+Check queue.size() == 0.
+  Passed (+2pt)
+Check whether queue.empty().
+  Passed (+2pt)
+Check whether queue.min() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Check whether queue.removeMin() throws an exception.
+  Exception: Queue is emtpy
+  Passed (+2pt)
+Score of this test case: (=106pt)
+
+Score earned in phase3-testcase05 = 106pt
+
+--------------------------------------------------
+Compiling phase3-testcase06.cpp ...
+Compilation succeeded.
+Running phase3-testcase06 ...
+
+TESTCASE: check memory leak due to remove():
+Create an char circular list called "queue".
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 0MB
+  At 50000 step, memory usage = 0MB
+  At 60000 step, memory usage = 0MB
+  At 70000 step, memory usage = 0MB
+  At 80000 step, memory usage = 0MB
+  At 90000 step, memory usage = 0MB
+  At 100000 step, memory usage = 0MB
+  At 110000 step, memory usage = 0MB
+  At 120000 step, memory usage = 0MB
+  At 130000 step, memory usage = 0MB
+  At 140000 step, memory usage = 0MB
+  At 150000 step, memory usage = 0MB
+  At 160000 step, memory usage = 0MB
+  At 170000 step, memory usage = 0MB
+  At 180000 step, memory usage = 0MB
+  At 190000 step, memory usage = 0MB
+  At 200000 step, memory usage = 0MB
+  At 210000 step, memory usage = 0MB
+  At 220000 step, memory usage = 0MB
+  At 230000 step, memory usage = 0MB
+  At 240000 step, memory usage = 0MB
+  At 250000 step, memory usage = 0MB
+  At 260000 step, memory usage = 0MB
+  At 270000 step, memory usage = 0MB
+  At 280000 step, memory usage = 0MB
+  At 290000 step, memory usage = 0MB
+  At 300000 step, memory usage = 0MB
+  At 310000 step, memory usage = 0MB
+  At 320000 step, memory usage = 0MB
+  At 330000 step, memory usage = 0MB
+  At 340000 step, memory usage = 0MB
+  At 350000 step, memory usage = 0MB
+  At 360000 step, memory usage = 0MB
+  At 370000 step, memory usage = 0MB
+  At 380000 step, memory usage = 0MB
+  At 390000 step, memory usage = 0MB
+  At 400000 step, memory usage = 0MB
+  At 410000 step, memory usage = 0MB
+  At 420000 step, memory usage = 0MB
+  At 430000 step, memory usage = 0MB
+  At 440000 step, memory usage = 0MB
+  At 450000 step, memory usage = 0MB
+  At 460000 step, memory usage = 0MB
+  At 470000 step, memory usage = 0MB
+  At 480000 step, memory usage = 0MB
+  At 490000 step, memory usage = 0MB
+  At 500000 step, memory usage = 0MB
+  No memory leak is detected.
+  Passed (+20pt)
+Score of this test case: (=20pt)
+
+Score earned in phase3-testcase06 = 20pt
+
+--------------------------------------------------
+Compiling phase3-testcase07.cpp ...
+Compilation succeeded.
+Running phase3-testcase07 ...
+
+TESTCASE: check memory leak due to remove():
+Create an char circular list called "queue".
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 0MB
+  At 50000 step, memory usage = 0MB
+  At 60000 step, memory usage = 0MB
+  At 70000 step, memory usage = 0MB
+  At 80000 step, memory usage = 0MB
+  At 90000 step, memory usage = 0MB
+  At 100000 step, memory usage = 0MB
+  At 110000 step, memory usage = 0MB
+  At 120000 step, memory usage = 0MB
+  At 130000 step, memory usage = 0MB
+  At 140000 step, memory usage = 0MB
+  At 150000 step, memory usage = 0MB
+  At 160000 step, memory usage = 0MB
+  At 170000 step, memory usage = 0MB
+  At 180000 step, memory usage = 0MB
+  At 190000 step, memory usage = 0MB
+  At 200000 step, memory usage = 0MB
+  At 210000 step, memory usage = 0MB
+  At 220000 step, memory usage = 0MB
+  At 230000 step, memory usage = 0MB
+  At 240000 step, memory usage = 0MB
+  At 250000 step, memory usage = 0MB
+  At 260000 step, memory usage = 0MB
+  At 270000 step, memory usage = 0MB
+  At 280000 step, memory usage = 0MB
+  At 290000 step, memory usage = 0MB
+  At 300000 step, memory usage = 0MB
+  At 310000 step, memory usage = 0MB
+  At 320000 step, memory usage = 0MB
+  At 330000 step, memory usage = 0MB
+  At 340000 step, memory usage = 0MB
+  At 350000 step, memory usage = 0MB
+  At 360000 step, memory usage = 0MB
+  At 370000 step, memory usage = 0MB
+  At 380000 step, memory usage = 0MB
+  At 390000 step, memory usage = 0MB
+  At 400000 step, memory usage = 0MB
+  At 410000 step, memory usage = 0MB
+  At 420000 step, memory usage = 0MB
+  At 430000 step, memory usage = 0MB
+  At 440000 step, memory usage = 0MB
+  At 450000 step, memory usage = 0MB
+  At 460000 step, memory usage = 0MB
+  At 470000 step, memory usage = 0MB
+  At 480000 step, memory usage = 0MB
+  At 490000 step, memory usage = 0MB
+  At 500000 step, memory usage = 0MB
+  No memory leak is detected.
+  Passed (+20pt)
+Score of this test case: (=20pt)
+
+Score earned in phase3-testcase07 = 20pt
+
+==================================================
+=== PHASE 4: Behavioral Tests ====================
+==================================================
+Compiling submitted files ...
+Compilation succeeded.
+--------------------------------------------------
+Input file: input01.txt
+Error: The following input caused segmentation fault:
+------------------------------
+a 3 
+b 1 1 6
+b 2 2 5
+b 3 3 6
+b 4 4 7
+c 4.5 2
+b 5 5 3
+b 5 6 3
+d
+f
+z
+------------------------------
+Score earned in input01 = 0pt
+
+--------------------------------------------------
+Input file: input02.txt
+Error: The following input caused segmentation fault:
+------------------------------
+a 3
+b 1 1 3
+b 2 2 2
+b 3 3 6
+b 4 4 7
+c 5 4
+b 7 5 3
+d
+f
+z
+------------------------------
+Score earned in input02 = 0pt
+
+--------------------------------------------------
+Input file: input03.txt
+Error: The following input caused segmentation fault:
+------------------------------
+a 15
+b 1 1 6
+b 2 2 5
+b 3 3 6
+b 4 4 7
+b 5 5 3
+b 5 6 3
+b 5 7 3
+b 5 8 3
+b 5 9 3
+b 5 10 3
+b 5 11 3
+b 5 12 3
+b 5 13 3
+b 5 14 3
+b 5 15 3
+d
+f
+z
+------------------------------
+Score earned in input03 = 0pt
+
+--------------------------------------------------
+Input file: input04.txt
+Error: The following input caused segmentation fault:
+------------------------------
+a 3
+b 1 1 6
+c 2 1
+b 3 2 5
+c 4 2
+b 5 3 6
+c 6 3
+b 7 4 6
+c 8 4
+b 9 5 3
+d
+f
+z
+------------------------------
+Score earned in input04 = 0pt
+
+--------------------------------------------------
+Input file: input05.txt
+Error: The following input caused segmentation fault:
+------------------------------
+a 7
+b 1 1 5
+b 4 2 2
+b 7 3 6
+c 8 3
+b 10 4 7
+b 7 5 3
+d
+f
+z
+------------------------------
+Score earned in input05 = 0pt
+
+--------------------------------------------------
+Input file: input06.txt
+Error: The following input caused segmentation fault:
+------------------------------
+a 1
+b 1 1 1
+b 2 2 1
+b 3 3 1
+b 4 4 1
+b 5 5 1
+b 6 6 1
+b 7 7 1
+b 8 8 1
+d
+f
+z
+------------------------------
+Score earned in input06 = 0pt
+
+--------------------------------------------------
+Input file: input07.txt
+Error: The following input caused segmentation fault:
+------------------------------
+a 10
+b 1 1 2
+b 1 2 3
+b 1 3 2
+b 3 4 5
+b 3 5 5
+b 3 6 5
+c 4 5
+b 5 7 5
+c 5.5 7
+d
+f
+z
+------------------------------
+Score earned in input07 = 0pt
+
+--------------------------------------------------
+Input file: input08.txt
+Error: The following input caused segmentation fault:
+------------------------------
+a 1000
+b 100 1 600
+b 200 2 500
+b 300 3 600
+b 400 4 700
+c 450 2
+b 500 5 300
+b 500 6 300
+d
+f
+z
+------------------------------
+Score earned in input08 = 0pt
+
+--------------------------------------------------
+Input file: input09.txt
+Error: The following input caused segmentation fault:
+------------------------------
+a 5
+b 1 1 2
+b 3 2 2
+b 5 3 2
+b 7 4 2
+b 9 5 2
+b 11 6 2
+b 13 7 2
+b 15 8 2
+d
+f
+z
+------------------------------
+Score earned in input09 = 0pt
+
+--------------------------------------------------
+Input file: input10.txt
+Error: The following input caused segmentation fault:
+------------------------------
+a 1
+b 1 1 1
+c 1.5 1
+d
+f
+z
+------------------------------
+Score earned in input10 = 0pt
+
+==================================================
+=== SUMMARY ======================================
+==================================================
+Total score = 968pt out of 1084pt
+The final score = 89%
+
+However, the assignment is 1 day(s) late.
+There is a late penalty of 15%.
+The final score = 74%

@@ -1,0 +1,3 @@
+movl $0x30c337de,0x0804c1ec
+pushq $0x08048bdb 
+ret

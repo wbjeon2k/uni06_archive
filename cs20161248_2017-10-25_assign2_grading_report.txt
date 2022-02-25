@@ -1,0 +1,5915 @@
+Grading Report for cs20161248 for programs submitted on 2017-10-25
+This file is generated at 03:14:24 on 2017-10-26.
+
+==================================================
+=== PRELIMINARY TESTS ============================
+==================================================
+The file named README.TXT exists.
+Score earned for the existence of the README.TXT file = 10pt
+
+==================================================
+=== PHASE 1: Tests for LinkedBinaryTree.h ============
+==================================================
+The file named LinkedBinaryTree.h exists.
+Score earned for the existence of the LinkedBinaryTree.h file = 10pt
+
+--------------------------------------------------
+Compiling phase1-testcase01.cpp ...
+In file included from /home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase01.cpp:6:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:308:40: warning: no newline at end of file
+Compilation succeeded.
+Running phase1-testcase01 ...
+
+/home/cse221/chiu-2017/assign2/grading/scripts/timeout.sh: line 63: 12893 Segmentation fault      "$@"
+== 0.
+  Passed (+1pt)
+Check whether tree.empty().
+  Passed (+1pt)
+Check whether tree.height() will throw exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Check whether tree.root() is null.
+  Passed (+1pt)
+Check whether tree.positions() is an empty list.
+
+Error: Segmentation fault. Zero point for the rest of this test case.
+
+Score earned in phase1-testcase01 = 4pt
+
+--------------------------------------------------
+Compiling phase1-testcase02.cpp ...
+In file included from /home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase02.cpp:6:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:308:40: warning: no newline at end of file
+Compilation succeeded.
+Running phase1-testcase02 ...
+
+TESTCASE: add one node to an empty tree
+SETUP: Create a string binary tree.
+Check whether tree.empty().
+  Passed (+1pt)
+Add the root node.
+  Passed (+1pt)
+Check tree.size() == 1
+  Passed (+1pt)
+Check tree.height() == 0.
+  Passed (+1pt)
+Check tree is not empty.
+  Passed (+1pt)
+Check whether adding another root node again will throw exception.
+  Exception: Root is not empty
+  Passed (+1pt)
+Set *root = 'hello'
+  Passed (+1pt)
+Set *root = 'world'
+  Passed (+1pt)
+Check tree.root().isRoot()
+  Passed (+1pt)
+Check tree.root().parent().isNull()
+  Passed (+1pt)
+Check tree.root().isExternal()
+  Passed (+1pt)
+Check tree.left().isNull()
+  Passed (+1pt)
+Check tree.right().isNull()
+  Passed (+1pt)
+Check whether tree.positions() is an not empty list.
+  Passed (+1pt)
+Check whether tree.positions().size() == 1.
+  Passed (+1pt)
+Check whether *tree.positions().front() == 'world'.
+  Passed (+1pt)
+Score of this test case: (=16pt)
+
+Score earned in phase1-testcase02 = 16pt
+
+--------------------------------------------------
+Compiling phase1-testcase03.cpp ...
+In file included from /home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase03.cpp:6:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:308:40: warning: no newline at end of file
+Compilation succeeded.
+Running phase1-testcase03 ...
+
+TESTCASE: Expand external nodes.
+SETUP: Create a char binary tree and set *root = 'a'.
+Expand the root.
+  Passed (+1pt)
+Check tree.size() == 3
+  Passed (+1pt)
+Check tree.height() == 1
+  Passed (+1pt)
+Check !root.left().isNull()
+  Passed (+1pt)
+Check !root.right().isNull()
+  Passed (+1pt)
+Check *root.left() = 'b'
+  Passed (+1pt)
+Check *root.right() = 'c'
+  Passed (+1pt)
+Check *root.left().parent() == *root
+  Passed (+1pt)
+Check *root.right().parent() == *root
+  Passed (+1pt)
+Check *root.left().isExternal()
+  Passed (+1pt)
+Check *root.right().isExternal()
+  Passed (+1pt)
+Check tree.positions().size()==3
+  Passed (+1pt)
+Check tree.positions() = [a b c]
+  Passed (+1pt)
+  Passed (+1pt)
+  Passed (+1pt)
+Check exception when expanding null node.
+  Exception: The node is empty
+  Passed (+1pt)
+Check exception when expanding internal node.
+  Exception: Node is an internal node
+  Passed (+1pt)
+Expanding root.left().
+  Passed (+1pt)
+Check tree.size() == 5
+  Passed (+1pt)
+Check tree.height() == 2
+  Passed (+1pt)
+Expanding root.right().
+  Passed (+1pt)
+Check tree.size() == 7
+  Passed (+1pt)
+Check tree.height() == 2
+  Passed (+1pt)
+Expanding root.right().right().
+  Passed (+1pt)
+Check tree.size() == 9
+  Passed (+1pt)
+Check tree.height() == 3
+  Passed (+1pt)
+Score of this test case: (=26pt)
+
+Score earned in phase1-testcase03 = 26pt
+
+--------------------------------------------------
+Compiling phase1-testcase04.cpp ...
+In file included from /home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase04.cpp:6:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:308:40: warning: no newline at end of file
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h: In destructor ‘LinkedBinaryTree<Elem>::Node::~Node() [with Elem = char]’:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:251:   instantiated from ‘void LinkedBinaryTree<Elem>::removeSubtree(const LinkedBinaryTree<Elem>::Position&) [with Elem = char]’
+/home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase04.cpp:22:   instantiated from here
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:52: warning: converting to non-pointer type ‘char’ from NULL
+Compilation succeeded.
+Running phase1-testcase04 ...
+
+TESTCASE: Test removeSubtree().
+SETUP: Create an integer binary tree and set *root = 1.
+Remove the root.
+  Passed (+1pt)
+Check tree.size() == 0.
+  Passed (+1pt)
+Check whether tree.empty().
+  Passed (+1pt)
+Check whether tree.height() will throw exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Removing the root again should throw exception.
+  Failed (+0pt)
+SETUP: Add root back and expand it with two children: 2 and 3.
+Removing root.left().left() should throw exception.
+  Failed (+0pt)
+Remove root.right().
+  Passed (+1pt)
+Check whether root.right() is null
+  Passed (+1pt)
+Check tree.size() == 2.
+  Passed (+1pt)
+Check whether tree.height() == 1.
+  Passed (+1pt)
+Check whether root is still a root.
+  Passed (+1pt)
+Check whether root is not external.
+  Passed (+1pt)
+Check whether root.left() is external.
+  Passed (+1pt)
+Check whether tree.positions() is [1 2].
+  Passed (+1pt)
+  Passed (+1pt)
+Remove root.left().
+  Passed (+1pt)
+Check whether root.left() is null
+  Passed (+1pt)
+Check tree.size() == 1.
+  Passed (+1pt)
+Check whether tree.height() == 0.
+  Passed (+1pt)
+Check whether root is still a root.
+  Passed (+1pt)
+Check whether root is external.
+  Passed (+1pt)
+Check whether tree.positions() is [1].
+  Passed (+1pt)
+Remove the root.
+  Passed (+1pt)
+Check tree.size() == 0.
+  Passed (+1pt)
+Check whether tree.empty().
+  Passed (+1pt)
+Check whether tree.height() will throw exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Removing the root again should throw exception.
+  Failed (+0pt)
+SETUP: Add root back and expand it with two children: 2 and 3.
+SETUP: expand root.left() with two children: 4 and 5.
+Check tree.size() == 5.
+  Passed (+1pt)
+Check whether tree.height() == 2.
+  Passed (+1pt)
+Remove root.left().right().
+  Passed (+1pt)
+Check whether root.left().right() is null
+  Passed (+1pt)
+Check tree.size() == 4.
+  Passed (+1pt)
+Check whether tree.height() == 2.
+  Passed (+1pt)
+Check whether root.left().left() is external.
+  Passed (+1pt)
+Check whether root.left() is not external.
+  Passed (+1pt)
+SETUP: expand root.left().left() with two children: 6 and 7.
+Check tree.size() == 6.
+  Passed (+1pt)
+Check whether tree.height() == 3.
+  Passed (+1pt)
+Removing root.left().right() should throw exception .
+  Failed (+0pt)
+Remove root.left().
+  Passed (+1pt)
+Check whether root.left() is null
+  Passed (+1pt)
+Check whether root is not external.
+  Passed (+1pt)
+Check whether root.right() is not null
+  Passed (+1pt)
+Check tree.size() == 2.
+  Passed (+1pt)
+Check whether tree.height() == 1.
+  Passed (+1pt)
+Remove root.right().
+  Passed (+1pt)
+Check tree.size() == 1.
+  Passed (+1pt)
+Check whether tree.height() == 0.
+  Passed (+1pt)
+Check whether root is still a root.
+  Passed (+1pt)
+Check whether root is external.
+  Passed (+1pt)
+Check whether tree.positions() is [1].
+  Passed (+1pt)
+Remove the root.
+  Passed (+1pt)
+Check tree.size() == 0.
+  Passed (+1pt)
+Check whether tree.empty().
+  Passed (+1pt)
+Check whether tree.height() will throw exception.
+  Exception: Tree is empty
+  Passed (+1pt)
+Removing the root again should throw exception.
+  Failed (+0pt)
+Score of this test case: (=50pt)
+
+Score earned in phase1-testcase04 = 50pt
+
+--------------------------------------------------
+Compiling phase1-testcase05.cpp ...
+In file included from /home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase05.cpp:6:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:308:40: warning: no newline at end of file
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h: In destructor ‘LinkedBinaryTree<Elem>::Node::~Node() [with Elem = std::basic_string<char, std::char_traits<char>, std::allocator<char> >]’:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:162:   instantiated from ‘typename LinkedBinaryTree<Elem>::Position LinkedBinaryTree<Elem>::removeAboveExternal(const LinkedBinaryTree<Elem>::Position&) [with Elem = std::basic_string<char, std::char_traits<char>, std::allocator<char> >]’
+/home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase05.cpp:18:   instantiated from here
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:52: error: ambiguous overload for ‘operator=’ in ‘((LinkedBinaryTree<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Node*)this)->LinkedBinaryTree<std::basic_string<char, std::char_traits<char>, std::allocator<char> > >::Node::elt = 0l’
+/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/basic_string.h:485: note: candidates are: std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::operator=(const std::basic_string<_CharT, _Traits, _Alloc>&) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]
+/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/basic_string.h:493: note:                 std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::operator=(const _CharT*) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]
+/usr/lib/gcc/x86_64-redhat-linux/4.1.2/../../../../include/c++/4.1.2/bits/basic_string.h:504: note:                 std::basic_string<_CharT, _Traits, _Alloc>& std::basic_string<_CharT, _Traits, _Alloc>::operator=(_CharT) [with _CharT = char, _Traits = std::char_traits<char>, _Alloc = std::allocator<char>]
+Fail to compile the program.
+Score earned for phase1-testcase05 = 0pt
+
+--------------------------------------------------
+Compiling phase1-testcase06.cpp ...
+In file included from /home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase06.cpp:6:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:308:40: warning: no newline at end of file
+Compilation succeeded.
+Running phase1-testcase06 ...
+
+/home/cse221/chiu-2017/assign2/grading/scripts/timeout.sh: line 63: 13185 Segmentation fault      "$@"
+ tree1.
+SETUP: Create another empty boolean tree called tree2.
+Attaching tree2 to the left of the root of tree1 should throw exception.
+
+Error: Segmentation fault. Zero point for the rest of this test case.
+
+Score earned in phase1-testcase06 = 0pt
+
+--------------------------------------------------
+Compiling phase1-testcase07.cpp ...
+In file included from /home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase07.cpp:7:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:308:40: warning: no newline at end of file
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h: In destructor ‘LinkedBinaryTree<Elem>::Node::~Node() [with Elem = int]’:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:251:   instantiated from ‘void LinkedBinaryTree<Elem>::removeSubtree(const LinkedBinaryTree<Elem>::Position&) [with Elem = int]’
+/home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase07.cpp:32:   instantiated from here
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:52: warning: converting to non-pointer type ‘int’ from NULL
+Compilation succeeded.
+Running phase1-testcase07 ...
+
+TESTCASE: check memory leak due to removeSubtree().
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 0MB
+  At 50000 step, memory usage = 0MB
+  At 60000 step, memory usage = 0MB
+  At 70000 step, memory usage = 0MB
+  At 80000 step, memory usage = 0MB
+  At 90000 step, memory usage = 0MB
+  At 100000 step, memory usage = 0MB
+  At 110000 step, memory usage = 0MB
+  At 120000 step, memory usage = 0MB
+  At 130000 step, memory usage = 0MB
+  At 140000 step, memory usage = 0MB
+  At 150000 step, memory usage = 0MB
+  At 160000 step, memory usage = 0MB
+  At 170000 step, memory usage = 0MB
+  At 180000 step, memory usage = 0MB
+  At 190000 step, memory usage = 0MB
+  At 200000 step, memory usage = 0MB
+  At 210000 step, memory usage = 0MB
+  At 220000 step, memory usage = 0MB
+  At 230000 step, memory usage = 0MB
+  At 240000 step, memory usage = 0MB
+  At 250000 step, memory usage = 0MB
+  At 260000 step, memory usage = 0MB
+  At 270000 step, memory usage = 0MB
+  At 280000 step, memory usage = 0MB
+  At 290000 step, memory usage = 0MB
+  At 300000 step, memory usage = 0MB
+  At 310000 step, memory usage = 0MB
+  At 320000 step, memory usage = 0MB
+  At 330000 step, memory usage = 0MB
+  At 340000 step, memory usage = 0MB
+  At 350000 step, memory usage = 0MB
+  At 360000 step, memory usage = 0MB
+  At 370000 step, memory usage = 0MB
+  At 380000 step, memory usage = 0MB
+  At 390000 step, memory usage = 0MB
+  At 400000 step, memory usage = 0MB
+  At 410000 step, memory usage = 0MB
+  At 420000 step, memory usage = 0MB
+  At 430000 step, memory usage = 0MB
+  At 440000 step, memory usage = 0MB
+  At 450000 step, memory usage = 0MB
+  At 460000 step, memory usage = 0MB
+  At 470000 step, memory usage = 0MB
+  At 480000 step, memory usage = 0MB
+  At 490000 step, memory usage = 0MB
+  At 500000 step, memory usage = 0MB
+  At 510000 step, memory usage = 0MB
+  At 520000 step, memory usage = 0MB
+  At 530000 step, memory usage = 0MB
+  At 540000 step, memory usage = 0MB
+  At 550000 step, memory usage = 0MB
+  At 560000 step, memory usage = 0MB
+  At 570000 step, memory usage = 0MB
+  At 580000 step, memory usage = 0MB
+  At 590000 step, memory usage = 0MB
+  At 600000 step, memory usage = 0MB
+  At 610000 step, memory usage = 0MB
+  At 620000 step, memory usage = 0MB
+  At 630000 step, memory usage = 0MB
+  At 640000 step, memory usage = 0MB
+  At 650000 step, memory usage = 0MB
+  At 660000 step, memory usage = 0MB
+  At 670000 step, memory usage = 0MB
+  At 680000 step, memory usage = 0MB
+  At 690000 step, memory usage = 0MB
+  At 700000 step, memory usage = 0MB
+  At 710000 step, memory usage = 0MB
+  At 720000 step, memory usage = 0MB
+  At 730000 step, memory usage = 0MB
+  At 740000 step, memory usage = 0MB
+  At 750000 step, memory usage = 0MB
+  At 760000 step, memory usage = 0MB
+  At 770000 step, memory usage = 0MB
+  At 780000 step, memory usage = 0MB
+  At 790000 step, memory usage = 0MB
+  At 800000 step, memory usage = 0MB
+  At 810000 step, memory usage = 0MB
+  At 820000 step, memory usage = 0MB
+  At 830000 step, memory usage = 0MB
+  At 840000 step, memory usage = 0MB
+  At 850000 step, memory usage = 0MB
+  At 860000 step, memory usage = 0MB
+  At 870000 step, memory usage = 0MB
+  At 880000 step, memory usage = 0MB
+  At 890000 step, memory usage = 0MB
+  At 900000 step, memory usage = 0MB
+  At 910000 step, memory usage = 0MB
+  At 920000 step, memory usage = 0MB
+  At 930000 step, memory usage = 0MB
+  At 940000 step, memory usage = 0MB
+  At 950000 step, memory usage = 0MB
+  At 960000 step, memory usage = 0MB
+  At 970000 step, memory usage = 0MB
+  At 980000 step, memory usage = 0MB
+  At 990000 step, memory usage = 0MB
+  At 1000000 step, memory usage = 0MB
+  No memory leak is detected.
+  Passed (+25pt)
+Score of this test case: (=25pt)
+
+Score earned in phase1-testcase07 = 25pt
+
+--------------------------------------------------
+Compiling phase1-testcase08.cpp ...
+In file included from /home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase08.cpp:7:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:308:40: warning: no newline at end of file
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h: In destructor ‘LinkedBinaryTree<Elem>::Node::~Node() [with Elem = long int]’:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:162:   instantiated from ‘typename LinkedBinaryTree<Elem>::Position LinkedBinaryTree<Elem>::removeAboveExternal(const LinkedBinaryTree<Elem>::Position&) [with Elem = long int]’
+/home/cse221/chiu-2017/assign2/grading/scripts/testcase-phase1/phase1-testcase08.cpp:32:   instantiated from here
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase1-prog/LinkedBinaryTree.h:52: warning: converting to non-pointer type ‘long int’ from NULL
+Compilation succeeded.
+Running phase1-testcase08 ...
+
+TESTCASE: check memory leak due to removeAboveExternal().
+  At 10000 step, memory usage = 0MB
+  At 20000 step, memory usage = 0MB
+  At 30000 step, memory usage = 0MB
+  At 40000 step, memory usage = 0MB
+  At 50000 step, memory usage = 0MB
+  At 60000 step, memory usage = 0MB
+  At 70000 step, memory usage = 0MB
+  At 80000 step, memory usage = 0MB
+  At 90000 step, memory usage = 0MB
+  At 100000 step, memory usage = 0MB
+  At 110000 step, memory usage = 0MB
+  At 120000 step, memory usage = 0MB
+  At 130000 step, memory usage = 0MB
+  At 140000 step, memory usage = 0MB
+  At 150000 step, memory usage = 0MB
+  At 160000 step, memory usage = 0MB
+  At 170000 step, memory usage = 0MB
+  At 180000 step, memory usage = 0MB
+  At 190000 step, memory usage = 0MB
+  At 200000 step, memory usage = 0MB
+  At 210000 step, memory usage = 0MB
+  At 220000 step, memory usage = 0MB
+  At 230000 step, memory usage = 0MB
+  At 240000 step, memory usage = 0MB
+  At 250000 step, memory usage = 0MB
+  At 260000 step, memory usage = 0MB
+  At 270000 step, memory usage = 0MB
+  At 280000 step, memory usage = 0MB
+  At 290000 step, memory usage = 0MB
+  At 300000 step, memory usage = 0MB
+  At 310000 step, memory usage = 0MB
+  At 320000 step, memory usage = 0MB
+  At 330000 step, memory usage = 0MB
+  At 340000 step, memory usage = 0MB
+  At 350000 step, memory usage = 0MB
+  At 360000 step, memory usage = 0MB
+  At 370000 step, memory usage = 0MB
+  At 380000 step, memory usage = 0MB
+  At 390000 step, memory usage = 0MB
+  At 400000 step, memory usage = 0MB
+  At 410000 step, memory usage = 0MB
+  At 420000 step, memory usage = 0MB
+  At 430000 step, memory usage = 0MB
+  At 440000 step, memory usage = 0MB
+  At 450000 step, memory usage = 0MB
+  At 460000 step, memory usage = 0MB
+  At 470000 step, memory usage = 0MB
+  At 480000 step, memory usage = 0MB
+  At 490000 step, memory usage = 0MB
+  At 500000 step, memory usage = 0MB
+  At 510000 step, memory usage = 0MB
+  At 520000 step, memory usage = 0MB
+  At 530000 step, memory usage = 0MB
+  At 540000 step, memory usage = 0MB
+  At 550000 step, memory usage = 0MB
+  At 560000 step, memory usage = 0MB
+  At 570000 step, memory usage = 0MB
+  At 580000 step, memory usage = 0MB
+  At 590000 step, memory usage = 0MB
+  At 600000 step, memory usage = 0MB
+  At 610000 step, memory usage = 0MB
+  At 620000 step, memory usage = 0MB
+  At 630000 step, memory usage = 0MB
+  At 640000 step, memory usage = 0MB
+  At 650000 step, memory usage = 0MB
+  At 660000 step, memory usage = 0MB
+  At 670000 step, memory usage = 0MB
+  At 680000 step, memory usage = 0MB
+  At 690000 step, memory usage = 0MB
+  At 700000 step, memory usage = 0MB
+  At 710000 step, memory usage = 0MB
+  At 720000 step, memory usage = 0MB
+  At 730000 step, memory usage = 0MB
+  At 740000 step, memory usage = 0MB
+  At 750000 step, memory usage = 0MB
+  At 760000 step, memory usage = 0MB
+  At 770000 step, memory usage = 0MB
+  At 780000 step, memory usage = 0MB
+  At 790000 step, memory usage = 0MB
+  At 800000 step, memory usage = 0MB
+  At 810000 step, memory usage = 0MB
+  At 820000 step, memory usage = 0MB
+  At 830000 step, memory usage = 0MB
+  At 840000 step, memory usage = 0MB
+  At 850000 step, memory usage = 0MB
+  At 860000 step, memory usage = 0MB
+  At 870000 step, memory usage = 0MB
+  At 880000 step, memory usage = 0MB
+  At 890000 step, memory usage = 0MB
+  At 900000 step, memory usage = 0MB
+  At 910000 step, memory usage = 0MB
+  At 920000 step, memory usage = 0MB
+  At 930000 step, memory usage = 0MB
+  At 940000 step, memory usage = 0MB
+  At 950000 step, memory usage = 0MB
+  At 960000 step, memory usage = 0MB
+  At 970000 step, memory usage = 0MB
+  At 980000 step, memory usage = 0MB
+  At 990000 step, memory usage = 0MB
+  At 1000000 step, memory usage = 0MB
+  No memory leak is detected.
+  Passed (+25pt)
+Score of this test case: (=25pt)
+
+Score earned in phase1-testcase08 = 25pt
+
+==================================================
+=== PHASE 2: Tests for assignment2.cpp ===========
+==================================================
+The file named assignment2.cpp exists.
+Score earned for the existence of the assignment2.cpp file = 10pt
+
+--------------------------------------------------
+Compiling phase2-testcase01.cpp ...
+Compilation succeeded.
+Running phase2-testcase01 ...
+
+/home/cse221/chiu-2017/assign2/grading/scripts/timeout.sh: line 63: 13713 Segmentation fault      "$@"
+ation
+  Passed (+1pt)
+Check whether the minimum depth of 1 is -1.
+  Passed (+1pt)
+Simplify the subtree.
+
+Error: Segmentation fault. Zero point for the rest of this test case.
+
+Score earned in phase2-testcase01 = 2pt
+
+--------------------------------------------------
+Compiling phase2-testcase02.cpp ...
+Compilation succeeded.
+Running phase2-testcase02 ...
+
+TESTCASE: test the behavior of input '10':
+Paste the postfix expression.
+Check whether the minimum depth of 10 is 0.
+  Passed (+1pt)
+Check whether the minimum depth of 99 is -1.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the root is 10.
+  Passed (+1pt)
+Check whether the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the root is null.
+  Passed (+1pt)
+Score of this test case: (=6pt)
+
+Score earned in phase2-testcase02 = 6pt
+
+--------------------------------------------------
+Compiling phase2-testcase03.cpp ...
+Compilation succeeded.
+Running phase2-testcase03 ...
+
+TESTCASE: test the behavior of input '1 2 +':
+Paste the postfix expression.
+Check whether the minimum depth of + is 0.
+  Passed (+1pt)
+Check whether the minimum depth of 1 is 1.
+  Passed (+1pt)
+Check whether the minimum depth of 2 is 1.
+  Passed (+1pt)
+Check whether the minimum depth of 99 is -1.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the root is 3.
+  Passed (+1pt)
+Check whether the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the root is null.
+  Passed (+1pt)
+Score of this test case: (=8pt)
+
+Score earned in phase2-testcase03 = 8pt
+
+--------------------------------------------------
+Compiling phase2-testcase04.cpp ...
+Compilation succeeded.
+Running phase2-testcase04 ...
+
+TESTCASE: test the behavior of input '1 2 + 3 4 - +':
+Paste the postfix expression.
+Check whether the minimum depth of + is 0.
+  Passed (+1pt)
+Check whether the minimum depth of - is 1.
+  Failed (+0pt)
+Check whether the minimum depth of 1 is 2.
+  Failed (+0pt)
+Check whether the minimum depth of 2 is 2.
+  Failed (+0pt)
+Check whether the minimum depth of 3 is 2.
+  Failed (+0pt)
+Check whether the minimum depth of 4 is 2.
+  Failed (+0pt)
+Check whether the minimum depth of 99 is -1.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the root is 2.
+  Passed (+1pt)
+Check whether the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the root is null.
+  Passed (+1pt)
+Score of this test case: (=6pt)
+
+Score earned in phase2-testcase04 = 6pt
+
+--------------------------------------------------
+Compiling phase2-testcase05.cpp ...
+Compilation succeeded.
+Running phase2-testcase05 ...
+
+TESTCASE: test the behavior of input 'x':
+Paste the postfix expression.
+Check whether the minimum depth of x is 0.
+  Passed (+1pt)
+Check whether the minimum depth of y is -1.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the root is x.
+  Passed (+1pt)
+Check whether the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the root is null.
+  Passed (+1pt)
+Score of this test case: (=6pt)
+
+Score earned in phase2-testcase05 = 6pt
+
+--------------------------------------------------
+Compiling phase2-testcase06.cpp ...
+Compilation succeeded.
+Running phase2-testcase06 ...
+
+TESTCASE: test the behavior of input '1 x +':
+Paste the postfix expression.
+Check whether the minimum depth of + is 0.
+  Passed (+1pt)
+Check whether the minimum depth of 1 is 1.
+  Passed (+1pt)
+Check whether the minimum depth of x is 1.
+  Passed (+1pt)
+Check whether the minimum depth of y is -1.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the root is +.
+  Passed (+1pt)
+Check whether the left child of the root is 1.
+  Passed (+1pt)
+Check whether the right child of the root is x.
+  Passed (+1pt)
+Check whether the left child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the lift child of the right child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the right child of the root is null.
+  Passed (+1pt)
+Substitute x for 2.
+  Passed (+1pt)
+Check whether the minimum depth of + is 0.
+  Passed (+1pt)
+Check whether the minimum depth of 1 is 1.
+  Passed (+1pt)
+Check whether the minimum depth of 2 is 1.
+  Passed (+1pt)
+Check whether the minimum depth of x is -1.
+  Passed (+1pt)
+Check whether the root is +.
+  Passed (+1pt)
+Check whether the left child of the root is 1.
+  Passed (+1pt)
+Check whether the right child of the root is 2.
+  Passed (+1pt)
+Check whether the left child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the lift child of the right child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the right child of the root is null.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the root is 3.
+  Passed (+1pt)
+Check whether the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the root is null.
+  Passed (+1pt)
+Score of this test case: (=28pt)
+
+Score earned in phase2-testcase06 = 28pt
+
+--------------------------------------------------
+Compiling phase2-testcase07.cpp ...
+Compilation succeeded.
+Running phase2-testcase07 ...
+
+TESTCASE: test the behavior of input 'y x x * +':
+Paste the postfix expression.
+Check whether the minimum depth of + is 0.
+  Passed (+1pt)
+Check whether the minimum depth of * is 1.
+  Passed (+1pt)
+Check whether the minimum depth of x is 2.
+  Passed (+1pt)
+Check whether the minimum depth of y is 1.
+  Failed (+0pt)
+Check whether the minimum depth of 1 is -1.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the root is +.
+  Passed (+1pt)
+Check whether the left child of the root is y.
+  Passed (+1pt)
+Check whether the right child of the root is *.
+  Passed (+1pt)
+Check whether the left child of the right child of the root is x.
+  Passed (+1pt)
+Check whether the right child of the right child of the root is x.
+  Passed (+1pt)
+Check whether the left child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the left child of the root is null.
+  Passed (+1pt)
+Substitute x for -1.
+  Passed (+1pt)
+Check whether the left child of the right child of the root is -1.
+  Passed (+1pt)
+Check whether the right child of the right child of the root is -1.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the root is +.
+  Passed (+1pt)
+Check whether the left child of the root is y.
+  Passed (+1pt)
+Check whether the right child of the root is 1.
+  Passed (+1pt)
+Check whether the left child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the left child of the right child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the right child of the root is null.
+  Passed (+1pt)
+Score of this test case: (=23pt)
+
+Score earned in phase2-testcase07 = 23pt
+
+--------------------------------------------------
+Compiling phase2-testcase08.cpp ...
+Compilation succeeded.
+Running phase2-testcase08 ...
+
+TESTCASE: test the behavior of input 'y x x x x 1 + + + + +':
+Paste the postfix expression.
+Check whether the minimum depth of x is 2.
+  Passed (+1pt)
+Check whether the minimum depth of y is 1.
+  Failed (+0pt)
+Check whether the minimum depth of 1 is 5.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the minimum depth of x is 2.
+  Passed (+1pt)
+Check whether the minimum depth of y is 1.
+  Failed (+0pt)
+Substitute x for 1.
+  Passed (+1pt)
+Check whether the minimum depth of x is -1.
+  Passed (+1pt)
+Check whether the minimum depth of y is 1.
+  Failed (+0pt)
+Check whether the minimum depth of 1 is 2.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the root is +.
+  Passed (+1pt)
+Check whether the left child of the root is y.
+  Passed (+1pt)
+Check whether the right child of the root is 5.
+  Passed (+1pt)
+Check whether the left child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the left child of the right child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the right child of the root is null.
+  Passed (+1pt)
+Score of this test case: (=15pt)
+
+Score earned in phase2-testcase08 = 15pt
+
+--------------------------------------------------
+Compiling phase2-testcase09.cpp ...
+Compilation succeeded.
+Running phase2-testcase09 ...
+
+TESTCASE: test the behavior of input 'x x + x x + + y +':
+Paste the postfix expression.
+Check whether the minimum depth of x is 3.
+  Passed (+1pt)
+Check whether the minimum depth of y is 1.
+  Failed (+0pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the minimum depth of x is 3.
+  Passed (+1pt)
+Check whether the minimum depth of y is 1.
+  Failed (+0pt)
+Substitute x for 1.
+  Passed (+1pt)
+Check whether the minimum depth of x is -1.
+  Passed (+1pt)
+Check whether the minimum depth of y is 1.
+  Failed (+0pt)
+Check whether the minimum depth of 1 is 3.
+  Passed (+1pt)
+Simplify the subtree.
+  Passed (+1pt)
+Check whether the root is +.
+  Passed (+1pt)
+Check whether the right child of the root is y.
+  Passed (+1pt)
+Check whether the left child of the root is 5.
+  Passed (+1pt)
+Check whether the left child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the left child of the root is null.
+  Passed (+1pt)
+Check whether the left child of the right child of the root is null.
+  Passed (+1pt)
+Check whether the right child of the right child of the root is null.
+  Passed (+1pt)
+Score of this test case: (=14pt)
+
+Score earned in phase2-testcase09 = 14pt
+
+==================================================
+=== PHASE 3: Behavioral Tests ====================
+==================================================
+Compiling submitted files ...
+In file included from /home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/assignment2.cpp:43:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/LinkedBinaryTree.h:308:40: warning: no newline at end of file
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/LinkedBinaryTree.h: In destructor ‘LinkedBinaryTree<Elem>::Node::~Node() [with Elem = Symbol]’:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/LinkedBinaryTree.h:251:   instantiated from ‘void LinkedBinaryTree<Elem>::removeSubtree(const LinkedBinaryTree<Elem>::Position&) [with Elem = Symbol]’
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/assignment2.cpp:261:   instantiated from here
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/LinkedBinaryTree.h:52: warning: passing NULL to non-pointer argument 1 of ‘Symbol::Symbol(int)’
+In file included from /home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/main.cpp:14:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/LinkedBinaryTree.h:308:40: warning: no newline at end of file
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/LinkedBinaryTree.h: In destructor ‘LinkedBinaryTree<Elem>::Node::~Node() [with Elem = Symbol]’:
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/LinkedBinaryTree.h:251:   instantiated from ‘void LinkedBinaryTree<Elem>::removeSubtree(const LinkedBinaryTree<Elem>::Position&) [with Elem = Symbol]’
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/main.cpp:186:   instantiated from here
+/home/cse221/chiu-2017/assign2/grading/grading-reports/2017-10-25/cs20161248_2017-10-25_tmp/phase3-prog/LinkedBinaryTree.h:52: warning: passing NULL to non-pointer argument 1 of ‘Symbol::Symbol(int)’
+Compilation succeeded.
+--------------------------------------------------
+Input file: input01.txt
+Correct output.
+Score earned in input01 = 5pt
+
+--------------------------------------------------
+Input file: input02.txt
+Correct output.
+Score earned in input02 = 5pt
+
+--------------------------------------------------
+Input file: input03.txt
+Correct output.
+Score earned in input03 = 5pt
+
+--------------------------------------------------
+Input file: input04.txt
+Correct output.
+Score earned in input04 = 5pt
+
+--------------------------------------------------
+Input file: input05.txt
+Correct output.
+Score earned in input05 = 5pt
+
+--------------------------------------------------
+Input file: input06.txt
+Correct output.
+Score earned in input06 = 5pt
+
+--------------------------------------------------
+Input file: input07.txt
+The following input generated wrong output:
+------------------------------
+a
+1 #
+g
+x
+j
+a
+x #
+g
+x
+j
+a
+z x + y y + + z + #
+g
+x
+g
+y
+j
+a
+y x + x + z + x x + y + z + + x x + + #
+g
+x
+g
+z
+j
+a
+q x + y + z + z x + 5 + 2 + + h x + y + z + z x + 3 + z + + + #
+g
+x
+g
+z
+g
+h
+j
+z------------------------------
+Score earned in input07 = 0pt
+
+--------------------------------------------------
+Input file: input08.txt
+Correct output.
+Score earned in input08 = 5pt
+
+--------------------------------------------------
+Input file: input09.txt
+Correct output.
+Score earned in input09 = 5pt
+
+--------------------------------------------------
+Input file: input10.txt
+Correct output.
+Score earned in input10 = 5pt
+
+--------------------------------------------------
+Input file: input11.txt
+Correct output.
+Score earned in input11 = 5pt
+
+--------------------------------------------------
+Input file: input12.txt
+Correct output.
+Score earned in input12 = 5pt
+
+--------------------------------------------------
+Input file: input13.txt
+The following input generated wrong output:
+------------------------------
+a
+8 1 * 2 x * * 2 3 * x x * * *  x 4 * 1 1 * * * #
+b
+c
+d
+e
+f
+g
+x
+i
+b
+c
+h
+x
+7
+b
+e
+f
+i
+b
+c
+d
+e
+f
+j
+z
+------------------------------
+Score earned in input13 = 0pt
+
+--------------------------------------------------
+Input file: input14.txt
+The following input generated wrong output:
+------------------------------
+a
+8 x / 2 x / / 6 3 / x x / / / #
+b
+c
+d
+e
+f
+g
+x
+i
+b
+c
+h
+x
+2
+b
+e
+f
+i
+b
+c
+d
+j
+z
+------------------------------
+Score earned in input14 = 0pt
+
+--------------------------------------------------
+Input file: input15.txt
+The following input generated wrong output:
+------------------------------
+a
+x1 x2 + x3 x4 + - x5 x6 - x7 x8 + + - x11 x12 + x13 x14 + - x15 x16 - x17 x18 + + - * x21 x22 + x23 x24 + - x25 x26 - x27 x28 + + - x31 x32 + x33 x34 + - x35 x36 - x37 x38 + + - / + x41 x42 + x43 x44 + - x45 x46 - x47 x48 + + - + x49 x50 - + #
+b
+c
+d
+e
+f
+g
+x1
+g
+x16
+g
+x44
+h
+x1
+44
+b
+i
+b
+h
+x2
+43
+b
+i
+b
+h
+x3
+42
+b
+i
+b
+h
+x4
+41
+b
+i
+b
+h
+x5
+40
+b
+i
+b
+h
+x6
+39
+b
+i
+b
+h
+x7
+38
+b
+i
+b
+h
+x8
+37
+b
+i
+b
+h
+x9
+36
+b
+i
+b
+h
+x10
+35
+b
+i
+b
+h
+x11
+34
+b
+i
+b
+h
+x12
+33
+b
+i
+b
+h
+x13
+32
+b
+i
+b
+h
+x14
+31
+b
+i
+b
+h
+x15
+30
+b
+i
+b
+h
+x16
+29
+b
+i
+b
+h
+x17
+28
+b
+i
+b
+h
+x18
+27
+b
+i
+b
+h
+x19
+26
+b
+i
+b
+h
+x20
+25
+b
+i
+b
+h
+x21
+24
+b
+i
+b
+h
+x22
+23
+b
+i
+b
+h
+x23
+22
+b
+i
+b
+h
+x24
+21
+b
+i
+b
+h
+x25
+20
+b
+i
+b
+h
+x26
+19
+b
+i
+b
+h
+x27
+18
+b
+i
+b
+h
+x28
+17
+b
+i
+b
+h
+x29
+16
+b
+i
+b
+h
+x30
+15
+b
+i
+b
+h
+x31
+14
+b
+i
+b
+h
+x32
+13
+b
+i
+b
+h
+x33
+12
+b
+i
+b
+h
+x34
+11
+b
+i
+b
+h
+x35
+10
+b
+i
+b
+h
+x36
+9
+b
+i
+b
+h
+x37
+8
+b
+i
+b
+h
+x38
+7
+b
+i
+b
+h
+x39
+6
+b
+i
+e
+b
+h
+x40
+5
+b
+i
+c
+b
+h
+x41
+4
+b
+i
+b
+h
+x42
+3
+b
+i
+b
+h
+x43
+2
+b
+i
+b
+h
+x44
+1
+b
+i
+b
+h
+x45
+5
+b
+i
+b
+h
+x46
+4
+b
+i
+b
+h
+x47
+1
+b
+i
+b
+h
+x48
+2
+b
+i
+b
+h
+x49
+3
+b
+i
+b
+h
+x50
+1
+b
+i
+b
+j
+z
+------------------------------
+Score earned in input15 = 0pt
+
+--------------------------------------------------
+Input file: input16.txt
+The following input generated wrong output:
+------------------------------
+a
+x #
+b
+h
+x
+1
+b
+j
+a
+x1 x2 - x3 x4 - + x5 x6 - x7 x8 - + + x9 x10 - x11 x12 - +  x13 x14 - x15 x16 - + + + x17 x18 - x19 x20 - + x21 x22 - x23 x24 - + + x25 x26 - x27 x28 - + x29 x30 - x31 x32 - + + + + x33 x34 - x35 x36 - + x37 x38 - x39 x40 - + + x41 x42 - x43 x44 - + x45 x46 - x47 x48 - + + + x49 x50 - x51 x52 - + x53 x54 - x55 x56 - + + x57 x58 - x59 x60 - + x61 x62 - x63 x64 - + + + + + x65 x66 - x67 x68 - + x69 x70 - x71 x72 - + + x73 x74 - x75 x76 - + x77 x78 - x79 x80 - + + + x81 x82 - x83 x84 - + x85 x86 - x87 x88 - + + x89 x90 - x91 x92 - + x93 x94 - x95 x96 - + + + + x97 x98 - x99 x100 - + + + #
+b
+c
+d
+h
+x1
+99
+b
+i
+b
+h
+x2
+98
+b
+i
+b
+h
+x3
+97
+b
+i
+b
+h
+x4
+96
+b
+i
+b
+h
+x5
+95
+b
+i
+b
+h
+x6
+94
+b
+i
+b
+h
+x7
+93
+b
+i
+b
+h
+x8
+92
+b
+i
+b
+h
+x9
+91
+b
+i
+b
+h
+x10
+90
+b
+i
+b
+h
+x11
+89
+b
+i
+b
+h
+x12
+88
+b
+i
+b
+h
+x13
+87
+b
+i
+b
+h
+x14
+86
+b
+i
+b
+h
+x15
+85
+b
+i
+b
+h
+x16
+84
+b
+i
+b
+h
+x17
+83
+b
+i
+b
+h
+x18
+82
+b
+i
+b
+h
+x19
+81
+b
+i
+b
+h
+x20
+80
+b
+i
+b
+h
+x21
+79
+b
+i
+b
+h
+x22
+78
+b
+i
+b
+h
+x23
+77
+b
+i
+b
+h
+x24
+76
+b
+i
+b
+h
+x25
+75
+b
+i
+b
+h
+x26
+74
+b
+i
+b
+h
+x27
+73
+b
+i
+b
+h
+x28
+72
+b
+i
+b
+h
+x29
+71
+b
+i
+b
+h
+x30
+70
+b
+i
+b
+h
+x31
+69
+b
+i
+b
+h
+x32
+68
+b
+i
+b
+h
+x33
+67
+b
+i
+b
+h
+x34
+66
+b
+i
+b
+h
+x35
+65
+b
+i
+b
+h
+x36
+64
+b
+i
+b
+h
+x37
+63
+b
+i
+b
+h
+x38
+62
+b
+i
+b
+h
+x39
+61
+b
+i
+b
+h
+x40
+60
+b
+i
+b
+h
+x41
+59
+b
+i
+b
+h
+x42
+58
+b
+i
+b
+h
+x43
+57
+b
+i
+b
+h
+x44
+56
+b
+i
+b
+h
+x45
+55
+b
+i
+b
+h
+x46
+54
+b
+i
+b
+h
+x47
+53
+b
+i
+b
+h
+x48
+52
+b
+i
+b
+h
+x49
+51
+b
+i
+b
+h
+x50
+50
+b
+i
+b
+h
+x51
+49
+b
+i
+b
+h
+x52
+48
+b
+i
+b
+h
+x53
+47
+b
+i
+b
+h
+x54
+46
+b
+i
+b
+h
+x55
+45
+b
+i
+b
+h
+x56
+44
+b
+i
+b
+h
+x57
+43
+b
+i
+b
+h
+x58
+42
+b
+i
+b
+h
+x59
+41
+b
+i
+b
+h
+x60
+40
+b
+i
+b
+h
+x61
+39
+b
+i
+b
+h
+x62
+38
+b
+i
+b
+h
+x63
+37
+b
+i
+b
+h
+x64
+36
+b
+i
+b
+h
+x65
+35
+b
+i
+b
+h
+x66
+34
+b
+i
+b
+h
+x67
+33
+b
+i
+b
+h
+x68
+32
+b
+i
+b
+h
+x69
+31
+b
+i
+b
+h
+x70
+30
+b
+i
+b
+h
+x71
+29
+b
+i
+b
+h
+x72
+28
+b
+i
+b
+h
+x73
+27
+b
+i
+b
+h
+x74
+26
+b
+i
+b
+h
+x75
+25
+b
+i
+b
+h
+x76
+24
+b
+i
+b
+h
+x77
+23
+b
+i
+b
+h
+x78
+22
+b
+i
+b
+h
+x79
+21
+b
+i
+b
+h
+x80
+20
+b
+i
+b
+h
+x81
+19
+b
+i
+b
+h
+x82
+18
+g
+x83
+d
+i
+b
+h
+x83
+17
+b
+i
+b
+h
+x84
+16
+b
+i
+b
+h
+x85
+15
+b
+i
+b
+h
+x86
+14
+e
+i
+e
+h
+x87
+13
+b
+i
+b
+h
+x88
+12
+b
+i
+c
+h
+x89
+11
+b
+i
+f
+h
+x90
+10
+b
+i
+b
+h
+x91
+9
+b
+i
+b
+h
+x92
+8
+b
+i
+b
+h
+x93
+7
+b
+i
+b
+h
+x94
+6
+b
+i
+b
+h
+x95
+5
+b
+i
+b
+h
+x96
+4
+f
+i
+b
+h
+x97
+3
+b
+i
+b
+h
+x98
+2
+d
+i
+b
+h
+x99
+1
+b
+i
+b
+h
+x100
+1
+c
+i
+b
+j
+z
+------------------------------
+Score earned in input16 = 0pt
+
+--------------------------------------------------
+Input file: input17.txt
+The following input generated wrong output:
+------------------------------
+a
+x #
+b
+h
+x
+1
+b
+j
+a
+x1 x2 - x3 x4 - + x5 x6 - x7 x8 - + + x9 x10 - x11 x12 - +  x13 x14 - x15 x16 - + + + x17 x18 - x19 x20 - + x21 x22 - x23 x24 - + + x25 x26 - x27 x28 - + x29 x30 - x31 x32 - + + + + x33 x34 - x35 x36 - + x37 x38 - x39 x40 - + + x41 x42 - x43 x44 - + x45 x46 - x47 x48 - + + + x49 x50 - x51 x52 - + x53 x54 - x55 x56 - + + x57 x58 - x59 x60 - + x61 x62 - x63 x64 - + + + + + x65 x66 - x67 x68 - + x69 x70 - x71 x72 - + + x73 x74 - x75 x76 - + x77 x78 - x79 x80 - + + + x81 x82 - x83 x84 - + x85 x86 - x87 x88 - + + x89 x90 - x91 x92 - + x93 x94 - x95 x96 - + + + + x97 x98 - x99 x100 - + + + #
+b
+c
+d
+h
+x3
+991
+b
+i
+b
+h
+x2
+982
+b
+i
+b
+h
+x7
+973
+b
+i
+b
+h
+x4
+964
+b
+i
+b
+h
+x8
+955
+b
+i
+b
+h
+x6
+946
+b
+i
+b
+h
+x1
+937
+b
+i
+b
+h
+x5
+928
+b
+i
+b
+h
+x9
+919
+b
+i
+b
+h
+x30
+9010
+b
+i
+b
+h
+x33
+8911
+b
+i
+b
+h
+x32
+8812
+b
+i
+b
+h
+x37
+8713
+b
+i
+b
+h
+x34
+8614
+b
+i
+b
+h
+x38
+8515
+b
+i
+b
+h
+x36
+8416
+b
+i
+b
+h
+x31
+8317
+b
+i
+b
+h
+x35
+8218
+b
+i
+b
+h
+x39
+8119
+b
+i
+b
+h
+x20
+8020
+b
+i
+b
+h
+x23
+7921
+b
+i
+b
+h
+x22
+7822
+b
+i
+b
+h
+x27
+7723
+b
+i
+b
+h
+x24
+7624
+b
+i
+b
+h
+x28
+7525
+b
+i
+b
+h
+x26
+7426
+b
+i
+b
+h
+x21
+7327
+b
+i
+b
+h
+x25
+7228
+b
+i
+b
+h
+x29
+7129
+b
+i
+b
+h
+x70
+7030
+b
+i
+b
+h
+x73
+6931
+b
+i
+b
+h
+x72
+6832
+b
+i
+b
+h
+x77
+6733
+b
+i
+b
+h
+x74
+6634
+b
+i
+b
+h
+x78
+6535
+b
+i
+b
+h
+x76
+6436
+b
+i
+b
+h
+x71
+6337
+b
+i
+b
+h
+x75
+6238
+b
+i
+b
+h
+x79
+6139
+b
+i
+b
+h
+x40
+6040
+b
+i
+b
+h
+x43
+5941
+b
+i
+b
+h
+x42
+5842
+b
+i
+b
+h
+x47
+5743
+b
+i
+b
+h
+x44
+5644
+b
+i
+b
+h
+x48
+5545
+b
+i
+b
+h
+x46
+5446
+b
+i
+b
+h
+x41
+5347
+b
+i
+b
+h
+x45
+5248
+b
+i
+b
+h
+x49
+5149
+b
+i
+b
+h
+x80
+5050
+b
+i
+b
+h
+x83
+4951
+b
+i
+b
+h
+x82
+4852
+b
+i
+b
+h
+x87
+4753
+b
+i
+b
+h
+x84
+4654
+b
+i
+b
+h
+x88
+4555
+b
+i
+b
+h
+x86
+4456
+b
+i
+b
+h
+x81
+4357
+b
+i
+b
+h
+x85
+4258
+b
+i
+b
+h
+x89
+4159
+b
+i
+b
+h
+x60
+4060
+b
+i
+b
+h
+x63
+3961
+b
+i
+b
+h
+x62
+3862
+b
+i
+b
+h
+x67
+3763
+b
+i
+b
+h
+x64
+3664
+b
+i
+b
+h
+x68
+3565
+b
+i
+b
+h
+x66
+3466
+b
+i
+b
+h
+x61
+3367
+b
+i
+b
+h
+x65
+3268
+b
+i
+b
+h
+x69
+3169
+b
+i
+b
+h
+x10
+3070
+b
+i
+b
+h
+x13
+2971
+b
+i
+b
+h
+x12
+2872
+b
+i
+b
+h
+x17
+2773
+b
+i
+b
+h
+x14
+2674
+b
+i
+b
+h
+x18
+2575
+b
+i
+b
+h
+x16
+2476
+b
+i
+b
+h
+x11
+2377
+b
+i
+b
+h
+x15
+2278
+b
+i
+b
+h
+x19
+2179
+b
+i
+b
+h
+x50
+2080
+b
+i
+b
+h
+x53
+1981
+b
+i
+b
+h
+x52
+1882
+b
+i
+b
+h
+x57
+1783
+b
+i
+b
+h
+x54
+1684
+b
+i
+b
+h
+x58
+1585
+b
+i
+b
+h
+x56
+1486
+b
+i
+b
+h
+x51
+1387
+b
+i
+b
+h
+x55
+1288
+b
+i
+b
+h
+x59
+1189
+b
+i
+b
+h
+x90
+1090
+b
+i
+b
+h
+x93
+991
+g
+x100
+i
+b
+h
+x92
+892
+d
+i
+b
+h
+x97
+793
+b
+i
+b
+h
+x94
+694
+b
+i
+b
+h
+x98
+595
+b
+i
+b
+h
+x96
+496
+f
+i
+b
+h
+x91
+397
+b
+i
+b
+h
+x95
+298
+d
+i
+b
+h
+x99
+199
+b
+i
+b
+h
+x100
+1100
+c
+i
+b
+j
+z
+------------------------------
+Score earned in input17 = 0pt
+
+--------------------------------------------------
+Input file: input18.txt
+Correct output.
+Score earned in input18 = 5pt
+
+--------------------------------------------------
+Input file: input19.txt
+Correct output.
+Score earned in input19 = 5pt
+
+--------------------------------------------------
+Input file: input20.txt
+Correct output.
+Score earned in input20 = 5pt
+
+--------------------------------------------------
+Input file: input21.txt
+Correct output.
+Score earned in input21 = 5pt
+
+--------------------------------------------------
+Input file: input22.txt
+Correct output.
+Score earned in input22 = 5pt
+
+--------------------------------------------------
+Input file: input23.txt
+Correct output.
+Score earned in input23 = 5pt
+
+--------------------------------------------------
+Input file: input24.txt
+Correct output.
+Score earned in input24 = 5pt
+
+--------------------------------------------------
+Input file: input25.txt
+The following input generated wrong output:
+------------------------------
+a
+x1	2	*	x201	2	+	+	x401	2	+	x601	1	-	+	+	x801	+								
+x2	2	*	x202	3	+	+	x402	3	+	x602	1	-	+	+	x802	+	+							
+x3	2	*	x203	4	+	+	x403	4	+	x603	1	-	+	+	x803	+								
+x4	2	*	x204	5	+	+	x404	5	+	x604	1	-	+	+	x804	+	+	+						
+x5	2	*	x205	6	+	+	x405	6	+	x605	1	-	+	+	x805	+								
+x6	2	*	x206	7	+	+	x406	7	+	x606	1	-	+	+	x806	+	+							
+x7	2	*	x207	8	+	+	x407	8	+	x607	1	-	+	+	x807	+								
+x8	2	*	x208	9	+	+	x408	9	+	x608	1	-	+	+	x808	+	+	+	+					
+x9	2	*	x209	10	+	+	x409	10	+	x609	1	-	+	+	x809	+								
+x10	2	*	x210	11	+	+	x410	11	+	x610	1	-	+	+	x810	+	+							
+x11	2	*	x211	12	+	+	x411	12	+	x611	1	-	+	+	x811	+								
+x12	2	*	x212	13	+	+	x412	13	+	x612	1	-	+	+	x812	+	+	+						
+x13	2	*	x213	14	+	+	x413	14	+	x613	1	-	+	+	x813	+								
+x14	2	*	x214	15	+	+	x414	15	+	x614	1	-	+	+	x814	+	+							
+x15	2	*	x215	16	+	+	x415	16	+	x615	1	-	+	+	x815	+								
+x16	2	*	x216	17	+	+	x416	17	+	x616	1	-	+	+	x816	+	+	+	+	+				
+x17	2	*	x217	18	+	+	x417	18	+	x617	1	-	+	+	x817	+								
+x18	2	*	x218	19	+	+	x418	19	+	x618	1	-	+	+	x818	+	+							
+x19	2	*	x219	20	+	+	x419	20	+	x619	1	-	+	+	x819	+								
+x20	2	*	x220	21	+	+	x420	21	+	x620	1	-	+	+	x820	+	+	+						
+x21	2	*	x221	22	+	+	x421	22	+	x621	1	-	+	+	x821	+								
+x22	2	*	x222	23	+	+	x422	23	+	x622	1	-	+	+	x822	+	+							
+x23	2	*	x223	24	+	+	x423	24	+	x623	1	-	+	+	x823	+								
+x24	2	*	x224	25	+	+	x424	25	+	x624	1	-	+	+	x824	+	+	+	+					
+x25	2	*	x225	26	+	+	x425	26	+	x625	1	-	+	+	x825	+								
+x26	2	*	x226	27	+	+	x426	27	+	x626	1	-	+	+	x826	+	+							
+x27	2	*	x227	28	+	+	x427	28	+	x627	1	-	+	+	x827	+								
+x28	2	*	x228	29	+	+	x428	29	+	x628	1	-	+	+	x828	+	+	+						
+x29	2	*	x229	30	+	+	x429	30	+	x629	1	-	+	+	x829	+								
+x30	2	*	x230	31	+	+	x430	31	+	x630	1	-	+	+	x830	+	+							
+x31	2	*	x231	32	+	+	x431	32	+	x631	1	-	+	+	x831	+								
+x32	2	*	x232	33	+	+	x432	33	+	x632	1	-	+	+	x832	+	+	+	+	+	+			
+x33	2	*	x233	34	+	+	x433	34	+	x633	1	-	+	+	x833	+								
+x34	2	*	x234	35	+	+	x434	35	+	x634	1	-	+	+	x834	+	+							
+x35	2	*	x235	36	+	+	x435	36	+	x635	1	-	+	+	x835	+								
+x36	2	*	x236	37	+	+	x436	37	+	x636	1	-	+	+	x836	+	+	+						
+x37	2	*	x237	38	+	+	x437	38	+	x637	1	-	+	+	x837	+								
+x38	2	*	x238	39	+	+	x438	39	+	x638	1	-	+	+	x838	+	+							
+x39	2	*	x239	40	+	+	x439	40	+	x639	1	-	+	+	x839	+								
+x40	2	*	x240	41	+	+	x440	41	+	x640	1	-	+	+	x840	+	+	+	+					
+x41	2	*	x241	42	+	+	x441	42	+	x641	1	-	+	+	x841	+								
+x42	2	*	x242	43	+	+	x442	43	+	x642	1	-	+	+	x842	+	+							
+x43	2	*	x243	44	+	+	x443	44	+	x643	1	-	+	+	x843	+								
+x44	2	*	x244	45	+	+	x444	45	+	x644	1	-	+	+	x844	+	+	+						
+x45	2	*	x245	46	+	+	x445	46	+	x645	1	-	+	+	x845	+								
+x46	2	*	x246	47	+	+	x446	47	+	x646	1	-	+	+	x846	+	+							
+x47	2	*	x247	48	+	+	x447	48	+	x647	1	-	+	+	x847	+								
+x48	2	*	x248	49	+	+	x448	49	+	x648	1	-	+	+	x848	+	+	+	+	+				
+x49	2	*	x249	50	+	+	x449	50	+	x649	1	-	+	+	x849	+								
+x50	2	*	x250	51	+	+	x450	51	+	x650	1	-	+	+	x850	+	+							
+x51	2	*	x251	52	+	+	x451	52	+	x651	1	-	+	+	x851	+								
+x52	2	*	x252	53	+	+	x452	53	+	x652	1	-	+	+	x852	+	+	+						
+x53	2	*	x253	54	+	+	x453	54	+	x653	1	-	+	+	x853	+								
+x54	2	*	x254	55	+	+	x454	55	+	x654	1	-	+	+	x854	+	+							
+x55	2	*	x255	56	+	+	x455	56	+	x655	1	-	+	+	x855	+								
+x56	2	*	x256	57	+	+	x456	57	+	x656	1	-	+	+	x856	+	+	+	+					
+x57	2	*	x257	58	+	+	x457	58	+	x657	1	-	+	+	x857	+								
+x58	2	*	x258	59	+	+	x458	59	+	x658	1	-	+	+	x858	+	+							
+x59	2	*	x259	60	+	+	x459	60	+	x659	1	-	+	+	x859	+								
+x60	2	*	x260	61	+	+	x460	61	+	x660	1	-	+	+	x860	+	+	+						
+x61	2	*	x261	62	+	+	x461	62	+	x661	1	-	+	+	x861	+								
+x62	2	*	x262	63	+	+	x462	63	+	x662	1	-	+	+	x862	+	+							
+x63	2	*	x263	64	+	+	x463	64	+	x663	1	-	+	+	x863	+								
+x64	2	*	x264	65	+	+	x464	65	+	x664	1	-	+	+	x864	+	+	+	+	+	+	+		
+x65	2	*	x265	66	+	+	x465	66	+	x665	1	-	+	+	x865	+								
+x66	2	*	x266	67	+	+	x466	67	+	x666	1	-	+	+	x866	+	+							
+x67	2	*	x267	68	+	+	x467	68	+	x667	1	-	+	+	x867	+								
+x68	2	*	x268	69	+	+	x468	69	+	x668	1	-	+	+	x868	+	+	+						
+x69	2	*	x269	70	+	+	x469	70	+	x669	1	-	+	+	x869	+								
+x70	2	*	x270	71	+	+	x470	71	+	x670	1	-	+	+	x870	+	+							
+x71	2	*	x271	72	+	+	x471	72	+	x671	1	-	+	+	x871	+								
+x72	2	*	x272	73	+	+	x472	73	+	x672	1	-	+	+	x872	+	+	+	+					
+x73	2	*	x273	74	+	+	x473	74	+	x673	1	-	+	+	x873	+								
+x74	2	*	x274	75	+	+	x474	75	+	x674	1	-	+	+	x874	+	+							
+x75	2	*	x275	76	+	+	x475	76	+	x675	1	-	+	+	x875	+								
+x76	2	*	x276	77	+	+	x476	77	+	x676	1	-	+	+	x876	+	+	+						
+x77	2	*	x277	78	+	+	x477	78	+	x677	1	-	+	+	x877	+								
+x78	2	*	x278	79	+	+	x478	79	+	x678	1	-	+	+	x878	+	+							
+x79	2	*	x279	80	+	+	x479	80	+	x679	1	-	+	+	x879	+								
+x80	2	*	x280	81	+	+	x480	81	+	x680	1	-	+	+	x880	+	+	+	+	+				
+x81	2	*	x281	82	+	+	x481	82	+	x681	1	-	+	+	x881	+								
+x82	2	*	x282	83	+	+	x482	83	+	x682	1	-	+	+	x882	+	+							
+x83	2	*	x283	84	+	+	x483	84	+	x683	1	-	+	+	x883	+								
+x84	2	*	x284	85	+	+	x484	85	+	x684	1	-	+	+	x884	+	+	+						
+x85	2	*	x285	86	+	+	x485	86	+	x685	1	-	+	+	x885	+								
+x86	2	*	x286	87	+	+	x486	87	+	x686	1	-	+	+	x886	+	+							
+x87	2	*	x287	88	+	+	x487	88	+	x687	1	-	+	+	x887	+								
+x88	2	*	x288	89	+	+	x488	89	+	x688	1	-	+	+	x888	+	+	+	+					
+x89	2	*	x289	90	+	+	x489	90	+	x689	1	-	+	+	x889	+								
+x90	2	*	x290	91	+	+	x490	91	+	x690	1	-	+	+	x890	+	+							
+x91	2	*	x291	92	+	+	x491	92	+	x691	1	-	+	+	x891	+								
+x92	2	*	x292	93	+	+	x492	93	+	x692	1	-	+	+	x892	+	+	+						
+x93	2	*	x293	94	+	+	x493	94	+	x693	1	-	+	+	x893	+								
+x94	2	*	x294	95	+	+	x494	95	+	x694	1	-	+	+	x894	+	+							
+x95	2	*	x295	96	+	+	x495	96	+	x695	1	-	+	+	x895	+								
+x96	2	*	x296	97	+	+	x496	97	+	x696	1	-	+	+	x896	+	+	+	+	+	+			
+x97	2	*	x297	98	+	+	x497	98	+	x697	1	-	+	+	x897	+								
+x98	2	*	x298	99	+	+	x498	99	+	x698	1	-	+	+	x898	+	+							
+x99	2	*	x299	100	+	+	x499	100	+	x699	1	-	+	+	x899	+								
+x100	2	*	x300	101	+	+	x500	101	+	x700	1	-	+	+	x900	+	+	+						
+x101	2	*	x301	102	+	+	x501	102	+	x701	1	-	+	+	x901	+								
+x102	2	*	x302	103	+	+	x502	103	+	x702	1	-	+	+	x902	+	+							
+x103	2	*	x303	104	+	+	x503	104	+	x703	1	-	+	+	x903	+								
+x104	2	*	x304	105	+	+	x504	105	+	x704	1	-	+	+	x904	+	+	+	+					
+x105	2	*	x305	106	+	+	x505	106	+	x705	1	-	+	+	x905	+								
+x106	2	*	x306	107	+	+	x506	107	+	x706	1	-	+	+	x906	+	+							
+x107	2	*	x307	108	+	+	x507	108	+	x707	1	-	+	+	x907	+								
+x108	2	*	x308	109	+	+	x508	109	+	x708	1	-	+	+	x908	+	+	+						
+x109	2	*	x309	110	+	+	x509	110	+	x709	1	-	+	+	x909	+								
+x110	2	*	x310	111	+	+	x510	111	+	x710	1	-	+	+	x910	+	+							
+x111	2	*	x311	112	+	+	x511	112	+	x711	1	-	+	+	x911	+								
+x112	2	*	x312	113	+	+	x512	113	+	x712	1	-	+	+	x912	+	+	+	+	+				
+x113	2	*	x313	114	+	+	x513	114	+	x713	1	-	+	+	x913	+								
+x114	2	*	x314	115	+	+	x514	115	+	x714	1	-	+	+	x914	+	+							
+x115	2	*	x315	116	+	+	x515	116	+	x715	1	-	+	+	x915	+								
+x116	2	*	x316	117	+	+	x516	117	+	x716	1	-	+	+	x916	+	+	+						
+x117	2	*	x317	118	+	+	x517	118	+	x717	1	-	+	+	x917	+								
+x118	2	*	x318	119	+	+	x518	119	+	x718	1	-	+	+	x918	+	+							
+x119	2	*	x319	120	+	+	x519	120	+	x719	1	-	+	+	x919	+								
+x120	2	*	x320	121	+	+	x520	121	+	x720	1	-	+	+	x920	+	+	+	+					
+x121	2	*	x321	122	+	+	x521	122	+	x721	1	-	+	+	x921	+								
+x122	2	*	x322	123	+	+	x522	123	+	x722	1	-	+	+	x922	+	+							
+x123	2	*	x323	124	+	+	x523	124	+	x723	1	-	+	+	x923	+								
+x124	2	*	x324	125	+	+	x524	125	+	x724	1	-	+	+	x924	+	+	+						
+x125	2	*	x325	126	+	+	x525	126	+	x725	1	-	+	+	x925	+								
+x126	2	*	x326	127	+	+	x526	127	+	x726	1	-	+	+	x926	+	+							
+x127	2	*	x327	128	+	+	x527	128	+	x727	1	-	+	+	x927	+								
+x128	2	*	x328	129	+	+	x528	129	+	x728	1	-	+	+	x928	+	+	+	+	+	+	+	+	
+x129	2	*	x329	130	+	+	x529	130	+	x729	1	-	+	+	x929	+								
+x130	2	*	x330	131	+	+	x530	131	+	x730	1	-	+	+	x930	+	+							
+x131	1	*	x331	132	+	+	x531	132	+	x731	1	-	+	+	x931	+								
+x132	1	*	x332	133	+	+	x532	133	+	x732	1	-	+	+	x932	+	+	+						
+x133	1	*	x333	134	+	+	x533	134	+	x733	1	-	+	+	x933	+								
+x134	1	*	x334	135	+	+	x534	135	+	x734	1	-	+	+	x934	+	+							
+x135	1	*	x335	136	+	+	x535	136	+	x735	1	-	+	+	x935	+								
+x136	1	*	x336	137	+	+	x536	137	+	x736	1	-	+	+	x936	+	+	+	+					
+x137	1	*	x337	138	+	+	x537	138	+	x737	1	-	+	+	x937	+								
+x138	1	*	x338	139	+	+	x538	139	+	x738	1	-	+	+	x938	+	+							
+x139	1	*	x339	140	+	+	x539	140	+	x739	1	-	+	+	x939	+								
+x140	1	*	x340	141	+	+	x540	141	+	x740	1	-	+	+	x940	+	+	+						
+x141	1	*	x341	142	+	+	x541	142	+	x741	1	-	+	+	x941	+								
+x142	1	*	x342	143	+	+	x542	143	+	x742	1	-	+	+	x942	+	+							
+x143	1	*	x343	144	+	+	x543	144	+	x743	1	-	+	+	x943	+								
+x144	1	*	x344	145	+	+	x544	145	+	x744	1	-	+	+	x944	+	+	+	+	+				
+x145	1	*	x345	146	+	+	x545	146	+	x745	1	-	+	+	x945	+								
+x146	1	*	x346	147	+	+	x546	147	+	x746	1	-	+	+	x946	+	+							
+x147	1	*	x347	148	+	+	x547	148	+	x747	1	-	+	+	x947	+								
+x148	1	*	x348	149	+	+	x548	149	+	x748	1	-	+	+	x948	+	+	+						
+x149	1	*	x349	150	+	+	x549	150	+	x749	1	-	+	+	x949	+								
+x150	1	*	x350	151	+	+	x550	151	+	x750	1	-	+	+	x950	+	+							
+x151	1	*	x351	152	+	+	x551	152	+	x751	1	-	+	+	x951	+								
+x152	1	*	x352	153	+	+	x552	153	+	x752	1	-	+	+	x952	+	+	+	+					
+x153	1	*	x353	154	+	+	x553	154	+	x753	1	-	+	+	x953	+								
+x154	1	*	x354	155	+	+	x554	155	+	x754	1	-	+	+	x954	+	+							
+x155	1	*	x355	156	+	+	x555	156	+	x755	1	-	+	+	x955	+								
+x156	1	*	x356	157	+	+	x556	157	+	x756	1	-	+	+	x956	+	+	+						
+x157	1	*	x357	158	+	+	x557	158	+	x757	1	-	+	+	x957	+								
+x158	1	*	x358	159	+	+	x558	159	+	x758	1	-	+	+	x958	+	+							
+x159	1	*	x359	160	+	+	x559	160	+	x759	1	-	+	+	x959	+								
+x160	1	*	x360	161	+	+	x560	161	+	x760	1	-	+	+	x960	+	+	+	+	+	+			
+x161	1	*	x361	162	+	+	x561	162	+	x761	1	-	+	+	x961	+								
+x162	1	*	x362	163	+	+	x562	163	+	x762	1	-	+	+	x962	+	+							
+x163	1	*	x363	164	+	+	x563	164	+	x763	1	-	+	+	x963	+								
+x164	1	*	x364	165	+	+	x564	165	+	x764	1	-	+	+	x964	+	+	+						
+x165	1	*	x365	166	+	+	x565	166	+	x765	1	-	+	+	x965	+								
+x166	1	*	x366	167	+	+	x566	167	+	x766	1	-	+	+	x966	+	+							
+x167	1	*	x367	168	+	+	x567	168	+	x767	1	-	+	+	x967	+								
+x168	1	*	x368	169	+	+	x568	169	+	x768	1	-	+	+	x968	+	+	+	+					
+x169	1	*	x369	170	+	+	x569	170	+	x769	1	-	+	+	x969	+								
+x170	1	*	x370	171	+	+	x570	171	+	x770	1	-	+	+	x970	+	+							
+x171	1	*	x371	172	+	+	x571	172	+	x771	1	-	+	+	x971	+								
+x172	1	*	x372	173	+	+	x572	173	+	x772	1	-	+	+	x972	+	+	+						
+x173	1	*	x373	174	+	+	x573	174	+	x773	1	-	+	+	x973	+								
+x174	1	*	x374	175	+	+	x574	175	+	x774	1	-	+	+	x974	+	+							
+x175	1	*	x375	176	+	+	x575	176	+	x775	1	-	+	+	x975	+								
+x176	1	*	x376	177	+	+	x576	177	+	x776	1	-	+	+	x976	+	+	+	+	+				
+x177	1	*	x377	178	+	+	x577	178	+	x777	1	-	+	+	x977	+								
+x178	1	*	x378	179	+	+	x578	179	+	x778	1	-	+	+	x978	+	+							
+x179	1	*	x379	180	+	+	x579	180	+	x779	1	-	+	+	x979	+								
+x180	1	*	x380	181	+	+	x580	181	+	x780	1	-	+	+	x980	+	+	+						
+x181	1	*	x381	182	+	+	x581	182	+	x781	1	-	+	+	x981	+								
+x182	1	*	x382	183	+	+	x582	183	+	x782	1	-	+	+	x982	+	+							
+x183	1	*	x383	184	+	+	x583	184	+	x783	1	-	+	+	x983	+								
+x184	1	*	x384	185	+	+	x584	185	+	x784	1	-	+	+	x984	+	+	+	+					
+x185	1	*	x385	186	+	+	x585	186	+	x785	1	-	+	+	x985	+								
+x186	1	*	x386	187	+	+	x586	187	+	x786	1	-	+	+	x986	+	+							
+x187	1	*	x387	188	+	+	x587	188	+	x787	1	-	+	+	x987	+								
+x188	1	*	x388	189	+	+	x588	189	+	x788	1	-	+	+	x988	+	+	+						
+x189	1	*	x389	190	+	+	x589	190	+	x789	1	-	+	+	x989	+								
+x190	1	*	x390	191	+	+	x590	191	+	x790	1	-	+	+	x990	+	+							
+x191	1	*	x391	192	+	+	x591	192	+	x791	1	-	+	+	x991	+								
+x192	1	*	x392	193	+	+	x592	193	+	x792	1	-	+	+	x992	+	+	+	+	+	+	+		
+x193	1	*	x393	194	+	+	x593	194	+	x793	1	-	+	+	x993	+								
+x194	1	*	x394	195	+	+	x594	195	+	x794	1	-	+	+	x994	+	+							
+x195	1	*	x395	196	+	+	x595	196	+	x795	1	-	+	+	x995	+								
+x196	1	*	x396	197	+	+	x596	197	+	x796	1	-	+	+	x996	+	+	+						
+x197	1	*	x397	198	+	+	x597	198	+	x797	1	-	+	+	x997	+								
+x198	1	*	x398	199	+	+	x598	199	+	x798	1	-	+	+	x998	+	+							
+x199	1	*	x399	200	+	+	x599	200	+	x799	1	-	+	+	x999	+								
+x200	1	*	x400	201	+	+	x600	201	+	x800	1	-	+	+	x1000	+	+	+	+				+	+
+#
+b
+c
+d
+e
+f
+g
+x1
+h
+x1
+74
+h
+x2
+66
+h
+x3
+72
+h
+x4
+72
+h
+x5
+43
+h
+x6
+17
+h
+x7
+1
+h
+x8
+73
+h
+x9
+42
+h
+x10
+29
+h
+x11
+83
+h
+x12
+41
+h
+x13
+30
+h
+x14
+84
+h
+x15
+21
+h
+x16
+34
+h
+x17
+63
+h
+x18
+97
+h
+x19
+37
+h
+x20
+18
+h
+x21
+66
+h
+x22
+62
+h
+x23
+51
+h
+x24
+74
+h
+x25
+10
+h
+x26
+78
+h
+x27
+64
+h
+x28
+4
+h
+x29
+23
+h
+x30
+13
+h
+x31
+74
+h
+x32
+43
+h
+x33
+45
+h
+x34
+69
+h
+x35
+33
+h
+x36
+98
+h
+x37
+54
+h
+x38
+31
+h
+x39
+17
+h
+x40
+66
+h
+x41
+38
+h
+x42
+59
+h
+x43
+63
+h
+x44
+52
+h
+x45
+8
+h
+x46
+29
+h
+x47
+14
+h
+x48
+44
+h
+x49
+1
+h
+x50
+63
+h
+x51
+44
+h
+x52
+37
+h
+x53
+45
+h
+x54
+72
+h
+x55
+33
+h
+x56
+33
+h
+x57
+93
+h
+x58
+41
+h
+x59
+90
+h
+x60
+27
+h
+x61
+95
+h
+x62
+92
+h
+x63
+90
+h
+x64
+41
+h
+x65
+31
+h
+x66
+87
+h
+x67
+27
+h
+x68
+12
+h
+x69
+49
+h
+x70
+8
+h
+x71
+96
+h
+x72
+8
+h
+x73
+30
+h
+x74
+71
+h
+x75
+57
+h
+x76
+45
+h
+x77
+75
+h
+x78
+91
+h
+x79
+81
+h
+x80
+25
+h
+x81
+34
+h
+x82
+65
+h
+x83
+96
+h
+x84
+25
+h
+x85
+64
+h
+x86
+21
+h
+x87
+93
+h
+x88
+77
+e
+h
+x89
+88
+h
+x90
+62
+h
+x91
+100
+h
+x92
+54
+h
+x93
+97
+h
+x94
+77
+h
+x95
+10
+h
+x96
+33
+h
+x97
+1
+h
+x98
+16
+b
+h
+x99
+98
+h
+x100
+49
+h
+x101
+4
+h
+x102
+86
+h
+x103
+96
+h
+x104
+18
+h
+x105
+20
+h
+x106
+56
+b
+h
+x107
+34
+h
+x108
+67
+h
+x109
+96
+h
+x110
+35
+h
+x111
+96
+h
+x112
+27
+c
+h
+x113
+26
+h
+x114
+51
+h
+x115
+7
+h
+x116
+88
+h
+x117
+96
+
+h
+x118
+21
+h
+x119
+89
+h
+x120
+52
+h
+x121
+5
+h
+x122
+64
+h
+x123
+85
+h
+x124
+30
+h
+x125
+38
+h
+x126
+43
+h
+x127
+48
+h
+x128
+43
+h
+x129
+22
+h
+x130
+100
+h
+x131
+30
+h
+x132
+82
+h
+x133
+81
+h
+x134
+27
+h
+x135
+63
+h
+x136
+66
+h
+x137
+34
+h
+x138
+26
+h
+x139
+12
+h
+x140
+88
+h
+x141
+54
+h
+x142
+58
+c
+h
+x143
+78
+h
+x144
+47
+h
+x145
+87
+h
+x146
+50
+h
+x147
+66
+h
+x148
+60
+h
+x149
+24
+h
+x150
+15
+h
+x151
+59
+h
+x152
+40
+h
+x153
+59
+h
+x154
+50
+h
+x155
+2
+h
+x156
+53
+h
+x157
+82
+h
+x158
+15
+h
+x159
+7
+h
+x160
+16
+h
+x161
+21
+h
+x162
+98
+h
+x163
+76
+h
+x164
+39
+h
+x165
+2
+h
+x166
+36
+h
+x167
+94
+d
+h
+x168
+64
+h
+x169
+6
+h
+x170
+64
+h
+x171
+6
+h
+x172
+31
+h
+x173
+87
+h
+x174
+75
+h
+x175
+28
+h
+x176
+84
+h
+x177
+44
+h
+x178
+76
+h
+x179
+93
+h
+x180
+17
+h
+x181
+20
+h
+x182
+77
+h
+x183
+49
+h
+x184
+42
+h
+x185
+48
+h
+x186
+83
+h
+x187
+84
+b
+h
+x188
+2
+h
+x189
+36
+h
+x190
+44
+h
+x191
+57
+h
+x192
+15
+h
+x193
+56
+h
+x194
+83
+h
+x195
+10
+h
+x196
+52
+h
+x197
+32
+h
+x198
+18
+h
+x199
+60
+h
+x200
+95
+h
+x201
+57
+h
+x202
+14
+h
+x203
+66
+h
+x204
+14
+h
+x205
+65
+h
+x206
+10
+h
+x207
+62
+h
+x208
+52
+h
+x209
+78
+i
+b
+h
+x210
+31
+h
+x211
+57
+h
+x212
+32
+h
+x213
+11
+h
+x214
+25
+h
+x215
+79
+h
+x216
+89
+h
+x217
+13
+h
+x218
+89
+h
+x219
+57
+h
+x220
+50
+h
+x221
+84
+h
+x222
+27
+h
+x223
+81
+h
+x224
+34
+h
+x225
+23
+h
+x226
+20
+h
+x227
+40
+h
+x228
+59
+h
+x229
+82
+h
+x230
+8
+i
+c
+h
+x231
+44
+h
+x232
+31
+h
+x233
+25
+h
+x234
+8
+h
+x235
+6
+h
+x236
+69
+h
+x237
+87
+h
+x238
+7
+h
+x239
+52
+h
+x240
+61
+h
+x241
+94
+h
+x242
+36
+h
+x243
+90
+h
+x244
+61
+h
+x245
+62
+h
+x246
+49
+h
+x247
+72
+h
+x248
+64
+h
+x249
+37
+h
+x250
+14
+h
+x251
+68
+h
+x252
+73
+h
+x253
+75
+h
+x254
+22
+h
+x255
+25
+h
+x256
+71
+h
+x257
+26
+h
+x258
+7
+h
+x259
+82
+h
+x260
+78
+h
+x261
+77
+h
+x262
+59
+h
+x263
+92
+h
+x264
+9
+h
+x265
+26
+h
+x266
+93
+h
+x267
+88
+h
+x268
+59
+h
+x269
+30
+h
+x270
+8
+h
+x271
+16
+h
+x272
+33
+h
+x273
+51
+h
+x274
+32
+h
+x275
+25
+h
+x276
+10
+h
+x277
+69
+h
+x278
+33
+h
+x279
+76
+h
+x280
+42
+h
+x281
+55
+h
+x282
+86
+h
+x283
+6
+h
+x284
+34
+h
+x285
+46
+h
+x286
+34
+h
+x287
+29
+h
+x288
+7
+h
+x289
+72
+h
+x290
+8
+h
+x291
+21
+h
+x292
+49
+h
+x293
+26
+h
+x294
+77
+h
+x295
+11
+h
+x296
+84
+h
+x297
+23
+h
+x298
+86
+h
+x299
+18
+h
+x300
+82
+h
+x301
+69
+h
+x302
+80
+h
+x303
+13
+h
+x304
+70
+h
+x305
+92
+h
+x306
+53
+h
+x307
+13
+h
+x308
+47
+h
+x309
+75
+h
+x310
+70
+h
+x311
+69
+h
+x312
+8
+h
+x313
+61
+h
+x314
+64
+h
+x315
+12
+h
+x316
+25
+h
+x317
+1
+h
+x318
+62
+h
+x319
+59
+h
+x320
+65
+h
+x321
+50
+h
+x322
+70
+h
+x323
+83
+h
+x324
+83
+h
+x325
+27
+h
+x326
+95
+h
+x327
+30
+h
+x328
+17
+h
+x329
+95
+h
+x330
+19
+h
+x331
+50
+h
+x332
+35
+h
+x333
+32
+h
+x334
+83
+h
+x335
+74
+h
+x336
+44
+h
+x337
+79
+h
+x338
+20
+h
+x339
+92
+h
+x340
+32
+h
+x341
+97
+h
+x342
+48
+h
+x343
+22
+h
+x344
+75
+h
+x345
+18
+h
+x346
+10
+h
+x347
+12
+h
+x348
+47
+h
+x349
+29
+h
+x350
+82
+h
+x351
+52
+h
+x352
+2
+h
+x353
+92
+h
+x354
+8
+h
+x355
+53
+h
+x356
+60
+h
+x357
+7
+h
+x358
+38
+h
+x359
+28
+h
+x360
+66
+h
+x361
+65
+h
+x362
+59
+h
+x363
+96
+h
+x364
+43
+h
+x365
+65
+h
+x366
+44
+h
+x367
+47
+h
+x368
+90
+h
+x369
+41
+h
+x370
+16
+h
+x371
+46
+h
+x372
+93
+h
+x373
+86
+h
+x374
+24
+h
+x375
+23
+h
+x376
+32
+h
+x377
+6
+h
+x378
+21
+h
+x379
+54
+h
+x380
+26
+h
+x381
+87
+h
+x382
+91
+h
+x383
+24
+h
+x384
+94
+h
+x385
+68
+h
+x386
+44
+h
+x387
+50
+h
+x388
+65
+h
+x389
+98
+h
+x390
+95
+h
+x391
+90
+h
+x392
+36
+h
+x393
+48
+h
+x394
+68
+h
+x395
+89
+h
+x396
+47
+h
+x397
+8
+h
+x398
+3
+h
+x399
+95
+h
+x400
+75
+h
+x401
+71
+h
+x402
+71
+h
+x403
+90
+h
+x404
+51
+h
+x405
+57
+h
+x406
+23
+h
+x407
+59
+h
+x408
+55
+h
+x409
+30
+h
+x410
+39
+h
+x411
+75
+h
+x412
+57
+h
+x413
+49
+h
+x414
+49
+h
+x415
+3
+h
+x416
+24
+h
+x417
+94
+h
+x418
+63
+h
+x419
+27
+h
+x420
+52
+h
+x421
+18
+h
+x422
+54
+h
+x423
+48
+h
+x424
+79
+h
+x425
+10
+h
+x426
+16
+h
+x427
+35
+h
+x428
+90
+h
+x429
+8
+h
+x430
+59
+h
+x431
+56
+h
+x432
+46
+h
+x433
+7
+h
+x434
+62
+h
+x435
+91
+h
+x436
+90
+h
+x437
+98
+h
+x438
+59
+h
+x439
+90
+h
+x440
+7
+h
+x441
+68
+h
+x442
+40
+h
+x443
+80
+h
+x444
+62
+h
+x445
+2
+h
+x446
+62
+h
+x447
+89
+h
+x448
+90
+h
+x449
+65
+h
+x450
+12
+h
+x451
+53
+h
+x452
+79
+h
+x453
+47
+h
+x454
+91
+h
+x455
+14
+h
+x456
+3
+h
+x457
+35
+h
+x458
+22
+h
+x459
+20
+h
+x460
+91
+h
+x461
+7
+h
+x462
+20
+h
+x463
+91
+h
+x464
+32
+h
+x465
+70
+h
+x466
+69
+h
+x467
+93
+h
+x468
+48
+h
+x469
+95
+h
+x470
+2
+h
+x471
+50
+h
+x472
+19
+h
+x473
+68
+h
+x474
+25
+h
+x475
+21
+h
+x476
+31
+h
+x477
+52
+h
+x478
+76
+h
+x479
+52
+h
+x480
+56
+h
+x481
+4
+h
+x482
+25
+h
+x483
+55
+h
+x484
+53
+h
+x485
+90
+h
+x486
+27
+h
+x487
+13
+h
+x488
+65
+h
+x489
+69
+h
+x490
+78
+h
+x491
+25
+h
+x492
+65
+h
+x493
+60
+h
+x494
+96
+h
+x495
+78
+h
+x496
+26
+h
+x497
+5
+h
+x498
+34
+h
+x499
+93
+h
+x500
+22
+h
+x501
+4
+h
+x502
+12
+h
+x503
+28
+h
+x504
+71
+h
+x505
+4
+h
+x506
+40
+h
+x507
+93
+h
+x508
+44
+h
+x509
+63
+h
+x510
+33
+h
+x511
+96
+h
+x512
+38
+h
+x513
+76
+h
+x514
+95
+h
+x515
+77
+h
+x516
+16
+h
+x517
+84
+h
+x518
+44
+h
+x519
+29
+h
+x520
+66
+h
+x521
+21
+h
+x522
+63
+h
+x523
+20
+h
+x524
+35
+h
+x525
+56
+h
+x526
+21
+h
+x527
+68
+h
+x528
+11
+h
+x529
+52
+h
+x530
+28
+h
+x531
+23
+h
+x532
+77
+h
+x533
+51
+h
+x534
+43
+h
+x535
+94
+h
+x536
+63
+h
+x537
+76
+h
+x538
+25
+h
+x539
+48
+h
+x540
+21
+h
+x541
+48
+h
+x542
+62
+h
+x543
+24
+h
+x544
+46
+h
+x545
+60
+h
+x546
+86
+h
+x547
+20
+h
+x548
+78
+h
+x549
+65
+h
+x550
+23
+h
+x551
+73
+h
+x552
+46
+h
+x553
+84
+h
+x554
+49
+h
+x555
+63
+h
+x556
+86
+h
+x557
+56
+h
+x558
+52
+h
+x559
+40
+h
+x560
+60
+h
+x561
+25
+h
+x562
+49
+h
+x563
+55
+h
+x564
+32
+h
+x565
+74
+h
+x566
+84
+h
+x567
+5
+h
+x568
+32
+h
+x569
+55
+h
+x570
+49
+h
+x571
+37
+h
+x572
+1
+h
+x573
+99
+h
+x574
+98
+h
+x575
+70
+h
+x576
+3
+h
+x577
+32
+h
+x578
+64
+h
+x579
+62
+h
+x580
+91
+h
+x581
+57
+h
+x582
+35
+h
+x583
+54
+h
+x584
+11
+h
+x585
+19
+h
+x586
+23
+h
+x587
+4
+h
+x588
+64
+h
+x589
+2
+h
+x590
+76
+h
+x591
+68
+h
+x592
+15
+h
+x593
+47
+h
+x594
+32
+h
+x595
+80
+h
+x596
+19
+h
+x597
+58
+h
+x598
+18
+h
+x599
+80
+h
+x600
+87
+h
+x601
+19
+h
+x602
+53
+h
+x603
+70
+h
+x604
+95
+h
+x605
+62
+h
+x606
+61
+h
+x607
+39
+h
+x608
+37
+h
+x609
+67
+h
+x610
+35
+h
+x611
+78
+h
+x612
+7
+h
+x613
+4
+h
+x614
+82
+h
+x615
+60
+h
+x616
+19
+h
+x617
+68
+h
+x618
+90
+h
+x619
+53
+h
+x620
+93
+h
+x621
+55
+h
+x622
+71
+h
+x623
+27
+h
+x624
+33
+h
+x625
+37
+h
+x626
+15
+h
+x627
+29
+h
+x628
+58
+h
+x629
+1
+h
+x630
+69
+h
+x631
+75
+h
+x632
+63
+h
+x633
+33
+h
+x634
+43
+h
+x635
+60
+h
+x636
+66
+h
+x637
+89
+h
+x638
+95
+h
+x639
+18
+h
+x640
+2
+h
+x641
+18
+h
+x642
+1
+h
+x643
+34
+h
+x644
+59
+h
+x645
+45
+h
+x646
+79
+h
+x647
+97
+h
+x648
+52
+h
+x649
+34
+h
+x650
+72
+h
+x651
+73
+h
+x652
+48
+h
+x653
+45
+h
+x654
+15
+h
+x655
+94
+h
+x656
+22
+h
+x657
+92
+h
+x658
+26
+h
+x659
+69
+h
+x660
+15
+h
+x661
+66
+h
+x662
+72
+h
+x663
+71
+h
+x664
+66
+h
+x665
+48
+h
+x666
+32
+h
+x667
+36
+h
+x668
+96
+h
+x669
+97
+h
+x670
+66
+h
+x671
+94
+h
+x672
+80
+h
+x673
+28
+h
+x674
+49
+h
+x675
+57
+h
+x676
+33
+h
+x677
+47
+h
+x678
+68
+h
+x679
+53
+h
+x680
+17
+h
+x681
+73
+h
+x682
+86
+h
+x683
+5
+h
+x684
+65
+h
+x685
+14
+h
+x686
+67
+h
+x687
+83
+h
+x688
+33
+h
+x689
+89
+h
+x690
+47
+h
+x691
+64
+h
+x692
+87
+h
+x693
+83
+h
+x694
+8
+h
+x695
+59
+h
+x696
+59
+h
+x697
+43
+h
+x698
+90
+h
+x699
+38
+h
+x700
+46
+h
+x701
+99
+h
+x702
+52
+h
+x703
+63
+h
+x704
+78
+h
+x705
+72
+h
+x706
+37
+h
+x707
+83
+h
+x708
+82
+h
+x709
+11
+h
+x710
+92
+h
+x711
+92
+h
+x712
+13
+h
+x713
+76
+h
+x714
+42
+h
+x715
+92
+h
+x716
+52
+h
+x717
+8
+h
+x718
+51
+h
+x719
+61
+h
+x720
+29
+h
+x721
+73
+h
+x722
+44
+h
+x723
+66
+h
+x724
+20
+h
+x725
+25
+h
+x726
+26
+h
+x727
+51
+h
+x728
+49
+h
+x729
+85
+h
+x730
+7
+h
+x731
+52
+h
+x732
+73
+h
+x733
+78
+h
+x734
+73
+h
+x735
+55
+h
+x736
+48
+h
+x737
+61
+h
+x738
+2
+h
+x739
+24
+h
+x740
+55
+h
+x741
+90
+h
+x742
+47
+h
+x743
+23
+h
+x744
+100
+h
+x745
+18
+h
+x746
+95
+h
+x747
+56
+h
+x748
+17
+h
+x749
+50
+h
+x750
+79
+h
+x751
+33
+h
+x752
+28
+h
+x753
+24
+h
+x754
+90
+h
+x755
+63
+h
+x756
+62
+h
+x757
+76
+h
+x758
+53
+h
+x759
+24
+h
+x760
+98
+h
+x761
+37
+h
+x762
+55
+h
+x763
+60
+h
+x764
+89
+h
+x765
+32
+h
+x766
+5
+h
+x767
+6
+h
+x768
+28
+h
+x769
+6
+h
+x770
+56
+h
+x771
+59
+h
+x772
+90
+h
+x773
+81
+h
+x774
+16
+h
+x775
+21
+h
+x776
+82
+h
+x777
+19
+h
+x778
+5
+h
+x779
+70
+h
+x780
+90
+h
+x781
+81
+h
+x782
+17
+h
+x783
+13
+h
+x784
+7
+h
+x785
+71
+h
+x786
+6
+h
+x787
+3
+h
+x788
+30
+h
+x789
+41
+h
+x790
+56
+h
+x791
+7
+h
+x792
+35
+h
+x793
+80
+h
+x794
+32
+h
+x795
+33
+h
+x796
+63
+h
+x797
+66
+h
+x798
+25
+h
+x799
+65
+h
+x800
+14
+h
+x801
+73
+h
+x802
+26
+h
+x803
+94
+h
+x804
+22
+h
+x805
+93
+h
+x806
+71
+h
+x807
+18
+h
+x808
+49
+h
+x809
+27
+h
+x810
+99
+h
+x811
+96
+h
+x812
+1
+h
+x813
+49
+h
+x814
+46
+h
+x815
+83
+h
+x816
+79
+h
+x817
+79
+h
+x818
+72
+h
+x819
+77
+h
+x820
+39
+h
+x821
+3
+h
+x822
+15
+h
+x823
+89
+h
+x824
+63
+h
+x825
+92
+h
+x826
+53
+h
+x827
+75
+h
+x828
+87
+h
+x829
+64
+h
+x830
+87
+h
+x831
+31
+h
+x832
+46
+h
+x833
+42
+h
+x834
+37
+h
+x835
+24
+h
+x836
+43
+h
+x837
+87
+h
+x838
+77
+h
+x839
+62
+h
+x840
+94
+h
+x841
+6
+h
+x842
+16
+h
+x843
+82
+h
+x844
+43
+h
+x845
+48
+h
+x846
+81
+h
+x847
+98
+h
+x848
+81
+h
+x849
+91
+h
+x850
+39
+h
+x851
+90
+h
+x852
+83
+h
+x853
+19
+h
+x854
+14
+h
+x855
+38
+h
+x856
+40
+h
+x857
+35
+h
+x858
+70
+h
+x859
+79
+h
+x860
+52
+h
+x861
+4
+h
+x862
+28
+h
+x863
+54
+h
+x864
+58
+h
+x865
+99
+h
+x866
+94
+h
+x867
+62
+h
+x868
+34
+h
+x869
+70
+h
+x870
+73
+h
+x871
+12
+h
+x872
+28
+h
+x873
+53
+h
+x874
+8
+h
+x875
+48
+h
+x876
+87
+h
+x877
+98
+h
+x878
+4
+h
+x879
+94
+h
+x880
+47
+h
+x881
+88
+h
+x882
+60
+h
+x883
+13
+h
+x884
+11
+h
+x885
+85
+h
+x886
+79
+h
+x887
+100
+h
+x888
+59
+h
+x889
+60
+h
+x890
+76
+h
+x891
+29
+h
+x892
+76
+h
+x893
+61
+h
+x894
+15
+h
+x895
+20
+h
+x896
+24
+h
+x897
+7
+h
+x898
+78
+h
+x899
+56
+h
+x900
+71
+h
+x901
+65
+h
+x902
+39
+h
+x903
+81
+h
+x904
+3
+h
+x905
+46
+h
+x906
+92
+h
+x907
+39
+h
+x908
+48
+h
+x909
+35
+h
+x910
+38
+h
+x911
+69
+h
+x912
+48
+h
+x913
+37
+h
+x914
+71
+h
+x915
+92
+h
+x916
+19
+h
+x917
+47
+h
+x918
+68
+h
+x919
+45
+h
+x920
+42
+h
+x921
+30
+h
+x922
+89
+h
+x923
+21
+h
+x924
+63
+h
+x925
+21
+h
+x926
+6
+h
+x927
+63
+h
+x928
+76
+h
+x929
+95
+h
+x930
+24
+h
+x931
+98
+h
+x932
+3
+h
+x933
+25
+h
+x934
+79
+h
+x935
+36
+h
+x936
+21
+h
+x937
+23
+h
+x938
+67
+h
+x939
+14
+h
+x940
+100
+h
+x941
+72
+h
+x942
+51
+h
+x943
+89
+h
+x944
+1
+h
+x945
+87
+h
+x946
+48
+h
+x947
+8
+h
+x948
+86
+h
+x949
+74
+h
+x950
+88
+h
+x951
+40
+h
+x952
+29
+h
+x953
+63
+h
+x954
+42
+h
+x955
+7
+h
+x956
+89
+h
+x957
+15
+h
+x958
+94
+h
+x959
+43
+h
+x960
+3
+h
+x961
+13
+h
+x962
+30
+h
+x963
+41
+h
+x964
+95
+h
+x965
+65
+h
+x966
+61
+h
+x967
+82
+h
+x968
+56
+h
+x969
+10
+h
+x970
+28
+h
+x971
+55
+h
+x972
+96
+h
+x973
+69
+h
+x974
+71
+h
+x975
+62
+h
+x976
+29
+h
+x977
+95
+h
+x978
+69
+h
+x979
+85
+h
+x980
+40
+h
+x981
+65
+h
+x982
+92
+h
+x983
+86
+h
+x984
+50
+h
+x985
+26
+h
+x986
+38
+h
+x987
+61
+h
+x988
+98
+h
+x989
+31
+h
+x990
+70
+h
+x991
+74
+i
+d
+h
+x992
+91
+h
+x993
+79
+h
+x994
+34
+h
+x995
+68
+h
+x996
+76
+h
+x997
+59
+h
+x998
+70
+h
+x999
+20
+h
+x1000
+2
+c
+i
+b
+j
+z------------------------------
+Score earned in input25 = 0pt
+
+==================================================
+=== SUMMARY ======================================
+==================================================
+Total score = 374pt out of 495pt
+The final score = 76%
